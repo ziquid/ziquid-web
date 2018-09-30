@@ -7,5 +7,5 @@ logo:
   use_default: true
 favicon:
   use_default: false
-  path: themes/ziquid/favicon-32x32.png
+  path: themes/custom/ziquid/favicon-32x32.png
   mimetype: image/png
