@@ -1,0 +1,5 @@
+name: Ziquid
+description: Ziquid site generic functions.
+type: module
+version: 1.0
+core: 8.x
