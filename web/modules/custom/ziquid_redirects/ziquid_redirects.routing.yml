@@ -1,0 +1,7 @@
+ziquid:
+  path: '/zoom'
+  defaults:
+    _controller: '\Drupal\ziquid_redirects\Controller\ZiquidRedirectController::zoomRedirect'
+    _title: 'Zoom URL Redirect'
+  requirements:
+    _permission: 'access content'

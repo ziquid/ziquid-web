@@ -1,7 +1,0 @@
-ziquid:
-  path: '/zoom'
-  defaults:
-    _controller: '\Drupal\ziquid\Controller\ZiquidController::zoomRedirect'
-    _title: 'Hello World'
-  requirements:
-    _permission: 'access content'
