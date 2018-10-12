@@ -5,8 +5,8 @@ features:
   favicon: true
 logo:
   use_default: false
-  path: themes/custom/ziquid/ziquid-logo.png
+  path: themes/custom/ziquid_theme/ziquid-logo.png
 favicon:
   use_default: false
-  path: themes/custom/ziquid/favicon.png
+  path: themes/custom/ziquid_theme/favicon.png
   mimetype: image/png
