@@ -1,0 +1,12 @@
+uuid: 16305625-c3b4-40aa-b36b-ca9a07d469b8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 13Alud_bjdOfLoxMrld0aELLVWn7ueSAXBH0cr24Ms4
+id: default
+label: Default
+options:
+  namespace: swiper-
+  direction: horizontal
+  speed: 300
