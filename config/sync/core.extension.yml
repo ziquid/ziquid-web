@@ -35,6 +35,8 @@ module:
   search: 0
   shortcut: 0
   swiper: 0
+  swiper_fields: 0
+  swiper_views: 0
   system: 0
   taxonomy: 0
   text: 0
