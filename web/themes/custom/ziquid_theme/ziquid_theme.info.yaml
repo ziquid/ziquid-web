@@ -1,6 +1,6 @@
-name: Ziquid
+name: Ziquid theme
 type: theme
-description: This is a Ziquid theme
+description: This is the Ziquid theme
 core: 8.x
 # Defines the base theme
 base theme: classy
