@@ -1,10 +1,10 @@
 .logo {
   float:left;
-  background:url(../images/ziquid-logo.png) no-repeat 0 0;
+  background:url(images/ziquid-logo.png) no-repeat 0 0;
   width:160px;
   height:66px;
 }
 
 .icon {
-	background:url(../images/favicon.png);
+	background:url(images/favicon.png);
 }
