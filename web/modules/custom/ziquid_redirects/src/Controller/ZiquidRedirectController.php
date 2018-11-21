@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
  */
 class ZiquidRedirectController extends ControllerBase {
   public function zoomRedirect() {
-    $response = new RedirectResponse('https://zoom.us/2110111973', 301);
+    $response = new RedirectResponse('https://zoom.us/j/2110111973', 301);
     $response->send();
     return;
   }
