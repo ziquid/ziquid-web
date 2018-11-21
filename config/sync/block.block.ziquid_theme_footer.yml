@@ -13,7 +13,7 @@ _core:
 id: ziquid_theme_footer
 theme: ziquid_theme
 region: footer
-weight: -6
+weight: -4
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
