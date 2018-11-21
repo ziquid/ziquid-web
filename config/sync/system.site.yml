@@ -1,5 +1,5 @@
 uuid: ac60401d-f438-4924-ae1a-6dbff6dd4b46
-name: Ziquid.com
+name: 'Ziquid Design Studio, LLC'
 mail: info@ziquid.com
 slogan: ''
 page:
@@ -12,3 +12,4 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ''
