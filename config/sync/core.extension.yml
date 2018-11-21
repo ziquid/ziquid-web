@@ -43,7 +43,9 @@ module:
   user: 0
   views_ui: 0
   ziquid_redirects: 0
+  fontyourface: 1
   menu_link_content: 1
+  typekit_api: 10
   views: 10
   standard: 1000
 theme:

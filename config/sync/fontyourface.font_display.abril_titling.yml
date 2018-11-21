@@ -1,0 +1,10 @@
+uuid: bea63c49-2de9-4348-a5b6-9334b5fdb49e
+langcode: en
+status: true
+dependencies: {  }
+id: abril_titling
+label: 'Abril Titling'
+font_url: 'https://typekit.com/fonts/abril-titling#n4'
+fallback: serif
+selectors: '.fontyourface h1, .fontyourface h2, .fontyourface h3, .fontyourface h4, .fontyourface h5, .fontyourface h6'
+theme: ziquid_theme

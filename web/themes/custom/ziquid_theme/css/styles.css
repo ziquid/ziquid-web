@@ -35,6 +35,7 @@ body {
 h1 {
     text-align: center;
     margin: 10px 0 16px;
+    font-family: abril-titling, serif;
 }
 
 .region-footer {
