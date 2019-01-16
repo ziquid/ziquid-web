@@ -18,4 +18,10 @@ class ZiquidRedirectController extends ControllerBase {
     $response->send();
     return;
   }
+
+  public function iosBetaRedirect() {
+    $response = new RedirectResponse('https://testflight.apple.com/join/vi0q9Ffy', 301);
+    $response->send();
+    return;
+  }
 }

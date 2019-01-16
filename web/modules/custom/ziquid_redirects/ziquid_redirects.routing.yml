@@ -5,3 +5,10 @@ ziquid:
     _title: 'Zoom URL Redirect'
   requirements:
     _permission: 'access content'
+ios-beta:
+  path: '/uslce/ios-beta'
+  defaults:
+    _controller: '\Drupal\ziquid_redirects\Controller\ZiquidRedirectController::iosBetaRedirect'
+    _title: 'iOS Beta Redirect'
+  requirements:
+    _permission: 'access content'
