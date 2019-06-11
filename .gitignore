@@ -22,3 +22,7 @@
 
 # Ignore .env files as they are personal
 /.env
+
+# A fix for the drush on windows local repo.
+vendor/bin/drush.php.bat
+vendor/drush/drush/src/Drupal/Commands/core/JsonapiCommands.php
