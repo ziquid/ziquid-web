@@ -78,7 +78,7 @@ h1 {
 
 #block-address  .text-formatted{
     position: relative;
-    z-index: 9999;
+    z-index: 99;
 }
 
 #block-footer-about-block {
