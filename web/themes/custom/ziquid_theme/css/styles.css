@@ -19,6 +19,7 @@ a, ul.menu a.is-active {
 
 .site-logo img {
     width: 160px;
+    padding-top: 0.5em;
 }
 
 .site-name {
@@ -73,6 +74,11 @@ h1 {
     border-radius: 14px;
     border-top-left-radius: 24px;
     border-bottom-right-radius: 24px;
+}
+
+#block-address  .text-formatted{
+    position: relative;
+    z-index: 99;
 }
 
 #block-footer-about-block {
