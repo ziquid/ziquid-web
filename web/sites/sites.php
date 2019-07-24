@@ -55,3 +55,9 @@
  * @see \Drupal\Core\DrupalKernel::getSitePath()
  * @see https://www.drupal.org/documentation/install/multi-site
  */
+ 
+ 
+ // URL: http://www.zds.group.com/
+ $sites['www.zds.group.com'] = 'zds.group';
+
+ 
