@@ -76,7 +76,7 @@ h1 {
     border-bottom-right-radius: 24px;
 }
 
-#block-address  .text-formatted{
+#block-address  .text-formatted {
     position: relative;
     z-index: 99;
 }
