@@ -8831,7 +8831,6 @@
         },
         {
             "name": "webflo/drupal-core-require-dev",
-<<<<<<< HEAD
             "version": "8.7.8",
             "source": {
                 "type": "git",
@@ -8842,18 +8841,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/593123300b3cf9974fa0742282af90fa72ac06fc",
                 "reference": "593123300b3cf9974fa0742282af90fa72ac06fc",
-=======
-            "version": "8.7.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webflo/drupal-core-require-dev.git",
-                "reference": "f535c939fee065b202ed5a84b15aa5385ba49d5e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/f535c939fee065b202ed5a84b15aa5385ba49d5e",
-                "reference": "f535c939fee065b202ed5a84b15aa5385ba49d5e",
->>>>>>> 628973607eb7d8d894852b5aa986a134d0361bd1
                 "shasum": ""
             },
             "require": {
