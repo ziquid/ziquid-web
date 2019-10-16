@@ -1,0 +1,22 @@
+uuid: ddc81d24-77d4-4803-b342-2369a884a229
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - ziquid_theme
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: ziquid_theme_help
+theme: ziquid_theme
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }
