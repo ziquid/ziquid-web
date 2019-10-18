@@ -1,0 +1,16 @@
+enabled_fonts:
+  - 'https://typekit.com/fonts/scriptorama-tradeshow-jf#n4'
+  - 'https://typekit.com/fonts/abril-titling-condensed#n4'
+  - 'https://typekit.com/fonts/abril-titling-condensed#i4'
+  - 'https://typekit.com/fonts/abril-titling-condensed#n7'
+  - 'https://typekit.com/fonts/abril-titling-condensed#i7'
+  - 'https://typekit.com/fonts/ff-ernestine-web-pro#n7'
+  - 'https://typekit.com/fonts/lust-script-display#n4'
+  - 'https://typekit.com/fonts/abril-titling#n4'
+  - 'https://typekit.com/fonts/abril-titling#i4'
+  - 'https://typekit.com/fonts/abril-titling#n7'
+  - 'https://typekit.com/fonts/abril-titling#i7'
+  - 'https://typekit.com/fonts/cabazon#n4'
+load_all_enabled_fonts: 0
+_core:
+  default_config_hash: r8uAx4mTBwCkgDFbdKCmhjgbb91BQ4HbWSYRKrlowMY
