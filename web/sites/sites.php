@@ -61,4 +61,8 @@
 $sites['www.zds.group'] = 'zds';
 $sites['zds.group'] = 'zds';
 
+// URL: http://www.ziquid/
+$sites['www.ziquid'] = 'ziquid';
+$sites['ziquid'] = 'ziquid';
+
 
