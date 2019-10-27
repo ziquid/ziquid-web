@@ -1,0 +1,8 @@
+uuid: eda061cd-4a11-4037-b5d2-c911755a569f
+langcode: en
+status: true
+dependencies: {  }
+name: Hobbies
+vid: hobbies
+description: 'Things we like to do in our free time, such as <em>dancing</em> or <em>billiards</em>.'
+weight: 0

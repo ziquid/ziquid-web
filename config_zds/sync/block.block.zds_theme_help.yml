@@ -1,0 +1,22 @@
+uuid: 62d2a241-7a7d-4a3e-a9d6-9961e7455a1d
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - zds_theme
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: zds_theme_help
+theme: zds_theme
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

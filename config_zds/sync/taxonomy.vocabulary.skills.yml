@@ -1,0 +1,8 @@
+uuid: 6bde78c6-ee0f-41bd-8716-991c2eb59b99
+langcode: en
+status: true
+dependencies: {  }
+name: Skills
+vid: skills
+description: 'Technical skills of value to us or our clients, such as <em>Drupal</em> or <em>SEO</em>'
+weight: 0

@@ -1,0 +1,17 @@
+name: ZDS theme
+type: theme
+description: This is the ZDS theme
+core: 8.x
+# Defines the base theme
+base theme: ziquid_theme
+# Defines libraries group in which we can add css/js.
+libraries:
+  - zds_theme/global-styling
+# Regions
+regions:
+  header: Header
+  featured: Featured
+  content: Content
+  sidebar_first: First sidebar
+  sidebar_second: Second sidebar
+  footer: Footer

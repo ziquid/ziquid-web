@@ -1,5 +1,7 @@
 module:
   admin_toolbar: 0
+  admin_toolbar_links_access_filter: 0
+  admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
   automated_cron: 0
   big_pipe: 0
@@ -23,6 +25,7 @@ module:
   help: 0
   history: 0
   image: 0
+  inline_form_errors: 0
   link: 0
   menu_ui: 0
   metatag: 0
@@ -58,6 +61,7 @@ theme:
   seven: 0
   adminimal_theme: 0
   ziquid_theme: 0
+  zds_theme: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

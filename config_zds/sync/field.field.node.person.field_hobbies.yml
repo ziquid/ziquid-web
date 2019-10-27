@@ -1,0 +1,29 @@
+uuid: 7a6041e6-586a-4928-aca7-9cf363122e25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hobbies
+    - node.type.person
+    - taxonomy.vocabulary.hobbies
+id: node.person.field_hobbies
+field_name: field_hobbies
+entity_type: node
+bundle: person
+label: Hobbies
+description: 'Enter relevant hobbies.  Enter them like <em>movies</em>, not <em>watching movies</em>, unless that would make the entry ambiguous.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      hobbies: hobbies
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

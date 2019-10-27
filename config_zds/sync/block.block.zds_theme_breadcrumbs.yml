@@ -1,0 +1,22 @@
+uuid: 435ab20f-b4c0-40ae-8798-eb2835dd4e23
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - zds_theme
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: zds_theme_breadcrumbs
+theme: zds_theme
+region: header
+weight: -2
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 5095a39f-f5eb-4725-9851-a3cc3fe3d0b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - zds_theme
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: zds_theme_branding
+theme: zds_theme
+region: header
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

@@ -1,0 +1,12 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 0
+  path: sites/zds/files/ZDS-logo-500px.png
+favicon:
+  use_default: 0
+  path: themes/custom/ziquid_theme/images/favicon.png
+  mimetype: image/png
