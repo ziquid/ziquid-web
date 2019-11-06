@@ -79,6 +79,11 @@
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
             }
+        },
+        "patches": {
+            "drupal/fontyourface": {
+                "Allow domainless fonts to be loaded": "https://www.drupal.org/files/issues/2019-11-06/disable-domain-check-8x-3092865-2.patch"
+            }
         }
     }
 }
