@@ -44,15 +44,6 @@ h1 {
     font-family: abril-titling, serif;
 }
 
-.region-footer {
-    background-color: #b8b8bd;
-    padding: 36px 12px 16px;
-    position: absolute;
-    bottom: 0px;
-    width: calc(100% - 24px);
-    overflow-y: hidden;
-}
-
 #block-zds-theme-address {
     float: right;
     position: relative;

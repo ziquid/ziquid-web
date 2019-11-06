@@ -10,7 +10,7 @@ dependencies:
     - field.field.node.person.field_skills
     - node.type.person
   module:
-    - image
+    - simple_background_image_formatter
     - text
     - user
 id: node.person.default
@@ -27,12 +27,14 @@ content:
     region: content
   field_headshot:
     weight: 1
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
+      class: background-image
+      tag: div
     third_party_settings: {  }
-    type: image
+    type: simple_background_image
     region: content
   field_hobbies:
     weight: 5
@@ -44,7 +46,7 @@ content:
     region: content
   field_job_title:
     weight: 2
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }

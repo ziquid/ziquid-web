@@ -23,7 +23,7 @@
         "drupal/adminimal_theme": "^1.5",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.6",
-        "drupal/fontyourface": "^3.2",
+        "drupal/fontyourface": "3.x-dev",
         "drupal/metatag": "^1.10",
         "drupal/redirect": "^1.4",
         "drupal/simple_background_image_formatter": "1.x-dev",
@@ -34,6 +34,7 @@
         "webmozart/path-util": "^2.3"
     },
     "require-dev": {
+        "drupal/devel": "^2.1",
         "webflo/drupal-core-require-dev": "^8.6"
     },
     "conflict": {
