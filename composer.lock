@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "44526ee9f21f60a1303cfea3a8fa2dd1",
+    "content-hash": "9d12a7c92245f5c122161ffc66efd0f7",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -160,16 +160,16 @@
         },
         {
             "name": "chi-teck/drupal-code-generator",
-            "version": "1.30.4",
+            "version": "1.30.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Chi-teck/drupal-code-generator.git",
-                "reference": "8b7ae331e21e58088e3e52688823692ed6471ec3"
+                "reference": "c59c31ee6d8eefe76a5d367feef902e259c90c7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/8b7ae331e21e58088e3e52688823692ed6471ec3",
-                "reference": "8b7ae331e21e58088e3e52688823692ed6471ec3",
+                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/c59c31ee6d8eefe76a5d367feef902e259c90c7b",
+                "reference": "c59c31ee6d8eefe76a5d367feef902e259c90c7b",
                 "shasum": ""
             },
             "require": {
@@ -201,7 +201,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal code generator",
-            "time": "2019-08-25T06:39:56+00:00"
+            "time": "2019-10-27T14:27:26+00:00"
         },
         {
             "name": "composer/installers",
@@ -824,20 +824,20 @@
         },
         {
             "name": "consolidation/robo",
-            "version": "1.4.10",
+            "version": "1.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/Robo.git",
-                "reference": "e5a6ca64cf1324151873672e484aceb21f365681"
+                "reference": "5fa1d901776a628167a325baa9db95d8edf13a80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/Robo/zipball/e5a6ca64cf1324151873672e484aceb21f365681",
-                "reference": "e5a6ca64cf1324151873672e484aceb21f365681",
+                "url": "https://api.github.com/repos/consolidation/Robo/zipball/5fa1d901776a628167a325baa9db95d8edf13a80",
+                "reference": "5fa1d901776a628167a325baa9db95d8edf13a80",
                 "shasum": ""
             },
             "require": {
-                "consolidation/annotated-command": "^2.10.2",
+                "consolidation/annotated-command": "^2.11.0",
                 "consolidation/config": "^1.2",
                 "consolidation/log": "~1",
                 "consolidation/output-formatters": "^3.1.13",
@@ -867,6 +867,7 @@
                 "pear/archive_tar": "^1.4.4",
                 "php-coveralls/php-coveralls": "^1",
                 "phpunit/php-code-coverage": "~2|~4",
+                "sebastian/comparator": "^1.2.4",
                 "squizlabs/php_codesniffer": "^2.8"
             },
             "suggest": {
@@ -928,7 +929,7 @@
                 }
             ],
             "description": "Modern task runner",
-            "time": "2019-07-29T15:40:50+00:00"
+            "time": "2019-10-29T15:50:02+00:00"
         },
         {
             "name": "consolidation/self-update",
@@ -3855,16 +3856,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.2.4",
+            "version": "v4.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "97e59c7a16464196a8b9c77c47df68e4a39a45c4"
+                "reference": "b76bbc3c51f22c570648de48e8c2d941ed5e2cf2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/97e59c7a16464196a8b9c77c47df68e4a39a45c4",
-                "reference": "97e59c7a16464196a8b9c77c47df68e4a39a45c4",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/b76bbc3c51f22c570648de48e8c2d941ed5e2cf2",
+                "reference": "b76bbc3c51f22c570648de48e8c2d941ed5e2cf2",
                 "shasum": ""
             },
             "require": {
@@ -3872,6 +3873,7 @@
                 "php": ">=7.0"
             },
             "require-dev": {
+                "ircmaxell/php-yacc": "0.0.4",
                 "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0"
             },
             "bin": [
@@ -3902,7 +3904,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-09-01T07:51:21+00:00"
+            "time": "2019-10-25T18:33:07+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -4632,16 +4634,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.32",
+            "version": "v3.4.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "717ad66b5257e9752ae3c5722b5810bb4c40b236"
+                "reference": "c111091db748ed394fd8c3e473a90ad3b80e08ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/717ad66b5257e9752ae3c5722b5810bb4c40b236",
-                "reference": "717ad66b5257e9752ae3c5722b5810bb4c40b236",
+                "url": "https://api.github.com/repos/symfony/config/zipball/c111091db748ed394fd8c3e473a90ad3b80e08ad",
+                "reference": "c111091db748ed394fd8c3e473a90ad3b80e08ad",
                 "shasum": ""
             },
             "require": {
@@ -4692,7 +4694,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2019-09-19T15:32:51+00:00"
+            "time": "2019-10-30T12:46:47+00:00"
         },
         {
             "name": "symfony/console",
@@ -4768,7 +4770,7 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v3.4.32",
+            "version": "v3.4.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -4948,16 +4950,16 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v3.4.32",
+            "version": "v3.4.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "29cffc38a38f2a8ed7e494c9cea2f890a40c2359"
+                "reference": "6bcffd2eabc4ca087faaaf54e26c8ff3a40284f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/29cffc38a38f2a8ed7e494c9cea2f890a40c2359",
-                "reference": "29cffc38a38f2a8ed7e494c9cea2f890a40c2359",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/6bcffd2eabc4ca087faaaf54e26c8ff3a40284f3",
+                "reference": "6bcffd2eabc4ca087faaaf54e26c8ff3a40284f3",
                 "shasum": ""
             },
             "require": {
@@ -5001,7 +5003,7 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-30T17:42:32+00:00"
+            "time": "2019-10-24T15:33:53+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -5068,7 +5070,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.32",
+            "version": "v3.4.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -5118,16 +5120,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.4.32",
+            "version": "v3.4.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "2b6a666d6ff7fb65d10b97d817c8e7930944afb9"
+                "reference": "3e915e5ce305f8bc8017597f71f1f4095092ddf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/2b6a666d6ff7fb65d10b97d817c8e7930944afb9",
-                "reference": "2b6a666d6ff7fb65d10b97d817c8e7930944afb9",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/3e915e5ce305f8bc8017597f71f1f4095092ddf8",
+                "reference": "3e915e5ce305f8bc8017597f71f1f4095092ddf8",
                 "shasum": ""
             },
             "require": {
@@ -5163,7 +5165,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2019-09-01T21:32:23+00:00"
+            "time": "2019-10-30T12:43:22+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -6025,16 +6027,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v4.3.5",
+            "version": "v4.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "bde8957fc415fdc6964f33916a3755737744ff05"
+                "reference": "ea4940845535c85ff5c505e13b3205b0076d07bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/bde8957fc415fdc6964f33916a3755737744ff05",
-                "reference": "bde8957fc415fdc6964f33916a3755737744ff05",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/ea4940845535c85ff5c505e13b3205b0076d07bf",
+                "reference": "ea4940845535c85ff5c505e13b3205b0076d07bf",
                 "shasum": ""
             },
             "require": {
@@ -6097,7 +6099,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2019-10-04T19:48:13+00:00"
+            "time": "2019-10-13T12:02:04+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -6456,6 +6458,98 @@
             ],
             "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths.",
             "time": "2015-12-17T08:42:14+00:00"
+        },
+        {
+            "name": "wikimedia/composer-merge-plugin",
+            "version": "v1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wikimedia/composer-merge-plugin.git",
+                "reference": "81c6ac72a24a67383419c7eb9aa2b3437f2ab100"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wikimedia/composer-merge-plugin/zipball/81c6ac72a24a67383419c7eb9aa2b3437f2ab100",
+                "reference": "81c6ac72a24a67383419c7eb9aa2b3437f2ab100",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "composer/composer": "~1.0.0",
+                "jakub-onderka/php-parallel-lint": "~0.8",
+                "phpunit/phpunit": "~4.8|~5.0",
+                "squizlabs/php_codesniffer": "~2.1.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                },
+                "class": "Wikimedia\\Composer\\MergePlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wikimedia\\Composer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bryan Davis",
+                    "email": "bd808@wikimedia.org"
+                }
+            ],
+            "description": "Composer plugin to merge multiple composer.json files",
+            "time": "2017-04-25T02:31:25+00:00"
+        },
+        {
+            "name": "zaporylie/composer-drupal-optimizations",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zaporylie/composer-drupal-optimizations.git",
+                "reference": "fb231d92adc862a2c9276bccbc90f684816dc75d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zaporylie/composer-drupal-optimizations/zipball/fb231d92adc862a2c9276bccbc90f684816dc75d",
+                "reference": "fb231d92adc862a2c9276bccbc90f684816dc75d",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1"
+            },
+            "require-dev": {
+                "composer/composer": "^1.6",
+                "phpunit/phpunit": "^6"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "zaporylie\\ComposerDrupalOptimizations\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "zaporylie\\ComposerDrupalOptimizations\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jakub Piasecki",
+                    "email": "jakub@piaseccy.pl"
+                }
+            ],
+            "description": "Composer plugin to improve composer performance for Drupal projects",
+            "time": "2019-10-02T17:01:11+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -7381,16 +7475,16 @@
         },
         {
             "name": "mikey179/vfsstream",
-            "version": "v1.6.7",
+            "version": "v1.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bovigo/vfsStream.git",
-                "reference": "2b544ac3a21bcc4dde5d90c4ae8d06f4319055fb"
+                "reference": "231c73783ebb7dd9ec77916c10037eff5a2b6efe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bovigo/vfsStream/zipball/2b544ac3a21bcc4dde5d90c4ae8d06f4319055fb",
-                "reference": "2b544ac3a21bcc4dde5d90c4ae8d06f4319055fb",
+                "url": "https://api.github.com/repos/bovigo/vfsStream/zipball/231c73783ebb7dd9ec77916c10037eff5a2b6efe",
+                "reference": "231c73783ebb7dd9ec77916c10037eff5a2b6efe",
                 "shasum": ""
             },
             "require": {
@@ -7423,7 +7517,7 @@
             ],
             "description": "Virtual file system to mock the real file system in unit tests.",
             "homepage": "http://vfs.bovigo.org/",
-            "time": "2019-08-01T01:38:37+00:00"
+            "time": "2019-10-30T15:31:00+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -8742,16 +8836,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.1",
+            "version": "3.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "82cd0f854ceca17731d6d019c7098e3755c45060"
+                "reference": "65b12cdeaaa6cd276d4c3033a95b9b88b12701e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/82cd0f854ceca17731d6d019c7098e3755c45060",
-                "reference": "82cd0f854ceca17731d6d019c7098e3755c45060",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/65b12cdeaaa6cd276d4c3033a95b9b88b12701e7",
+                "reference": "65b12cdeaaa6cd276d4c3033a95b9b88b12701e7",
                 "shasum": ""
             },
             "require": {
@@ -8789,20 +8883,20 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-10-16T21:14:26+00:00"
+            "time": "2019-10-28T04:36:32+00:00"
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v4.3.5",
+            "version": "v4.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
-                "reference": "78b7611c45039e8ce81698be319851529bf040b1"
+                "reference": "b14fa08508afd152257d5dcc7adb5f278654d972"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/78b7611c45039e8ce81698be319851529bf040b1",
-                "reference": "78b7611c45039e8ce81698be319851529bf040b1",
+                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/b14fa08508afd152257d5dcc7adb5f278654d972",
+                "reference": "b14fa08508afd152257d5dcc7adb5f278654d972",
                 "shasum": ""
             },
             "require": {
@@ -8848,11 +8942,11 @@
             ],
             "description": "Symfony BrowserKit Component",
             "homepage": "https://symfony.com",
-            "time": "2019-09-10T11:25:17+00:00"
+            "time": "2019-10-28T17:07:32+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.4.32",
+            "version": "v3.4.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
@@ -9002,6 +9096,8 @@
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.0.8"
+    },
     "platform-dev": []
 }

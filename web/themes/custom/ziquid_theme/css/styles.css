@@ -92,7 +92,7 @@ h1 {
 
 .simple_background_image {
   width: 100%;
-  height: 100%;
+  padding-top: 100%;
 }
 
 .node--view-mode-hero .field--name-field-headshot,
