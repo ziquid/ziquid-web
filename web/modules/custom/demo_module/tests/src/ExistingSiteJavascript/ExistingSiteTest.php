@@ -17,7 +17,7 @@ class ExistingSiteTest extends ExistingSiteWebDriverTestBase {
   public function testNodeExists() {
     $this->visit('/node/1');
     $web_assert = $this->assertSession();
-    $web_assert->pageTextContains('Sample article');
+    $web_assert->pageTextContains('Ziquid Design Studio');
   }
 
 }
