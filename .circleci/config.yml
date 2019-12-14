@@ -116,7 +116,7 @@ workflows:
   version: 2
   test_and_lint:
     jobs:
-      - run-unit-kernel-tests
-      - run-behat-tests
+#      - run-unit-kernel-tests
+#      - run-behat-tests
       - run-code-sniffer
       - run-code-coverage
