@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 # build ziquid on OVH3
 
-set -x
+set -xe
 git co master
-composer install
 git pull
+composer.phar install
 drush updb -y
 drush updb -y -l zds
 drush cim -y sync
