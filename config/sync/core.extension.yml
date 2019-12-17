@@ -17,6 +17,7 @@ module:
   devel: 0
   dynamic_page_cache: 0
   editor: 0
+  entityqueue: 0
   field: 0
   field_ui: 0
   file: 0
@@ -25,7 +26,10 @@ module:
   history: 0
   image: 0
   kint: 0
+  libraries: 0
   link: 0
+  media: 0
+  media_library: 0
   menu_ui: 0
   metatag: 0
   node: 0
@@ -36,6 +40,7 @@ module:
   quickedit: 0
   rdf: 0
   redirect: 0
+  responsive_image: 0
   search: 0
   shortcut: 0
   simple_background_image_formatter: 0

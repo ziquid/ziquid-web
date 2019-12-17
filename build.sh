@@ -3,6 +3,7 @@
 
 set -x
 git co master
+composer install
 git pull
 drush updb -y
 drush updb -y -l zds
