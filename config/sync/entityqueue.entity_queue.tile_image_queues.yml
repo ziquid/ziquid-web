@@ -1,0 +1,25 @@
+uuid: 7b4904dd-6691-4e91-b0eb-945f62834a1c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: tile_image_queues
+label: 'Tile Image Queues'
+handler: multiple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      tile: tile
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse_in_admin: false

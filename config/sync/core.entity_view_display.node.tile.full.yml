@@ -1,0 +1,39 @@
+uuid: 625acc5d-0996-483f-a10e-21ecbdae0fbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.tile.body
+    - field.field.node.tile.field_black_or_white_bg
+    - field.field.node.tile.field_tile_
+    - node.type.tile
+    - responsive_image.styles.wide
+  module:
+    - responsive_image
+    - text
+    - user
+id: node.tile.full
+targetEntityType: node
+bundle: tile
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_tile_:
+    weight: 1
+    label: hidden
+    settings:
+      responsive_image_style: wide
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+hidden:
+  field_black_or_white_bg: true
+  links: true

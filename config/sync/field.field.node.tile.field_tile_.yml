@@ -1,0 +1,38 @@
+uuid: 62027e90-bbd9-4257-8dc2-090562fef528
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tile_
+    - node.type.tile
+  module:
+    - image
+id: node.tile.field_tile_
+field_name: field_tile_
+entity_type: node
+bundle: tile
+label: 'Tile Image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 2600x2600
+  min_resolution: 1300x1300
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

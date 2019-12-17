@@ -1,0 +1,17 @@
+uuid: fe2f0f4b-0386-44e2-a4d0-8b7a71021aa6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Tile
+type: tile
+description: 'Image tile'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

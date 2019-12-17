@@ -1,0 +1,22 @@
+uuid: 773822fa-ab48-4e1f-bfc1-332203cc9958
+langcode: en
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.tile_image_queues
+id: entity_subqueue.tile_image_queues.default
+targetEntityType: entity_subqueue
+bundle: tile_image_queues
+mode: default
+content:
+  items:
+    label: hidden
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+hidden:
+  title: true

@@ -51,10 +51,6 @@ a, ul.menu a.is-active {
   opacity: 67%;
 }
 
-body.page-node-type-person .region-content {
-    padding: 0;
-}
-
 body.page-node-type-person .block-page-title-block {
   display: none;
 }
