@@ -262,7 +262,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: 'Ziquid Design Studio, LLC, operates a full-service recording studio in the heart of Makati''s Central Business District in Manila, Philippines.'
+            value: 'Ziquid Design Studio, LLC, operates a full-service audio and video recording and production studio in the heart of the Makati Central Business District in Manila, Philippines.'
             format: basic_html
           plugin_id: text
       defaults:
