@@ -66,9 +66,14 @@ h2.inline-title {
   text-align: center;
 }
 
+main {
+  padding-bottom: 196px;
+}
+
 .region-footer {
   background-color: #eaedee;
   background-image: linear-gradient(to bottom, transparent, #fafdfe);
+  position: fixed;
 }
 
 #block-zds-theme-address {
