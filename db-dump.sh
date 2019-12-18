@@ -9,16 +9,16 @@ function do_dump() {
   set -x
 
   # dump the full production db
-  drush sql-dump > $1.sql
+  drush sql-dump -l $1 > $1.sql
 
   # sanitize the full production db
-  drush -q sqlsan --sanitize-email=email+%uid@example.com --sanitize-password=no -y
+  drush -q sqlsan --sanitize-email=email+%uid@example.com --sanitize-password=no -y -l $1
 
   # dump the sanitized version
-  drush sql-dump > $1.san.sql
+  drush sql-dump -l $1 > $1.san.sql
 
   # reload the production db and remove the dump on the file system
-  drush sqlc < $1.sql
+  drush sqlc -l $1 < $1.sql
   shred -u $1.sql || rm -P $1.sql || rm $1.sql
 
   # move the sanitized version to public files and create compressed and downloadable copies
