@@ -25,7 +25,15 @@ function do_dump() {
   # (drupal's .htaccess auto-blocks .sql files)
   # also store a backup somewhere
   gzip -c $1.san.sql > web/sites/$1/files/$1.san.sql.gz
-  [ -d /var/backup ] && cp web/sites/$1/files/$1.san.sql.gz /var/backup/$1.san.sql.gz-$(date | sed -e 's,[: ],-,g') || echo no /var/backup dir exists!
+
+  if [ -d /var/backup ]; then
+    BACKUP_FILE=$1.san.sql.gz-$(date | sed -e 's,[: ],-,g')
+    cp web/sites/$1/files/$1.san.sql.gz /var/backup/$BACKUP_FILE
+    ln -sf /var/backup/$BACKUP_FILE /var/backup/$1.latest.sql.gz
+  else
+    echo no /var/backup dir exists!
+  fi
+
   mv $1.san.sql web/sites/$1/files/$1.san.sql.ok-to-download
 
   set +x
