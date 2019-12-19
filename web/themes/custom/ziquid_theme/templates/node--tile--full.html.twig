@@ -83,14 +83,6 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-  {{ title_prefix }}
-  {% if label and not page %}
-    <h2{{ title_attributes }}>
-      {{ label }}
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-
   {% if display_submitted %}
     <footer class="node__meta">
       {{ author_picture }}
@@ -102,7 +94,17 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
+    {{ content.field_tile_ }}
+    <div class="field-tile-content-wrapper">
+      {{ title_prefix }}
+      {% if label %}
+        <h2{{ title_attributes.addClass('inline-title') }}>
+          {{ label }}
+        </h2>
+      {% endif %}
+      {{ title_suffix }}
+      {{ content|without('field_tile_') }}
+    </div>
   </div>
 
 </article>

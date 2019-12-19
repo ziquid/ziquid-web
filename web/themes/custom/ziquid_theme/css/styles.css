@@ -79,6 +79,28 @@ main {
   height: 100%;
 }
 
+div.view-recording-landing-page-tiles div.field__item:nth-child(odd) div.field-tile-content-wrapper {
+  color: #f8fdfe;
+  background-color: #08020160;
+}
+
+div.view-recording-landing-page-tiles div.field__item:nth-child(even) div.field-tile-content-wrapper {
+  color: #080201;
+  background-color: #f8fdfe60;
+}
+
+div.view-recording-landing-page-tiles div.field__item {
+  margin: 12px 0 4px;
+}
+
+div.view-recording-landing-page-tiles div.field-tile-content-wrapper {
+  position: absolute;
+  width: 90%;
+  top: 0;
+  padding: 0 5%;
+  font-size: 110%;
+}
+
 div.view-recording-landing-page-tiles div.view-header {
   text-align: center;
 }
