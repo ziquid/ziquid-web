@@ -1,0 +1,107 @@
+uuid: 8b48ef68-9a5d-4343-8763-76910519463c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.webform_page.body
+    - field.field.node.webform_page.field_body_1
+    - field.field.node.webform_page.field_body_2
+    - field.field.node.webform_page.field_body_3
+    - field.field.node.webform_page.field_subhead_1
+    - field.field.node.webform_page.field_subhead_2
+    - field.field.node.webform_page.field_subhead_3
+    - field.field.node.webform_page.field_webform_1
+    - field.field.node.webform_page.field_webform_2
+    - field.field.node.webform_page.field_webform_3
+    - node.type.webform_page
+  module:
+    - text
+    - user
+    - webform
+id: node.webform_page.default
+targetEntityType: node
+bundle: webform_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_body_1:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_body_2:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_body_3:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_subhead_1:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_subhead_2:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_subhead_3:
+    weight: 8
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_webform_1:
+    weight: 4
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+  field_webform_2:
+    weight: 7
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+  field_webform_3:
+    weight: 10
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

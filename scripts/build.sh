@@ -11,4 +11,6 @@ drush cim -y sync
 drush cim -y sync -l zds
 drush cr
 drush cr -l zds
+drush cc views
+drush cc views -l zds
 ./db-dump.sh

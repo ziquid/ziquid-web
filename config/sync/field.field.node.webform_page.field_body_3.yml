@@ -1,0 +1,21 @@
+uuid: 7daa7c07-a75e-439e-8691-2c6454160daa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body_3
+    - node.type.webform_page
+  module:
+    - text
+id: node.webform_page.field_body_3
+field_name: field_body_3
+entity_type: node
+bundle: webform_page
+label: 'Body 3'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -55,10 +55,25 @@ a, ul.menu a.is-active {
     padding: 0;
 }
 
+body.page-node-type-webform-page .region-content {
+  padding: 0 20px;
+}
+
 h1 {
     text-align: center;
     margin: 10px 0 16px;
     font-family: abril-titling, serif;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.region-content a:after {
+  content: ' >';
+  padding-right: 40px;
+  text-align: left;
 }
 
 main {
@@ -105,11 +120,42 @@ div.view-recording-landing-page-tiles div.field-tile-content-wrapper {
 
 div.view-recording-landing-page-tiles div.view-header {
   text-align: center;
+  margin-bottom: 36px;
 }
 
 article.node--type-tile.node--view-mode-full h2,
 article.node--type-tile.node--view-mode-full div.field--name-body {
   text-align: center;
+}
+
+div.field--type-webform {
+  margin: 0 20%;
+}
+
+body.page-node-type-webform-page h2 {
+  text-align: center;
+  padding: 24px;
+  background-image: linear-gradient(179deg, #080201, transparent);
+  background-color: #08020160;
+  color: #f8fdfe;
+  margin-top: 48px;
+}
+
+body.page-node-type-webform-page .field--type-text-long,
+body.page-node-type-webform-page .field--type-text-with-summary {
+  margin: 0 5%;
+  text-align: center;
+  font-size: 110%;
+}
+
+body.page-node-type-webform-page .field--type-text-long ul,
+body.page-node-type-webform-page .field--type-text-with-summary ul {
+  margin: 0 30%;
+}
+
+body.page-node-type-webform-page .field--type-text-long ul li,
+body.page-node-type-webform-page .field--type-text-with-summary ul li {
+  text-align: left;
 }
 
 .region-footer {

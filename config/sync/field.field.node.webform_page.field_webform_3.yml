@@ -1,0 +1,25 @@
+uuid: d71975d2-ce56-4ce1-800e-a4ef8161f661
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_webform_3
+    - node.type.webform_page
+  module:
+    - webform
+id: node.webform_page.field_webform_3
+field_name: field_webform_3
+entity_type: node
+bundle: webform_page
+label: 'Webform 3'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

@@ -1,0 +1,21 @@
+uuid: 41e7b802-33a8-4d45-98d0-7961d686a51c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body_2
+    - node.type.webform_page
+  module:
+    - text
+id: node.webform_page.field_body_2
+field_name: field_body_2
+entity_type: node
+bundle: webform_page
+label: 'Body 2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

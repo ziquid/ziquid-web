@@ -1,0 +1,48 @@
+uuid: e1c05b73-aca7-4ada-9cbb-f0278a4e00de
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.webform_page.body
+    - field.field.node.webform_page.field_body_1
+    - field.field.node.webform_page.field_body_2
+    - field.field.node.webform_page.field_body_3
+    - field.field.node.webform_page.field_subhead_1
+    - field.field.node.webform_page.field_subhead_2
+    - field.field.node.webform_page.field_subhead_3
+    - field.field.node.webform_page.field_webform_1
+    - field.field.node.webform_page.field_webform_2
+    - field.field.node.webform_page.field_webform_3
+    - node.type.webform_page
+  module:
+    - text
+    - user
+id: node.webform_page.teaser
+targetEntityType: node
+bundle: webform_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_body_1: true
+  field_body_2: true
+  field_body_3: true
+  field_subhead_1: true
+  field_subhead_2: true
+  field_subhead_3: true
+  field_webform_1: true
+  field_webform_2: true
+  field_webform_3: true
