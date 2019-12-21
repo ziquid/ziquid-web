@@ -61,7 +61,8 @@
     </div>
   {% else %}
     {% for item in items %}
-      <h2{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</h2>
+      {% set anchor = item['content']['#context']['value']|clean_id %}
+      <h2{{ attributes.addClass(classes, 'field__item').setAttribute('id', anchor) }}>{{ item.content }}</h2>
     {% endfor %}
   {% endif %}
 {% else %}
