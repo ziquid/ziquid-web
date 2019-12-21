@@ -262,7 +262,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: "<p>Ziquid Design Studio, LLC, operates a full-service audio and video recording and production studio in the heart of the Makati Central Business District in Manila, Philippines.</p>\r\n<a href=\"/recording/info#pricing-and-availability\">Check pricing and availability</a>\r\n<a href=\"/recording/info#request-information-or-schedule-an-appointment\">Get more information</a>\r\n<a href=\"/recording/info#request-information-or-schedule-an-appointment\">Book a tour</a>\r\n"
+            value: "<p>Ziquid Design Studio, LLC, operates a full-service audio and video recording and production studio in the heart of the Makati Central Business District in Manila, Philippines.</p>\r\n<a href=\"/recording/info\">Check pricing and availability</a>\r\n<a href=\"/recording/info#request-information-or-schedule-an-appointment\">Get more information</a>\r\n<a href=\"/recording/info#request-information-or-schedule-an-appointment\">Book a tour</a>\r\n<a href=\"/recording/info#map-of-our-location\">See our location on a map</a>\r\n"
             format: basic_html
           plugin_id: text
       defaults:
