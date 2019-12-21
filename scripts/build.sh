@@ -13,4 +13,4 @@ drush cr
 drush cr -l zds
 drush cc views
 drush cc views -l zds
-./db-dump.sh
+$(dirname "$0")/db-dump.sh
