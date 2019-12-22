@@ -210,7 +210,12 @@ display:
           table: views
           field: area
           plugin_id: text
-      footer: {  }
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          plugin_id: text
       empty: {  }
       relationships: {  }
       arguments: {  }
@@ -267,6 +272,21 @@ display:
           plugin_id: text
       defaults:
         header: false
+        footer: false
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: "<a href=\"/recording/info\">Check pricing and availability</a>\r\n<a href=\"/recording/info#request-information-or-schedule-an-appointment\">Get more information</a>\r\n<a href=\"/recording/info#request-information-or-schedule-an-appointment\">Book a tour</a>\r\n<a href=\"/recording/info#map-of-our-location\">See our location on a map</a>"
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
