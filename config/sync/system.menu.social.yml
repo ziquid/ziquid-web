@@ -1,0 +1,8 @@
+uuid: 968cb403-3606-4eb1-89d1-001f6361c336
+langcode: en
+status: true
+dependencies: {  }
+id: social
+label: 'Connect with us'
+description: 'Social links (FB, Twitter, etc.)'
+locked: false
