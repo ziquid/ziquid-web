@@ -21,6 +21,7 @@
         "drupal/core-recommended": "^8.6.15",
         "drupal/entityqueue": "1.x-dev",
         "drupal/fontyourface": "3.x-dev",
+        "drupal/menus_attribute": "^1.1",
         "drupal/metatag": "^1.10",
         "drupal/redirect": "^1.4",
         "drupal/simple_background_image_formatter": "1.x-dev",
