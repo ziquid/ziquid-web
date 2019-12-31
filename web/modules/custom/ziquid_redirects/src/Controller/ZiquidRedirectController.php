@@ -19,6 +19,14 @@ class ZiquidRedirectController extends ControllerBase {
   }
 
   /**
+   * Redirect for Youtube.
+   */
+  public function youtubeRedirect() {
+    $response = new RedirectResponse('https://www.youtube.com/channel/UCHok9pO-Jv2f-aTnG87k87w/featured', 302);
+    $response->send();
+  }
+
+  /**
    * Redirect for iOS beta.
    */
   public function iosBetaRedirect() {

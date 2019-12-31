@@ -12,3 +12,10 @@ ios-beta:
     _title: 'iOS Beta Redirect'
   requirements:
     _permission: 'access content'
+youtube:
+  path: '/youtube'
+  defaults:
+    _controller: '\Drupal\ziquid_redirects\Controller\ZiquidRedirectController::youtubeRedirect'
+    _title: 'Youtube URL Redirect'
+  requirements:
+    _permission: 'access content'
