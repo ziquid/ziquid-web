@@ -1,6 +1,6 @@
-hotlink: false
+hotlink: true
 origin: 'http://ziquid.com'
-origin_dir: sites/ziquid/files
+origin_dir: sites/default/files
 use_imagecache_root: true
 verify: true
 _core:
