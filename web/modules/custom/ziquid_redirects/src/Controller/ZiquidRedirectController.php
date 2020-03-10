@@ -27,6 +27,14 @@ class ZiquidRedirectController extends ControllerBase {
   }
 
   /**
+   * Redirect for PhpMyAdmin.
+   */
+  public function pmaRedirect() {
+    $response = new RedirectResponse('http://ziquid.com/phpmyadmin', 301);
+    $response->send();
+  }
+
+  /**
    * Redirect for iOS beta.
    */
   public function iosBetaRedirect() {

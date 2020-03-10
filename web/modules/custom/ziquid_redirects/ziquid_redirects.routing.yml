@@ -12,6 +12,13 @@ ios-beta:
     _title: 'iOS Beta Redirect'
   requirements:
     _permission: 'access content'
+phpmyadmin:
+  path: '/pma'
+  defaults:
+    _controller: '\Drupal\ziquid_redirects\Controller\ZiquidRedirectController::pmaRedirect'
+    _title: 'PhpMyAdmin Redirect'
+  requirements:
+    _permission: 'access content'
 youtube:
   path: '/youtube'
   defaults:
