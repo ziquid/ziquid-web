@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.tile.body
     - field.field.node.tile.field_black_or_white_bg
     - field.field.node.tile.field_tile_
+    - field.field.node.tile.field_tile_type
+    - field.field.node.tile.field_url
     - node.type.tile
   module:
     - text
@@ -32,3 +34,5 @@ content:
 hidden:
   field_black_or_white_bg: true
   field_tile_: true
+  field_tile_type: true
+  field_url: true

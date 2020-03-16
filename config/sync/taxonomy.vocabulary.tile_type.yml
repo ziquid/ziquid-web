@@ -1,0 +1,8 @@
+uuid: b17efefe-e404-45bd-8d0a-acd15ece588b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Tile type'
+vid: tile_type
+description: 'The type of tile'
+weight: 0

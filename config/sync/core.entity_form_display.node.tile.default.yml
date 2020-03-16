@@ -6,10 +6,13 @@ dependencies:
     - field.field.node.tile.body
     - field.field.node.tile.field_black_or_white_bg
     - field.field.node.tile.field_tile_
+    - field.field.node.tile.field_tile_type
+    - field.field.node.tile.field_url
     - image.style.thumbnail
     - node.type.tile
   module:
     - image
+    - link
     - path
     - text
 id: node.tile.default
@@ -46,6 +49,20 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_tile_type:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_url:
+    weight: 26
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   path:
     type: path

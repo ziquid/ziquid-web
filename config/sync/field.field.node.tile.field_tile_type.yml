@@ -1,0 +1,29 @@
+uuid: 5688c694-3b78-43cd-b31e-bf10a69ab1a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tile_type
+    - node.type.tile
+    - taxonomy.vocabulary.tile_type
+id: node.tile.field_tile_type
+field_name: field_tile_type
+entity_type: node
+bundle: tile
+label: 'Tile Type'
+description: 'Which type of tile is this?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tile_type: tile_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
