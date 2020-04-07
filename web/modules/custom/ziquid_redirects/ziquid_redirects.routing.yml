@@ -26,3 +26,10 @@ youtube:
     _title: 'Youtube URL Redirect'
   requirements:
     _permission: 'access content'
+trello:
+  path: '/trello'
+  defaults:
+    _controller: '\Drupal\ziquid_redirects\Controller\ZiquidRedirectController::trelloRedirect'
+    _title: 'Trello Redirect'
+  requirements:
+    _permission: 'access content'
