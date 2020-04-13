@@ -42,4 +42,11 @@ class ZiquidRedirectController extends ControllerBase {
     $response->send();
   }
 
+  /**
+   * Redirect for Trello.
+   */
+  public function trelloRedirect() {
+    $response = new RedirectResponse('https://trello.com/b/iuGEXINc/tasks', 302);
+    $response->send();
+  }
 }
