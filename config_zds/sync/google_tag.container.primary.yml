@@ -1,4 +1,22 @@
+uuid: 61b4f2c0-f227-4f48-8055-3351f40d6cb0
+langcode: en
 status: true
+dependencies: {  }
 id: primary
 label: Primary
 weight: 0
+container_id: null
+data_layer: null
+include_classes: null
+whitelist_classes: null
+blacklist_classes: null
+include_environment: null
+environment_id: null
+environment_token: null
+path_toggle: null
+path_list: null
+role_toggle: null
+role_list: null
+status_toggle: null
+status_list: null
+conditions: {  }
