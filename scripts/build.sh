@@ -1,5 +1,5 @@
 #!/bin/bash
-# build ziquid on OVH3
+# build ziquid on OVH3 or local
 
 set -xe
 git co master
@@ -13,4 +13,4 @@ drush cr
 drush cr -l zds
 drush cc views
 drush cc views -l zds
-$(dirname "$0")/db-dump.sh
+[ $(uname) == Linux ] && $(dirname "$0")/db-dump.sh
