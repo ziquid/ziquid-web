@@ -73,7 +73,6 @@ main {
 .region-footer {
   background-color: #eaedee;
   background-image: linear-gradient(to bottom, transparent, #fafdfe);
-  position: fixed;
 }
 
 #block-zds-theme-address {

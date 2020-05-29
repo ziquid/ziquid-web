@@ -186,6 +186,7 @@ body.page-node-type-webform-page .field--type-text-with-summary ul li {
     bottom: 0px;
     width: calc(100% - 24px);
     overflow-y: hidden;
+    position: fixed;
 }
 
 #block-footer-about-block div.clearfix:after {
