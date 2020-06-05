@@ -4,9 +4,10 @@ features:
   comment_user_verification: 1
   favicon: 1
 logo:
-  use_default: 0
-  path: themes/custom/zds_theme/images/zds-logo-500px.png
+  use_default: 1
 favicon:
   use_default: 0
-  path: themes/custom/zds_theme/images/favicon.png
+  path: themes/custom/ziquid_theme/images/favicon.png
   mimetype: image/png
+custom_css: 0
+disable_google_fonts: 0
