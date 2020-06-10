@@ -1,0 +1,29 @@
+uuid: 0fefc3b0-f67b-4ebe-b448-3cfcefa658d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_brand_name
+    - node.type.web_project
+    - taxonomy.vocabulary.brand_name
+id: node.web_project.field_brand_name
+field_name: field_brand_name
+entity_type: node
+bundle: web_project
+label: 'Brand Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      brand_name: brand_name
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,48 @@
+uuid: e1843662-588b-4425-8754-f95d5f272502
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.web_project.body
+    - field.field.node.web_project.field_brand_name
+    - field.field.node.web_project.field_contracted_through
+    - field.field.node.web_project.field_end_client
+    - field.field.node.web_project.field_headline
+    - field.field.node.web_project.field_keywords
+    - field.field.node.web_project.field_problem_to_solve
+    - field.field.node.web_project.field_site_screenshot
+    - field.field.node.web_project.field_technologies_used
+    - field.field.node.web_project.field_web_site
+    - node.type.web_project
+  module:
+    - text
+    - user
+id: node.web_project.teaser
+targetEntityType: node
+bundle: web_project
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_brand_name: true
+  field_contracted_through: true
+  field_end_client: true
+  field_headline: true
+  field_keywords: true
+  field_problem_to_solve: true
+  field_site_screenshot: true
+  field_technologies_used: true
+  field_web_site: true

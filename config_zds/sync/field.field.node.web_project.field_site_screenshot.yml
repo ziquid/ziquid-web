@@ -1,0 +1,38 @@
+uuid: 6d0600cf-4ce1-44a1-94fe-dffb958756ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site_screenshot
+    - node.type.web_project
+  module:
+    - image
+id: node.web_project.field_site_screenshot
+field_name: field_site_screenshot
+entity_type: node
+bundle: web_project
+label: 'Site Screenshot'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 1280x720
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
