@@ -1,0 +1,8 @@
+uuid: ffc70f37-41d8-4d4b-bbc1-675277c311ed
+langcode: en
+status: true
+dependencies: {  }
+name: 'Technologies Used'
+vid: technologies_used
+description: ''
+weight: 0

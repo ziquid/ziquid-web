@@ -1,0 +1,8 @@
+uuid: 735b825a-ce1a-4b53-84ee-6fa52ba26c4f
+langcode: en
+status: true
+dependencies: {  }
+name: 'End Client'
+vid: end_client
+description: ''
+weight: 0

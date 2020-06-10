@@ -1,0 +1,29 @@
+uuid: 03460a0d-d662-4133-887a-ced0c5d971f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_technologies_used
+    - node.type.web_project
+    - taxonomy.vocabulary.technologies_used
+id: node.web_project.field_technologies_used
+field_name: field_technologies_used
+entity_type: node
+bundle: web_project
+label: 'Technologies Used'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      technologies_used: technologies_used
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

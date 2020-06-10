@@ -1,0 +1,19 @@
+uuid: 3ffe730e-8027-4811-9bc4-633518e62d9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_headline
+    - node.type.web_project
+id: node.web_project.field_headline
+field_name: field_headline
+entity_type: node
+bundle: web_project
+label: Headline
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

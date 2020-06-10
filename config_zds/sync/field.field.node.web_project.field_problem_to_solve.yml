@@ -1,0 +1,21 @@
+uuid: 547dbcdb-7412-44b0-a37e-9163c000abe7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_problem_to_solve
+    - node.type.web_project
+  module:
+    - text
+id: node.web_project.field_problem_to_solve
+field_name: field_problem_to_solve
+entity_type: node
+bundle: web_project
+label: 'Problem to Solve'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,23 @@
+uuid: 88202b78-58c7-41d8-9a91-e84286eb32e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_web_site
+    - node.type.web_project
+  module:
+    - link
+id: node.web_project.field_web_site
+field_name: field_web_site
+entity_type: node
+bundle: web_project
+label: 'Web Site'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link
