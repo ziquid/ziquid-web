@@ -16,10 +16,13 @@ module:
   contact: 0
   contextual: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
   devel: 0
   dynamic_page_cache: 0
   editor: 0
+  entityqueue: 0
+  entityqueue_smartqueue: 0
   field: 0
   field_ui: 0
   file: 0
@@ -30,10 +33,24 @@ module:
   image: 0
   inline_form_errors: 0
   kint: 0
+  layout_builder: 0
+  layout_discovery: 0
+  libraries: 0
   link: 0
+  media: 0
+  media_library: 0
   menu_ui: 0
   menus_attribute: 0
   metatag: 0
+  metatag_app_links: 0
+  metatag_dc: 0
+  metatag_facebook: 0
+  metatag_favicons: 0
+  metatag_mobile: 0
+  metatag_open_graph: 0
+  metatag_pinterest: 0
+  metatag_twitter_cards: 0
+  metatag_views: 0
   node: 0
   options: 0
   page_cache: 0
@@ -43,11 +60,17 @@ module:
   rdf: 0
   redirect: 0
   redirect_domain: 0
+  responsive_image: 0
   search: 0
   shortcut: 0
   simple_background_image_formatter: 0
+  stage_file_proxy: 0
+  swiper: 0
+  swiper_fields: 0
+  swiper_views: 0
   system: 0
   taxonomy: 0
+  telephone: 0
   text: 0
   token: 0
   toolbar: 0
@@ -55,6 +78,11 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  webform: 0
+  webform_access: 0
+  webform_node: 0
+  webform_submission_log: 0
+  webform_ui: 0
   ziquid_redirects: 0
   fontyourface: 1
   menu_link_content: 1
