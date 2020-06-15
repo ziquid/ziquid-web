@@ -7,8 +7,8 @@ git pull
 composer.phar install
 drush updb -y
 drush updb -y -l zds
-drush cim -y sync
-drush cim -y sync -l zds
+drush cim -y sync --partial
+drush cim -y sync -l zds --partial
 drush cr
 drush cr -l zds
 drush cc views
