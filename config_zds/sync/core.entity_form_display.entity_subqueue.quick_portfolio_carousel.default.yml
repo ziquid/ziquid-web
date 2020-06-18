@@ -1,0 +1,29 @@
+uuid: b03d1fa7-72ab-4378-869f-6fc099018731
+langcode: en
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.quick_portfolio_carousel
+  module:
+    - media_library
+id: entity_subqueue.quick_portfolio_carousel.default
+targetEntityType: entity_subqueue
+bundle: quick_portfolio_carousel
+mode: default
+content:
+  items:
+    type: media_library_widget
+    weight: 5
+    settings:
+      media_types: {  }
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

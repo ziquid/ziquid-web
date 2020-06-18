@@ -1,0 +1,26 @@
+uuid: de4a8e44-e901-4fb4-b28d-89b80a86f638
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: quick_portfolio_carousel
+label: 'Quick Portfolio Carousel'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: media
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: revision_created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse: false
