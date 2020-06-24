@@ -2,6 +2,7 @@
 # build ziquid on OVH3 or local
 
 set -xe
+chmod +w web/sites/default
 git co master
 git pull
 composer.phar install
