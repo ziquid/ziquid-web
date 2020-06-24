@@ -1,15 +1,15 @@
-uuid: 606a1d43-d8cc-4d9d-abe8-37a38c49ce29
+uuid: 016f1d66-2aaa-42e6-9c0e-ae78a84bacb4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.brand_name.field_logo
-    - taxonomy.vocabulary.brand_name
+    - field.field.taxonomy_term.contracted_through.field_logo
+    - taxonomy.vocabulary.contracted_through
   module:
     - text
-id: taxonomy_term.brand_name.default
+id: taxonomy_term.contracted_through.default
 targetEntityType: taxonomy_term
-bundle: brand_name
+bundle: contracted_through
 mode: default
 content:
   description:
@@ -20,12 +20,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_logo:
-    type: entity_reference_entity_view
     weight: 1
     label: above
     settings:
-      view_mode: default
-      link: false
+      link: true
     third_party_settings: {  }
+    type: entity_reference_label
     region: content
 hidden: {  }

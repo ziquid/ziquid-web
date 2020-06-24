@@ -1,16 +1,16 @@
-uuid: 4f5268c0-5414-4b66-a3f3-d117f7e5e8f7
+uuid: a1e50bc7-3aa9-4d0b-9c6b-27a4537408d1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.taxonomy_term.field_logo
+    - field.storage.node.field_screenshot
     - media.type.image
-    - taxonomy.vocabulary.brand_name
-id: taxonomy_term.brand_name.field_logo
-field_name: field_logo
-entity_type: taxonomy_term
-bundle: brand_name
-label: Logo
+    - node.type.web_project
+id: node.web_project.field_screenshot
+field_name: field_screenshot
+entity_type: node
+bundle: web_project
+label: Screenshot
 description: ''
 required: true
 translatable: false
@@ -24,6 +24,6 @@ settings:
     sort:
       field: changed
       direction: DESC
-    auto_create: false
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

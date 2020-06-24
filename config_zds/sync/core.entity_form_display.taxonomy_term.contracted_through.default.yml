@@ -1,16 +1,16 @@
-uuid: 380c9f85-7d15-480a-b690-386f093ddbdb
+uuid: cac99429-f3a6-4142-8aa4-e17da350347e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.end_client.field_logo
-    - taxonomy.vocabulary.end_client
+    - field.field.taxonomy_term.contracted_through.field_logo
+    - taxonomy.vocabulary.contracted_through
   module:
     - path
     - text
-id: taxonomy_term.end_client.default
+id: taxonomy_term.contracted_through.default
 targetEntityType: taxonomy_term
-bundle: end_client
+bundle: contracted_through
 mode: default
 content:
   description:

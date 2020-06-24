@@ -6,7 +6,6 @@ dependencies:
     - field.field.taxonomy_term.end_client.field_logo
     - taxonomy.vocabulary.end_client
   module:
-    - image
     - text
 id: taxonomy_term.end_client.default
 targetEntityType: taxonomy_term
@@ -24,9 +23,8 @@ content:
     weight: 1
     label: above
     settings:
-      image_style: ''
-      image_link: ''
+      link: true
     third_party_settings: {  }
-    type: image
+    type: entity_reference_label
     region: content
 hidden: {  }

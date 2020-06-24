@@ -1,19 +1,19 @@
-uuid: 4f5268c0-5414-4b66-a3f3-d117f7e5e8f7
+uuid: bb26e847-a940-40ee-a240-cd0f0fbd33b5
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_logo
     - media.type.image
-    - taxonomy.vocabulary.brand_name
-id: taxonomy_term.brand_name.field_logo
+    - taxonomy.vocabulary.contracted_through
+id: taxonomy_term.contracted_through.field_logo
 field_name: field_logo
 entity_type: taxonomy_term
-bundle: brand_name
+bundle: contracted_through
 label: Logo
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -24,6 +24,6 @@ settings:
     sort:
       field: changed
       direction: DESC
-    auto_create: false
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

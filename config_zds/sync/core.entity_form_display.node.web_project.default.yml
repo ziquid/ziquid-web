@@ -10,14 +10,13 @@ dependencies:
     - field.field.node.web_project.field_headline
     - field.field.node.web_project.field_keywords
     - field.field.node.web_project.field_problem_to_solve
-    - field.field.node.web_project.field_site_screenshot
+    - field.field.node.web_project.field_screenshot
     - field.field.node.web_project.field_technologies_used
     - field.field.node.web_project.field_web_site
-    - image.style.thumbnail
     - node.type.web_project
   module:
-    - image
     - link
+    - media_library
     - path
     - text
 id: node.web_project.default
@@ -80,7 +79,7 @@ content:
     type: string_textfield
     region: content
   field_keywords:
-    weight: 6
+    weight: 7
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -97,16 +96,15 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_site_screenshot:
-    weight: 7
+  field_screenshot:
+    type: media_library_widget
+    weight: 5
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
-    type: image_image
     region: content
   field_technologies_used:
-    weight: 5
+    weight: 6
     settings:
       match_operator: CONTAINS
       match_limit: 10

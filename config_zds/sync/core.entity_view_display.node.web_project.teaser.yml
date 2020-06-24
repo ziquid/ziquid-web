@@ -11,7 +11,7 @@ dependencies:
     - field.field.node.web_project.field_headline
     - field.field.node.web_project.field_keywords
     - field.field.node.web_project.field_problem_to_solve
-    - field.field.node.web_project.field_site_screenshot
+    - field.field.node.web_project.field_screenshot
     - field.field.node.web_project.field_technologies_used
     - field.field.node.web_project.field_web_site
     - node.type.web_project
@@ -43,6 +43,6 @@ hidden:
   field_headline: true
   field_keywords: true
   field_problem_to_solve: true
-  field_site_screenshot: true
+  field_screenshot: true
   field_technologies_used: true
   field_web_site: true
