@@ -44,5 +44,6 @@ hidden:
   field_keywords: true
   field_problem_to_solve: true
   field_screenshot: true
+  field_site_screenshot: true
   field_technologies_used: true
   field_web_site: true

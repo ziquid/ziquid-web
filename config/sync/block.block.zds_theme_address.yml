@@ -1,0 +1,25 @@
+uuid: 2f798ab2-90d8-406d-9464-9b871436bd15
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ee163715-bae4-4ec3-814a-b9382bc135d3'
+  module:
+    - block_content
+  theme:
+    - zds_theme
+id: zds_theme_address
+theme: zds_theme
+region: footer
+weight: -6
+provider: null
+plugin: 'block_content:ee163715-bae4-4ec3-814a-b9382bc135d3'
+settings:
+  id: 'block_content:ee163715-bae4-4ec3-814a-b9382bc135d3'
+  label: Address
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

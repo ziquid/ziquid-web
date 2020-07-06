@@ -1,0 +1,25 @@
+uuid: c157daf3-384d-463a-87f1-76b006a4dd1e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:eef9b715-3208-4647-b197-cebdf152d341'
+  module:
+    - block_content
+  theme:
+    - zds_theme
+id: zds_theme_footer_about_block
+theme: zds_theme
+region: footer
+weight: -5
+provider: null
+plugin: 'block_content:eef9b715-3208-4647-b197-cebdf152d341'
+settings:
+  id: 'block_content:eef9b715-3208-4647-b197-cebdf152d341'
+  label: 'Footer About Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

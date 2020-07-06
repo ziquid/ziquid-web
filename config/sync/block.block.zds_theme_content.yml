@@ -1,0 +1,22 @@
+uuid: 9c8d0b12-bd0b-4c50-885e-c988681c0185
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - zds_theme
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: zds_theme_content
+theme: zds_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

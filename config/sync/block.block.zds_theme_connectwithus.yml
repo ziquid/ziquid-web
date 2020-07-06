@@ -1,0 +1,25 @@
+uuid: 41ba7ccd-d9d5-4ea2-904f-79a1072f2ac8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social
+  module:
+    - system
+  theme:
+    - zds_theme
+id: zds_theme_connectwithus
+theme: zds_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:social'
+settings:
+  id: 'system_menu_block:social'
+  label: 'Connect with us'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
