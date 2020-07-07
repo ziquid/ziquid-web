@@ -1,0 +1,226 @@
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: upwork_jobs
+title: 'Upwork Jobs'
+description: ''
+category: ''
+elements: "url:\n  '#type': url\n  '#title': URL\ntitle:\n  '#type': textfield\n  '#title': Title\nconnects:\n  '#type': number\n  '#title': Connects\n  '#description': 'How many connects required to bid?'\ndescription:\n  '#type': textarea\n  '#title': Description\nhours_a_week:\n  '#type': select\n  '#title': 'Hours a week'\n  '#options':\n    less-30: 'Less than 30'\n    30-more: '30 or more'\nproject_length:\n  '#type': select\n  '#title': 'Project length'\n  '#options':\n    1-3: '1-3 months'\n    3-6: '3-6 months'\n    more-6: 'More than 6 months'\nskill_level:\n  '#type': select\n  '#title': 'Skill level'\n  '#options':\n    beginner: Beginner\n    intermediate: Intermediate\n    expert: Expert\nhourly_:\n  '#type': radios\n  '#title': 'Hourly?'\n  '#options':\n    hourly: Hourly\n    fixed-price: 'Fixed Price'\nprice_or_low_range:\n  '#type': number\n  '#title': 'Price or Low Range'\nhigh_range:\n  '#type': number\n  '#title': 'High Range'\nproject_type:\n  '#type': radios\n  '#title': 'Project Type'\n  '#options':\n    ongoing: Ongoing\n    one-time: 'One-time project'\nquestions_to_answer:\n  '#type': textarea\n  '#title': 'Questions to Answer'\n  '#multiple': true\n  '#description': 'Enter one question per box'\nskills_and_expertise:\n  '#type': entity_autocomplete\n  '#title': 'Skills and Expertise'\n  '#multiple': 0\n  '#tags': true\n  '#target_type': taxonomy_term\n  '#selection_handler': 'default:taxonomy_term'\n  '#selection_settings':\n    target_bundles:\n      skills: skills\n    sort:\n      field: name\n      direction: ASC\n    auto_create: true\n    auto_create_bundle: skills\nbusiness_size:\n  '#type': select\n  '#title': 'Business Size'\n  '#options':\n    very-small-1-9: 'Very Small (1 to 9)'\ntalent_type:\n  '#type': select\n  '#title': 'Talent type'\n  '#options':\n    independent: Independent\nproposals:\n  '#type': select\n  '#title': Proposals\n  '#options':\n    1-4: 1-4\n    5-10: 5-10\nlast_viewed:\n  '#type': select\n  '#title': 'Last Viewed'\n  '#options':\n    1: '1 day ago'\n    2: '2 days ago'\n    3: '3 days ago'\n    4: '4 days ago'\n    5: '5 days ago'\n    6: '6 days ago'\n    7: '7 days ago'\n    8: 'More than a week ago'\ninterviewing:\n  '#type': number\n  '#title': Interviewing\n  '#min': 0\ninvites_sent:\n  '#type': number\n  '#title': 'Invites sent'\n  '#min': 0\nunanswered_invites:\n  '#type': number\n  '#title': 'Unanswered invites'\n  '#min': 0\npayment_verified:\n  '#type': radios\n  '#title': 'Payment Verified'\n  '#options':\n    'yes': 'Yes'\n    'no': 'No'\nrating:\n  '#type': number\n  '#title': Rating\n  '#min': 0\n  '#max': 5\n  '#step': 0.01\nreviews:\n  '#type': number\n  '#title': Reviews\n  '#min': 0\ncity:\n  '#type': textfield\n  '#title': City\ncountry:\n  '#type': textfield\n  '#title': Country\njobs_posted:\n  '#type': number\n  '#title': 'Jobs posted'\n  '#min': 0\nhire_rate_percentage_:\n  '#type': number\n  '#title': 'Hire rate (percentage)'\n  '#min': 0\nopen_jobs:\n  '#type': number\n  '#title': 'Open jobs'\n  '#min': 0\ntotal_spent:\n  '#type': number\n  '#title': 'Total spent'\n  '#description': 'Total spent, in dollars'\n  '#min': 0\nhires:\n  '#type': number\n  '#title': Hires\n  '#min': 0\nactive_contractors:\n  '#type': number\n  '#title': 'Active contractors'\n  '#min': 0\naverage_hourly_rate:\n  '#type': number\n  '#title': 'Average hourly rate'\n  '#min': 0\ntotal_hours_paid_for:\n  '#type': number\n  '#title': 'Total hours paid for'\n  '#min': 0\nmember_since:\n  '#type': date\n  '#title': 'Member since'\n  '#date_date_max': today\n  '#datepicker': true\n  '#datepicker_button': true\n  '#date_date_format': 'M j, Y'"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: upwork
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: source_entity_webform
+  form_submit_once: true
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: true
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: true
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_auto_forward: true
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: authenticated
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+access:
+  create:
+    roles:
+      - administrator
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  email:
+    id: email
+    label: 'Upwork Job Email'
+    handler_id: email
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: joseph@ziquid.com
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
+variants: {  }
+uuid: dac839ec-2f55-41e5-9121-d7209abc0a47
