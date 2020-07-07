@@ -77,8 +77,13 @@ h3, h4 {
 
 #block-ziquid-theme-content a:after {
   content: ' >';
-  padding: 0 40px 0 4px;
+  padding: 0 4px 0 0;
   text-align: left;
+}
+
+#block-ziquid-theme-content .view-header a:after,
+#block-ziquid-theme-content .view-footer a:after {
+  padding: 0 40px 0 4px;
 }
 
 #block-ziquid-theme-content a.noarrow:after {
