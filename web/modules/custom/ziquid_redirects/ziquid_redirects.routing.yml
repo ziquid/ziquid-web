@@ -1,4 +1,4 @@
-ziquid:
+zoom:
   path: '/zoom'
   defaults:
     _controller: '\Drupal\ziquid_redirects\Controller\ZiquidRedirectController::zoomRedirect'
@@ -6,7 +6,7 @@ ziquid:
   requirements:
     _permission: 'access content'
 ios-beta:
-  path: '/uslce/ios-beta'
+  path: '/games/usl/ios-beta'
   defaults:
     _controller: '\Drupal\ziquid_redirects\Controller\ZiquidRedirectController::iosBetaRedirect'
     _title: 'iOS Beta Redirect'
