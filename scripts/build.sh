@@ -2,16 +2,32 @@
 # build ziquid on OVH3 or local
 
 set -xe
-chmod +w web/sites/default
-git co master
-git pull
+
+# Linux/non-apache?  sudo to apache
+[ $(uname) == Linux ] && [ $(whoami) == apache ] && exec sudo su -l apache -s /bin/bash "$0" "$@"
+
+function update() {
+  drush cr -l $1 || :
+  drush updb -y -l $1
+  drush cr -l $1 || :
+  [ $(uname) == Linux ] && drush cim -y sync -l $1 || drush cim -y sync --partial -l $1
+  drush cr -l $1
+  drush cc views -l $1
+}
+
+# main()
+cd $(dirname "$0")/..
+git fetch
+
+if [ "$1" != "" ]; then
+  echo checking out branch $1...
+  git co $1
+  git pull
+fi
+
 composer.phar install
-drush updb -y
-drush updb -y -l zds
-drush cim -y sync --partial
-drush cim -y sync -l zds --partial
-drush cr
-drush cr -l zds
-drush cc views
-drush cc views -l zds
-[ $(uname) == Linux ] && $(dirname "$0")/db-dump.sh
+
+update ziquid
+update zds
+
+scripts/db-dump.sh

@@ -1,7 +1,8 @@
 #!/bin/sh
-# dump a sanitized copy of the db
+# dump a (sanitized?) copy of the db
 
-function do_dump() {
+# shellcheck disable=SC2112
+function do_dump_san() {
 
   echo
   echo Dumping and sanitizing the $1 db...
@@ -39,5 +40,20 @@ function do_dump() {
   set +x
 }
 
-do_dump ziquid
-do_dump zds
+function do_dump() {
+
+  echo
+  echo Dumping the $1 db...
+  echo
+  set -x
+
+  # dump the full production db
+  drush sql-dump -l $1 > $1.sql
+  gzip -f $1.sql
+
+  set +x
+}
+
+[ $(uname) == Linux ] && DUMP=do_dump_san || DUMP=do_dump
+$DUMP ziquid
+$DUMP zds
