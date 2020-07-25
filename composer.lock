@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "caa227ab7b0219d234a3ca374feb768b",
+    "content-hash": "5b42c1065ba27209c02edf550fd3da06",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -7658,6 +7658,28 @@
             ],
             "description": "Composer plugin to improve composer performance for Drupal projects",
             "time": "2019-10-02T17:01:11+00:00"
+        },
+        {
+            "name": "ziquid/trello",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ziquid/trello.git",
+                "reference": "0af71bc87c04ccb512a69ca459271bb2bb9f38b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ziquid/trello/zipball/0af71bc87c04ccb512a69ca459271bb2bb9f38b1",
+                "reference": "0af71bc87c04ccb512a69ca459271bb2bb9f38b1",
+                "shasum": ""
+            },
+            "type": "drupal-module",
+            "description": "Trello integration for Drupal 8, forked from Lullabot/trello.",
+            "homepage": "https://github.com/ziquid/trello",
+            "support": {
+                "source": "https://github.com/ziquid/trello/tree/master"
+            },
+            "time": "2020-07-25T19:09:12+00:00"
         }
     ],
     "packages-dev": [
@@ -11155,6 +11177,7 @@
         "drupal/fontyourface": 20,
         "drupal/libraries": 15,
         "drupal/simple_background_image_formatter": 20,
+        "ziquid/trello": 20,
         "drupal/stage_file_proxy": 5
     },
     "prefer-stable": true,
