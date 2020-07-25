@@ -1,0 +1,22 @@
+uuid: 580ef288-ae56-41a6-a409-711d94b69ea1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_trello_key
+  module:
+    - user
+_core:
+  default_config_hash: SDn9vYEN7gG2DnuA5GtkPq7bNkNHYSJEiNgATATDwc8
+id: user.user.field_trello_key
+field_name: field_trello_key
+entity_type: user
+bundle: user
+label: 'Trello Key'
+description: 'Retrieve your Trello user key from https://trello.com/app-key.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

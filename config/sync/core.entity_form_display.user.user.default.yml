@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_trello_key
+    - field.field.user.user.field_trello_token
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -48,4 +50,6 @@ content:
     third_party_settings: {  }
     weight: -1
     region: content
-hidden: {  }
+hidden:
+  field_trello_key: true
+  field_trello_token: true

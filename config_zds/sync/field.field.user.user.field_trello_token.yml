@@ -1,0 +1,22 @@
+uuid: 3dafc4b6-7f5d-471a-ae53-0fb7e3d9a1dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_trello_token
+  module:
+    - user
+_core:
+  default_config_hash: feqfuzrIf7NEayakbL2BMqq72WFtLcv2yrvjJWAuIag
+id: user.user.field_trello_token
+field_name: field_trello_token
+entity_type: user
+bundle: user
+label: 'Trello Token'
+description: 'Generate your Trello user token at https://trello.com/app-key.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
