@@ -4,7 +4,7 @@
 set -xe
 
 # Linux/non-apache?  sudo to apache
-[ $(uname) == Linux ] && [ $(whoami) == apache ] && exec sudo su -l apache -s /bin/bash "$0" "$@"
+[ $(uname) == Linux ] && [ $(whoami) != apache ] && exec sudo su -l apache -s /bin/bash "$0" "$@"
 
 function update() {
   drush cr -l $1 || :
