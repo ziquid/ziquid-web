@@ -7665,12 +7665,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziquid/trello.git",
-                "reference": "0af71bc87c04ccb512a69ca459271bb2bb9f38b1"
+                "reference": "c0ef64b576bbe3c04a2e2b04680f160351157357"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziquid/trello/zipball/0af71bc87c04ccb512a69ca459271bb2bb9f38b1",
-                "reference": "0af71bc87c04ccb512a69ca459271bb2bb9f38b1",
+                "url": "https://api.github.com/repos/ziquid/trello/zipball/c0ef64b576bbe3c04a2e2b04680f160351157357",
+                "reference": "c0ef64b576bbe3c04a2e2b04680f160351157357",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -7679,7 +7679,7 @@
             "support": {
                 "source": "https://github.com/ziquid/trello/tree/master"
             },
-            "time": "2020-07-25T19:09:12+00:00"
+            "time": "2020-07-25T19:35:29+00:00"
         }
     ],
     "packages-dev": [
@@ -8332,16 +8332,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "1.10.9",
+            "version": "1.10.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "83c3250093d5491600a822e176b107a945baf95a"
+                "reference": "32966a3b1d48bc01472a8321fd6472b44fad033a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/83c3250093d5491600a822e176b107a945baf95a",
-                "reference": "83c3250093d5491600a822e176b107a945baf95a",
+                "url": "https://api.github.com/repos/composer/composer/zipball/32966a3b1d48bc01472a8321fd6472b44fad033a",
+                "reference": "32966a3b1d48bc01472a8321fd6472b44fad033a",
                 "shasum": ""
             },
             "require": {
@@ -8422,7 +8422,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-16T10:57:00+00:00"
+            "time": "2020-08-03T09:35:19+00:00"
         },
         {
             "name": "composer/spdx-licenses",
@@ -8982,6 +8982,9 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
                     "version": "8.x-1.0",
                     "datestamp": "1580492032",
