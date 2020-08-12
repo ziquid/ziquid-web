@@ -1,0 +1,8 @@
+uuid: 2eb1f5ff-ea06-4e4c-8078-631083b75939
+langcode: en
+status: true
+dependencies: {  }
+name: 'Intranet Links'
+vid: intranet_links
+description: 'Hierarchical links for our intranet'
+weight: 0
