@@ -1,0 +1,12 @@
+uuid: 01d240af-f773-4b54-9937-a301c74741ee
+langcode: en
+status: true
+dependencies: {  }
+id: employee
+label: Employee
+weight: -8
+is_admin: null
+permissions:
+  - 'delete own intranet_link content'
+  - 'edit any intranet_link content'
+  - 'edit own intranet_link content'

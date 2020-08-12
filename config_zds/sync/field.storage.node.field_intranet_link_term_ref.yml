@@ -1,0 +1,20 @@
+uuid: c9a90632-9d59-4f42-bfec-11af0e909efb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_intranet_link_term_ref
+field_name: field_intranet_link_term_ref
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

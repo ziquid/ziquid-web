@@ -1,0 +1,17 @@
+uuid: 9cc63938-ce3a-4ee9-a19a-e961fe8a0070
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Intranet Link'
+type: intranet_link
+description: 'A single link for the Intranet Links page'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

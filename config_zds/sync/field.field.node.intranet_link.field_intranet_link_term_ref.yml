@@ -1,0 +1,29 @@
+uuid: 64f7ab4c-f135-47de-8ee6-5206f33c6670
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intranet_link_term_ref
+    - node.type.intranet_link
+    - taxonomy.vocabulary.intranet_links
+id: node.intranet_link.field_intranet_link_term_ref
+field_name: field_intranet_link_term_ref
+entity_type: node
+bundle: intranet_link
+label: Term
+description: 'Where in the Intranet Link Hierarchy does this link belong?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      intranet_links: intranet_links
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

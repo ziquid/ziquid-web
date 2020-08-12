@@ -1,0 +1,8 @@
+uuid: c5fc2d2d-bc46-4743-9440-4dcf8ffe420c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Intranet Link Tags'
+vid: intranet_link_tags
+description: 'Tags for Intranet Links'
+weight: 0

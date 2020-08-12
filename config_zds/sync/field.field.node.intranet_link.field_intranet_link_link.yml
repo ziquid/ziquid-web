@@ -1,0 +1,23 @@
+uuid: 4cff9d30-39a7-43c4-8fcb-d58708886f77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intranet_link_link
+    - node.type.intranet_link
+  module:
+    - link
+id: node.intranet_link.field_intranet_link_link
+field_name: field_intranet_link_link
+entity_type: node
+bundle: intranet_link
+label: 'URL of Link'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link
