@@ -1,0 +1,14 @@
+uuid: e73f437f-d0b2-49aa-ac51-8afc163d952a
+langcode: en
+status: true
+dependencies: {  }
+name: client_logo
+label: 'Client Logo 80x80'
+effects:
+  34c1d2f0-211e-4353-b21c-f61a083acecf:
+    uuid: 34c1d2f0-211e-4353-b21c-f61a083acecf
+    id: image_resize
+    weight: 1
+    data:
+      width: 80
+      height: 80
