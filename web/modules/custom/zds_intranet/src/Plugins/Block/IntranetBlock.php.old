@@ -1,0 +1,84 @@
+<?php
+
+namespace Drupal\zds_intranet\Plugin\Block;
+
+use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Block\BlockPluginInterface;
+use Drupal\Core\Cache\Cache;
+use Drupal\Core\Url;
+
+/**
+ * Defines a block for the Internet.
+ *
+ * @Block(
+ *   id = "zds_intranet",
+ *   admin_label = @Translation("ZDS Intranet"),
+ *   category = @Translation("Block"),
+ * )
+ */
+class IntranetBlock extends BlockBase implements BlockPluginInterface {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function build() {
+    return $this->linkTree();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function defaultConfiguration() {
+    return ['label_display' => FALSE];
+  }
+
+  /**
+   * Generate the link tree.
+   *
+   * @return array
+   *   Render array containing the link.
+   */
+  protected function linkTree() {
+    $build = [];
+    $webform_path = \Drupal::request()->getRequestUri();
+
+    switch ($webform_path) {
+
+      case '/site-search':
+        $build['returnToSearch'] = [
+          '#prefix' => '<nav class="return-link" role="navigation" aria-labelledby="ecp-return-link">
+            <h2 id="ecp-return-link" class="visually-hidden">Return Link</h2>',
+          [
+            '#type' => 'link',
+            '#title' => $this->t('Project Search'),
+            '#url' => Url::fromRoute('entity.webform.canonical', ['webform' => 'site_installation_inquiry']),
+          ],
+          '#suffix' => '</nav>',
+        ];
+        break;
+
+      case '/search-order':
+        $build['returnToSearch'] = [
+          '#prefix' => '<nav class="return-link" role="navigation" aria-labelledby="ecp-return-link">
+            <h2 id="ecp-return-link" class="visually-hidden">Return Link</h2>',
+          [
+            '#type' => 'link',
+            '#title' => $this->t('Order Search'),
+            '#url' => Url::fromRoute('entity.webform.canonical', ['webform' => 'search_order']),
+          ],
+          '#suffix' => '</nav>',
+        ];
+        break;
+
+    }
+
+    return $build;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getMachineNameSuggestion() {
+    return 'zds_intranet';
+  }
+}

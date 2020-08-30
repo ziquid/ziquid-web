@@ -1,0 +1,7 @@
+zds_intranet.intranet_home:
+  path: '/intranet'
+  defaults:
+    _controller: '\Drupal\zds_intranet\Controller\IntranetController::intranetHome'
+    _title: 'ZDS Intranet'
+  requirements:
+    _permission: 'access intranet'

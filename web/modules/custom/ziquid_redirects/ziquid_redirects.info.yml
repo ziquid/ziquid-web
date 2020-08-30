@@ -3,3 +3,4 @@ description: Ziquid custom URL redirects.
 type: module
 version: 1.0
 core: 8.x
+Package: ZDS

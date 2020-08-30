@@ -1,0 +1,4 @@
+services:
+  zds_intranet.intranet:
+    class: Drupal\zds_intranet\Controller\IntranetController
+    arguments: ['taxonomy_tree.taxonomy_term_tree']

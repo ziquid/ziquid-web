@@ -1,0 +1,30 @@
+.taxo-tree-wrapper {
+  /*border: 2px solid grey;*/
+  padding: 2px;
+  margin: 3px;
+  width: 100%;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+}
+
+.taxo-tree-item {
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 2px;
+}
+
+.taxo-tree-item-title {
+  background-color: lightgrey;
+  padding: 3px;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  border-bottom: 2px solid #080808;
+  box-sizing: border-box;
+}
+
+.taxo-tree-item-node {
+  margin: 2px;
+}
