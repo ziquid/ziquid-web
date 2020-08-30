@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2abdbaedb80c799b0ad7e93740162111",
+    "content-hash": "fa963018ae9acd6c350099ce935842f8",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2710,7 +2710,9 @@
                         "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
-                "patches_applied": []
+                "patches_applied": {
+                    "Allow domainless fonts to be loaded": "https://www.drupal.org/files/issues/2019-11-06/disable-domain-check-8x-3092865-2.patch"
+                }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
@@ -7804,6 +7806,28 @@
             "time": "2019-10-02T17:01:11+00:00"
         },
         {
+            "name": "ziquid/taxonomy_tree",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ziquid/taxonomy_tree.git",
+                "reference": "5924e1230b8b9d7f4c00766dbc475e7bf47592a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ziquid/taxonomy_tree/zipball/5924e1230b8b9d7f4c00766dbc475e7bf47592a4",
+                "reference": "5924e1230b8b9d7f4c00766dbc475e7bf47592a4",
+                "shasum": ""
+            },
+            "type": "drupal-module",
+            "description": "Load an entire vocabulary as an array tree.",
+            "homepage": "https://github.com/ziquid/taxonomy_tree",
+            "support": {
+                "source": "https://github.com/ziquid/taxonomy_tree/tree/master"
+            },
+            "time": "2020-08-30T01:56:08+00:00"
+        },
+        {
             "name": "ziquid/trello",
             "version": "dev-master",
             "source": {
@@ -9126,9 +9150,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.0",
                     "datestamp": "1580492032",
@@ -11325,12 +11346,13 @@
         "drupal/libraries": 15,
         "drupal/simple_background_image_formatter": 20,
         "ziquid/trello": 20,
+        "ziquid/taxonomy_tree": 20,
         "drupal/stage_file_proxy": 5
     },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.0.8"
+        "php": ">=7.1"
     },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
