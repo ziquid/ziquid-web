@@ -2,43 +2,36 @@
 
 namespace Drupal\zds_intranet\Controller;
 
-use Drupal\Component\Render\FormattableMarkup;
-use Drupal\Component\Serialization\Json;
-use Drupal\Core\Form\FormInterface;
-use Drupal\Core\Messenger\MessengerInterface;
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\Core\Form\FormBase;
-use Drupal\Core\Render\Markup;
-use Drupal\Core\Routing\TrustedRedirectResponse;
-use Drupal\Core\Link;
-use Drupal\Core\Url;
+use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\node\NodeInterface;
 use Drupal\taxonomy_tree\TaxonomyTermTree;
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\RequestOptions;
-use Psr\Http\Message\ResponseInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
  * ZDS Intranet controller.
  */
 class IntranetController extends ControllerBase {
 
-  /**
-   * @var \Drupal\taxonomy_tree\TaxonomyTermTree
-   */
+  /** @var \Drupal\taxonomy_tree\TaxonomyTermTree */
   protected $termTree;
+
+  /**
+   * @var \Drupal\Core\Entity\EntityTypeManager
+   */
+  protected $entityTypeManager;
 
   /**
    * Class constructor.
    *
    * @param \Drupal\taxonomy_tree\TaxonomyTermTree $termTree
    *   The termTree object.
+   * @param \Drupal\Core\Entity\EntityTypeManager $entityTypeManager
+   *   The entity type manager.
    */
-  public function __construct(TaxonomyTermTree $termTree) {
+  public function __construct(TaxonomyTermTree $termTree, EntityTypeManager $entityTypeManager) {
     $this->termTree = $termTree;
+    $this->entityTypeManager = $entityTypeManager;
   }
 
   /**
@@ -46,14 +39,18 @@ class IntranetController extends ControllerBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('taxonomy_tree.taxonomy_term_tree')
+      $container->get('taxonomy_tree.taxonomy_term_tree'),
+      $container->get('entity_type.manager')
     );
   }
 
   /**
    * Intranet home page.
    *
-   * @return array|string
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+   *
+   * @return array
    *   The page.
    */
   public function intranetHome() {
@@ -66,7 +63,7 @@ class IntranetController extends ControllerBase {
       ],
     ];
     $this->buildTree($tree, $build, 1);
-    ksm($build, 'build');
+    kint_lite($build, 'build');
     return $build;
   }
 
@@ -127,7 +124,7 @@ class IntranetController extends ControllerBase {
             }
             $build['wrapper'][$key][$tagKey][$nodeKey] = $this->nodeBuild($node, $tag);
           }
-        else {
+          else {
             $build['wrapper'][$key][$nodeKey] = $this->nodeBuild($node);
           }
         }
@@ -144,15 +141,15 @@ class IntranetController extends ControllerBase {
   /**
    * Build a render array from a node.
    *
-   * @param NodeInterface $node
+   * @param \Drupal\node\NodeInterface $node
    *   The node to build for.
    * @param string $tag
-   *   The tag to use in building the arrau.
+   *   The tag to use in building the array.
    *
    * @return array
    *   The render array.
    */
-  protected function nodeBuild(NodeInterface $node, string $tag = ''): array {
+  protected function nodeBuild(NodeInterface $node, string $tag = '') {
     $title = $node->get('title')->value;
     $desc = $node->get('body')->value;
     $array = [
