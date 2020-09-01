@@ -12,6 +12,7 @@ use Drupal\Core\Render\Markup;
 use Drupal\Core\Routing\TrustedRedirectResponse;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
+use Drupal\node\NodeInterface;
 use Drupal\taxonomy_tree\TaxonomyTermTree;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
@@ -56,7 +57,6 @@ class IntranetController extends ControllerBase {
    *   The page.
    */
   public function intranetHome() {
-
     $tree = $this->termTree->load('intranet_links');
     $build = [
       '#attached' => [
@@ -66,65 +66,32 @@ class IntranetController extends ControllerBase {
       ],
     ];
     $this->buildTree($tree, $build, 1);
-
-ksm($tree, 'intranet link terms');
-
-//    if (hasCapability('viewSites')) {
-//      $build['viewSites'] = [
-//        '#prefix' => '<div class="site-home-icon">',
-//        'icon' => [
-//          '#type' => 'link',
-//          '#url' => Url::fromRoute('entity.webform.canonical', ['webform' => 'site_installation_inquiry']),
-//          '#title' => Markup::create('<img src="' . $image_path . 'search.png' . '">'),
-//          '#attributes' => [
-//            'class' => ['site-home-icon'],
-//          ],
-//        ],
-//        'link' => [
-//          '#type' => 'link',
-//          '#title' => $this->t('Search projects'),
-//          '#url' => Url::fromRoute('entity.webform.canonical', ['webform' => 'site_installation_inquiry']),
-//          '#attributes' => [
-//            'class' => ['site-home-text'],
-//          ],
-//        ],
-//        '#suffix' => '</div>',
-//      ];
-//    }
-//
-//    if (hasCapability('viewOrders')) {
-//      $build['viewOrders'] = [
-//        '#prefix' => '<div class="site-home-icon">',
-//        'icon' => [
-//          '#type' => 'link',
-//          '#url' => Url::fromRoute('entity.webform.canonical', ['webform' => 'search_order']),
-//          '#title' => Markup::create('<img src="' . $image_path . 'search.png">'),
-//          '#attributes' => [
-//            'class' => ['site-home-icon'],
-//          ],
-//        ],
-//        'link' => [
-//          '#type' => 'link',
-//          '#title' => $this->t('Search orders'),
-//          '#url' => Url::fromRoute('entity.webform.canonical', ['webform' => 'search_order']),
-//          '#attributes' => [
-//            'class' => ['site-home-text'],
-//          ],
-//        ],
-//        '#suffix' => '</div>',
-//      ];
-//    }
-
-    ksm($build, 'build render array');
+    ksm($build, 'build');
     return $build;
   }
 
-  protected function buildTree($tree, &$build, $level) {
+  /**
+   * Build the tree of terms/nodes.
+   *
+   * @param object[] $tree
+   *   The tree objects.
+   * @param array $build
+   *   The build render array.
+   * @param int $level
+   *   The level of the tree to build.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+   */
+  protected function buildTree(array $tree, array &$build, $level) {
+
+    // Each level gets a wrapper div.
     $build['wrapper'] = [
       '#prefix' => '<div class="taxo-tree-wrapper tree-wrapper-level-' . $level . '">',
       '#suffix' => '</div>',
     ];
 
+    // And spans for each term at that level.
     foreach ($tree as $key => $item) {
       $build['wrapper'][$key] = [
         '#prefix' => '<span class="taxo-tree-item tree-level-' . $level . '">',
@@ -132,26 +99,37 @@ ksm($tree, 'intranet link terms');
         '#suffix' => '</span>',
       ];
 
+      // Any nodes tagged with this term?
       $nids = \Drupal::entityTypeManager()->getStorage('node')->getQuery()
         ->latestRevision()
         ->condition('field_intranet_link_term_ref', $item->tid)
         ->execute();
       $nodes = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($nids);
 
+      // Render each node as a link below its term.
       if (count($nodes)) {
         foreach ($nodes as $node) {
-          $build['wrapper'][$key]['node_' . $node->get('nid')->value] = [
-            '#prefix' => '<div class="taxo-tree-item-node">',
-            'link' => [
-              '#type' => 'link',
-              '#title' => $node->get('title')->value,
-              '#url' => $node->get('field_intranet_link_link')->first()->getUrl(),
-              '#attributes' => [
-                'target' => '_blank',
-              ],
-            ],
-            '#suffix' => '</div>',
-          ];
+          $nodeKey = 'node_' . $node->get('nid')->value;
+
+          // Tagged?  Grab the tag tid and name.
+          $tid = $node->get('field_intranet_link_tag_ref')->first()->target_id;
+          if ($tid) {
+            $tag = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
+              ->load($tid)->get('name')->value;
+            $tagKey = 'tid_' . $tid;
+
+            if (!array_key_exists($tagKey, $build['wrapper'][$key])) {
+              $build['wrapper'][$key][$tagKey] = [
+                '#prefix' => '<div class="taxo-tree-item-tag-wrapper tid-' . $tid . '">',
+                '#markup' => '<h3 class="taxo-tree-item-tag">' . $tag . '</h3>',
+                '#suffix' => '</div>',
+              ];
+            }
+            $build['wrapper'][$key][$tagKey][$nodeKey] = $this->nodeBuild($node, $tag);
+          }
+        else {
+            $build['wrapper'][$key][$nodeKey] = $this->nodeBuild($node);
+          }
         }
       }
 
@@ -161,6 +139,44 @@ ksm($tree, 'intranet link terms');
       }
     }
 
+  }
+
+  /**
+   * Build a render array from a node.
+   *
+   * @param NodeInterface $node
+   *   The node to build for.
+   * @param string $tag
+   *   The tag to use in building the arrau.
+   *
+   * @return array
+   *   The render array.
+   */
+  protected function nodeBuild(NodeInterface $node, string $tag = ''): array {
+    $title = $node->get('title')->value;
+    $desc = $node->get('body')->value;
+    $array = [
+      '#prefix' => '<div class="taxo-tree-item-node">',
+      'link' => [
+        '#type' => 'link',
+        '#title' => $title,
+        '#url' => $node->get('field_intranet_link_link')->first()->getUrl(),
+        '#attributes' => [
+          'target' => '_blank',
+        ],
+      ],
+      '#suffix' => '</div>',
+    ];
+
+    if (strlen($desc)) {
+      $array['description'] = [
+        '#prefix' => '<div class="description">',
+        '#markup' => $desc,
+        '#suffix' => '</div>',
+      ];
+    }
+
+    return $array;
   }
 
 }
