@@ -25,9 +25,9 @@
         "drupal/admin_toolbar": "^2.0",
         "drupal/adminimal_admin_toolbar": "^1.9",
         "drupal/adminimal_theme": "^1.5",
-        "drupal/console": "^1.0.2",
         "drupal/content_access": "^1.0",
         "drupal/core-recommended": "^8.8.5",
+        "drupal/entity_clone": "^1.0@beta",
         "drupal/entityqueue": "1.x-dev",
         "drupal/fontyourface": "3.x-dev",
         "drupal/google_analytics": "^3.0",
@@ -48,8 +48,8 @@
         "webmozart/path-util": "^2.3",
         "wikimedia/composer-merge-plugin": "^1.4",
         "zaporylie/composer-drupal-optimizations": "^1.0",
-        "ziquid/trello": "dev-master",
-        "ziquid/taxonomy_tree": "dev-master"
+        "ziquid/taxonomy_tree": "dev-master",
+        "ziquid/trello": "dev-master"
     },
     "require-dev": {
         "behat/mink-extension": "v2.2",
@@ -57,10 +57,12 @@
         "bex/behat-screenshot": "^1.2",
         "dmore/chrome-mink-driver": "^2.7",
         "drupal/coder": "^8.2",
+        "drupal/console": "^1.0.2",
         "drupal/core-dev": "^8.7",
-        "drupal/devel": "^2.1",
+        "drupal/devel": "^4.0",
         "drupal/drupal-extension": "^4.0",
         "drupal/stage_file_proxy": "^1.0@RC",
+        "kint-php/kint": "^3.3",
         "squizlabs/php_codesniffer": "^3.5",
         "weitzman/drupal-test-traits": "^1.3"
     },

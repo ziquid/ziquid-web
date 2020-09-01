@@ -22,6 +22,7 @@ module:
   devel: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_clone: 0
   entityqueue: 0
   entityqueue_smartqueue: 0
   field: 0
@@ -34,7 +35,6 @@ module:
   image: 0
   imce: 0
   inline_form_errors: 0
-  kint: 0
   layout_builder: 0
   layout_discovery: 0
   libraries: 0

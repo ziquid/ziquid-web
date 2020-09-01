@@ -13,10 +13,16 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class IntranetController extends ControllerBase {
 
-  /** @var \Drupal\taxonomy_tree\TaxonomyTermTree */
+  /**
+   * Taxonomy Term Tree.
+   *
+   * @var \Drupal\taxonomy_tree\TaxonomyTermTree
+   */
   protected $termTree;
 
   /**
+   * Entity Type Manager.
+   *
    * @var \Drupal\Core\Entity\EntityTypeManager
    */
   protected $entityTypeManager;
@@ -63,7 +69,7 @@ class IntranetController extends ControllerBase {
       ],
     ];
     $this->buildTree($tree, $build, 1);
-    kint_lite($build, 'build');
+    ksm($build, 'build');
     return $build;
   }
 
