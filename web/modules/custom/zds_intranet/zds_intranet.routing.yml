@@ -1,7 +1,8 @@
 zds_intranet.intranet_home:
-  path: '/intranet'
+  path: '/intranet/{tid}'
   defaults:
     _controller: '\Drupal\zds_intranet\Controller\IntranetController::intranetHome'
-    _title: 'ZDS Intranet'
+    _title_callback: '\Drupal\zds_intranet\Controller\IntranetController::intranetHomeTitle'
+    tid: 0
   requirements:
     _permission: 'access intranet'

@@ -2,8 +2,11 @@
 
 namespace Drupal\zds_intranet\Controller;
 
+use Drupal\Component\Render\FormattableMarkup;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityTypeManager;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
 use Drupal\node\NodeInterface;
 use Drupal\taxonomy_tree\TaxonomyTermTree;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -51,7 +54,32 @@ class IntranetController extends ControllerBase {
   }
 
   /**
+   * Intranet home page title.
+   *
+   * @param int $tid
+   *   The term ID from which to start, or 0 for all terms.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+   *
+   * @return string
+   *   The title.
+   */
+  public function intranetHomeTitle(int $tid) {
+    $title = Link::createFromRoute('ZDS Intranet', 'zds_intranet.intranet_home', [])->toString();
+    if ($tid > 0) {
+      $term = $this->entityTypeManager->getStorage('taxonomy_term')
+        ->load($tid)->get('name')->value;
+      $title .= ' :: ' . $term;
+    }
+    return new FormattableMarkup($title, []);
+  }
+
+  /**
    * Intranet home page.
+   *
+   * @param int $tid
+   *   The term ID from which to start, or 0 for all terms.
    *
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
@@ -59,8 +87,8 @@ class IntranetController extends ControllerBase {
    * @return array
    *   The page.
    */
-  public function intranetHome() {
-    $tree = $this->termTree->load('intranet_links');
+  public function intranetHome(int $tid) {
+    $tree = $this->termTree->load('intranet_links', $tid);
     $build = [
       '#attached' => [
         'library' => [
@@ -69,7 +97,6 @@ class IntranetController extends ControllerBase {
       ],
     ];
     $this->buildTree($tree, $build, 1);
-    ksm($build, 'build');
     return $build;
   }
 
@@ -98,16 +125,23 @@ class IntranetController extends ControllerBase {
     foreach ($tree as $key => $item) {
       $build['wrapper'][$key] = [
         '#prefix' => '<span class="taxo-tree-item tree-level-' . $level . '">',
-        '#markup' => '<span class="taxo-tree-item-title">' . $item->name . '</span>',
+        'link' => [
+          '#type' => 'link',
+          '#title' => $item->name,
+          '#url' => Url::fromRoute('zds_intranet.intranet_home', ['tid' => $item->tid]),
+          '#attributes' => [
+            'class' => ['taxo-tree-item-title'],
+          ],
+        ],
         '#suffix' => '</span>',
       ];
 
       // Any nodes tagged with this term?
-      $nids = \Drupal::entityTypeManager()->getStorage('node')->getQuery()
+      $nids = $this->entityTypeManager->getStorage('node')->getQuery()
         ->latestRevision()
         ->condition('field_intranet_link_term_ref', $item->tid)
         ->execute();
-      $nodes = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($nids);
+      $nodes = $this->entityTypeManager->getStorage('node')->loadMultiple($nids);
 
       // Render each node as a link below its term.
       if (count($nodes)) {
@@ -117,7 +151,7 @@ class IntranetController extends ControllerBase {
           // Tagged?  Grab the tag tid and name.
           $tid = $node->get('field_intranet_link_tag_ref')->first()->target_id;
           if ($tid) {
-            $tag = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
+            $tag = $this->entityTypeManager->getStorage('taxonomy_term')
               ->load($tid)->get('name')->value;
             $tagKey = 'tid_' . $tid;
 
