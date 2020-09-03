@@ -202,6 +202,15 @@ class IntranetController extends ControllerBase {
           'target' => '_blank',
         ],
       ],
+      'editLink' => [
+        '#type' => 'link',
+        '#title' => '(edit)',
+        '#url' => $node->toUrl('edit-form'),
+        '#attributes' => [
+          'target' => '_blank',
+          'class' => 'taxo-tree-item-node-edit-link',
+        ],
+      ],
       '#suffix' => '</div>',
     ];
 
