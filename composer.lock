@@ -7162,12 +7162,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziquid/taxonomy_tree.git",
-                "reference": "1d29ad82080f015b6ec617c6f1aa698cc597c9bd"
+                "reference": "9f262b1247f3554f03b187eab0d6c519c5100a87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziquid/taxonomy_tree/zipball/1d29ad82080f015b6ec617c6f1aa698cc597c9bd",
-                "reference": "1d29ad82080f015b6ec617c6f1aa698cc597c9bd",
+                "url": "https://api.github.com/repos/ziquid/taxonomy_tree/zipball/9f262b1247f3554f03b187eab0d6c519c5100a87",
+                "reference": "9f262b1247f3554f03b187eab0d6c519c5100a87",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -7176,7 +7176,7 @@
             "support": {
                 "source": "https://github.com/ziquid/taxonomy_tree/tree/master"
             },
-            "time": "2020-08-30T05:45:00+00:00"
+            "time": "2020-09-02T11:18:16+00:00"
         },
         {
             "name": "ziquid/trello",
