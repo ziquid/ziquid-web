@@ -124,7 +124,6 @@ class IntranetController extends ControllerBase {
 
     // And spans for each term at that level.
     foreach ($tree as $key => $item) {
-      ksm($item, 'item');
       $desc = $item->description__value;
       $term = $this->entityTypeManager->getStorage('taxonomy_term')->load($item->tid);
       $build['wrapper'][$key] = [
