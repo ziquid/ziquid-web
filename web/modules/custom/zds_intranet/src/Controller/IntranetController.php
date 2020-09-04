@@ -158,7 +158,7 @@ class IntranetController extends ControllerBase {
             if (!array_key_exists($tagKey, $build['wrapper'][$key])) {
               $build['wrapper'][$key][$tagKey] = [
                 '#prefix' => '<div class="taxo-tree-item-tag-wrapper tid-' . $tid . '">',
-                '#markup' => '<h3 class="taxo-tree-item-tag">' . $tag . '</h3>',
+                '#markup' => '<div class="taxo-tree-item-tag">' . $tag . '</div>',
                 '#suffix' => '</div>',
               ];
             }
