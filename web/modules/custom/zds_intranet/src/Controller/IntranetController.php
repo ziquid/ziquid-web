@@ -123,6 +123,7 @@ class IntranetController extends ControllerBase {
 
     // And spans for each term at that level.
     foreach ($tree as $key => $item) {
+      $desc = $item->description__value;
       $build['wrapper'][$key] = [
         '#prefix' => '<span class="taxo-tree-item tree-level-' . $level . '">',
         'link' => [
@@ -135,6 +136,13 @@ class IntranetController extends ControllerBase {
         ],
         '#suffix' => '</span>',
       ];
+      if (strlen($desc)) {
+        $build['wrapper'][$key]['description'] = [
+          '#prefix' => '<div class="description">',
+          '#markup' => $desc,
+          '#suffix' => '</div>',
+        ];
+      }
 
       // Any nodes tagged with this term?
       $nids = $this->entityTypeManager->getStorage('node')->getQuery()
