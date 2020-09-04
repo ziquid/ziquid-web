@@ -157,7 +157,14 @@ class IntranetController extends ControllerBase {
           $nodeKey = 'node_' . $node->get('nid')->value;
 
           // Tagged?  Grab the tag tid and name.
-          $tid = $node->get('field_intranet_link_tag_ref')->first()->target_id;
+          $tidRef = $node->get('field_intranet_link_tag_ref');
+          $tid = NULL;
+          if ($tidRef) {
+            $tidFirst = $tidRef->first();
+            if ($tidFirst) {
+              $tid = $tidFirst->target_id;
+            }
+          }
           if ($tid) {
             $tag = $this->entityTypeManager->getStorage('taxonomy_term')
               ->load($tid)->get('name')->value;
@@ -213,9 +220,12 @@ class IntranetController extends ControllerBase {
       'editLink' => [
         '#type' => 'link',
         '#title' => '(edit)',
-        '#url' => $node->toUrl('edit-form'),
+        '#url' => $node->toUrl('edit-form', [
+          'query' => [
+            'destination' => $this->currentUrlWithParams(),
+          ],
+        ]),
         '#attributes' => [
-          'target' => '_blank',
           'class' => 'taxo-tree-item-node-edit-link',
         ],
       ],
@@ -231,6 +241,25 @@ class IntranetController extends ControllerBase {
     }
 
     return $array;
+  }
+
+  /**
+   * Returns the current URL with its current parameters.
+   *
+   * @see https://agileadam.com/2019/08/rendering-a-drupal-8-link-with-anchor-and-destination/
+   *
+   * @return string
+   *   URL as a string.
+   */
+  public function currentUrlWithParams() {
+    $current_url_options = [
+      'query' => \Drupal::request()->query->all(),
+    ];
+
+    $current_url = Url::fromRoute(
+      '<current>', [], $current_url_options)->toString();
+
+    return $current_url;
   }
 
 }
