@@ -8,6 +8,7 @@ use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
 use Drupal\node\NodeInterface;
+use Drupal\taxonomy\TermInterface;
 use Drupal\taxonomy_tree\TaxonomyTermTree;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -123,16 +124,31 @@ class IntranetController extends ControllerBase {
 
     // And spans for each term at that level.
     foreach ($tree as $key => $item) {
+      ksm($item, 'item');
       $desc = $item->description__value;
+      $term = $this->entityTypeManager->getStorage('taxonomy_term')->load($item->tid);
       $build['wrapper'][$key] = [
         '#prefix' => '<span class="taxo-tree-item tree-level-' . $level . '">',
-        'link' => [
-          '#type' => 'link',
-          '#title' => $item->name,
-          '#url' => Url::fromRoute('zds_intranet.intranet_home', ['tid' => $item->tid]),
-          '#attributes' => [
-            'class' => ['taxo-tree-item-title'],
+        'title' => [
+          '#prefix' => '<span class="taxo-tree-item-title">',
+          'link' => [
+            '#type' => 'link',
+            '#title' => $item->name,
+            '#url' => Url::fromRoute('zds_intranet.intranet_home', ['tid' => $item->tid]),
           ],
+          'editLink' => [
+            '#type' => 'link',
+            '#title' => '(edit)',
+            '#url' => $term->toUrl('edit-form', [
+              'query' => [
+                'destination' => $this->currentUrlWithParams(),
+              ],
+            ]),
+            '#attributes' => [
+              'class' => 'taxo-tree-item-node-edit-link',
+            ],
+          ],
+          '#suffix' => '</span>',
         ],
         '#suffix' => '</span>',
       ];
