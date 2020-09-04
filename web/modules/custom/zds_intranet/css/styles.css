@@ -12,6 +12,8 @@
   flex-grow: 1;
   box-sizing: border-box;
   padding: 2px;
+  border: 1px solid lightgrey;
+  border-radius: 0 0 10px 10px;
 }
 
 .taxo-tree-item-title {
