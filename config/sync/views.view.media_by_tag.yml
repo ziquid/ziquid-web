@@ -243,8 +243,8 @@ display:
             value: ''
             title_enable: false
             title: All
-          title_enable: false
-          title: ''
+          title_enable: true
+          title: 'Media: {{ arguments.name }}'
           default_argument_type: fixed
           default_argument_options:
             argument: ''
@@ -266,16 +266,16 @@ display:
             bundles:
               free_tags: free_tags
             operation: view
-            transform: true
             access: false
+            transform: false
           glossary: false
           limit: 0
           case: none
           path_case: none
-          transform_dash: true
+          transform_dash: false
           break_phrase: false
           add_table: false
-          require_value: true
+          require_value: false
           entity_type: taxonomy_term
           entity_field: name
           plugin_id: string
