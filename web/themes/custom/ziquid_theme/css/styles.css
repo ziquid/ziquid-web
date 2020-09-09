@@ -191,6 +191,14 @@ main {
   padding-bottom: 366px;
 }
 
+.views-view-table .field__item {
+  margin: 8px 24px 8px 16px;
+}
+
+.views-view-table .views-field-name {
+  margin: 0 0 0 16px;
+}
+
 .region-footer {
   background-color: #b8b8bd;
   padding: 36px 12px 16px;
