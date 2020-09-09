@@ -1,0 +1,8 @@
+uuid: 7852de3e-6b3e-4de2-a21d-fb6c8446baed
+langcode: en
+status: true
+dependencies: {  }
+name: 'Free Tags'
+vid: free_tags
+description: 'Anything goes, almost'
+weight: 0
