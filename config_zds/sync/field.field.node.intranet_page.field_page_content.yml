@@ -1,0 +1,21 @@
+uuid: b72c3c9a-5e61-4705-8af9-f5dd8fa4e02d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_content
+    - node.type.intranet_page
+  module:
+    - text
+id: node.intranet_page.field_page_content
+field_name: field_page_content
+entity_type: node
+bundle: intranet_page
+label: 'Page Content'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,29 @@
+uuid: 93f6a87a-10e2-4419-b48a-076e835f8e80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intranet_link_tag_ref
+    - node.type.intranet_page
+    - taxonomy.vocabulary.intranet_link_tags
+id: node.intranet_page.field_intranet_link_tag_ref
+field_name: field_intranet_link_tag_ref
+entity_type: node
+bundle: intranet_page
+label: 'Tag, if any'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      intranet_link_tags: intranet_link_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

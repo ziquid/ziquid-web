@@ -1,0 +1,48 @@
+uuid: 7d6c6f6c-c814-4164-99be-98488ffca41b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.intranet_page.body
+    - field.field.node.intranet_page.field_intranet_link_tag_ref
+    - field.field.node.intranet_page.field_intranet_link_term_ref
+    - field.field.node.intranet_page.field_page_content
+    - node.type.intranet_page
+  module:
+    - text
+    - user
+id: node.intranet_page.default
+targetEntityType: node
+bundle: intranet_page
+mode: default
+content:
+  field_intranet_link_tag_ref:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_intranet_link_term_ref:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_page_content:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true

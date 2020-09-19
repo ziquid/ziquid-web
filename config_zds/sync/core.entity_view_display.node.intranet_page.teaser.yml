@@ -1,0 +1,36 @@
+uuid: 79e55767-e953-4d68-ab92-3005cfb6ca33
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.intranet_page.body
+    - field.field.node.intranet_page.field_intranet_link_tag_ref
+    - field.field.node.intranet_page.field_intranet_link_term_ref
+    - field.field.node.intranet_page.field_page_content
+    - node.type.intranet_page
+  module:
+    - text
+    - user
+id: node.intranet_page.teaser
+targetEntityType: node
+bundle: intranet_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_intranet_link_tag_ref: true
+  field_intranet_link_term_ref: true
+  field_page_content: true

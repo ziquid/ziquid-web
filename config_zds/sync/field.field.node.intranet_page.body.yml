@@ -1,16 +1,16 @@
-uuid: 33d6f904-f05b-4a31-a627-cec3314cc18b
+uuid: c470ee6b-041b-4e95-9562-5ad9a8511152
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.intranet_link
+    - node.type.intranet_page
   module:
     - text
-id: node.intranet_link.body
+id: node.intranet_page.body
 field_name: body
 entity_type: node
-bundle: intranet_link
+bundle: intranet_page
 label: Summary
 description: ''
 required: false

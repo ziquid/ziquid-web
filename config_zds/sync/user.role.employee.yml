@@ -9,5 +9,8 @@ is_admin: null
 permissions:
   - 'access intranet'
   - 'delete own intranet_link content'
+  - 'delete own intranet_page content'
   - 'edit any intranet_link content'
+  - 'edit any intranet_page content'
   - 'edit own intranet_link content'
+  - 'edit own intranet_page content'

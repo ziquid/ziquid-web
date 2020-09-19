@@ -222,12 +222,18 @@ class IntranetController extends ControllerBase {
   protected function nodeBuild(NodeInterface $node, string $tag = '') {
     $title = $node->get('title')->value;
     $desc = $node->get('body')->value;
+    try {
+      $url = $node->get('field_intranet_link_link')->first()->getUrl();
+    }
+    catch (\InvalidArgumentException $e) {
+      $url = $node->toUrl();
+    }
     $array = [
       '#prefix' => '<div class="taxo-tree-item-node">',
       'link' => [
         '#type' => 'link',
         '#title' => $title,
-        '#url' => $node->get('field_intranet_link_link')->first()->getUrl(),
+        '#url' => $url,
         '#attributes' => [
           'target' => '_blank',
         ],
