@@ -16,6 +16,11 @@
   border-radius: 0 0 10px 10px;
 }
 
+.taxo-tree-item.collapsed {
+  max-height: 36px;
+  overflow-y: hidden;
+}
+
 .taxo-tree-item-title {
   background-color: lightgrey;
   padding: 3px;
@@ -24,6 +29,10 @@
   display: inline-block;
   border-bottom: 2px solid #080808;
   box-sizing: border-box;
+}
+
+.taxo-tree-item-tag-wrapper {
+  background-color: aliceblue;
 }
 
 .taxo-tree-item-tag {
