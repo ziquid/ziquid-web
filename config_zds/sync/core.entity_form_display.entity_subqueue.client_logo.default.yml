@@ -1,0 +1,29 @@
+uuid: 18df3676-b780-414a-b926-64280ac9b77e
+langcode: en
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.client_logo
+  module:
+    - media_library
+id: entity_subqueue.client_logo.default
+targetEntityType: entity_subqueue
+bundle: client_logo
+mode: default
+content:
+  items:
+    type: media_library_widget
+    weight: 5
+    settings:
+      media_types: {  }
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
