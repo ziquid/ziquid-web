@@ -36,6 +36,11 @@
   position: absolute;
   left: 3px;
   font-size: 75%;
+  background-color: lightgreen;
+}
+
+.taxo-tree-item.collapsed .taxo-tree-item-title input.button {
+  background-color: lightpink;
 }
 
 .taxo-tree-item-tag-wrapper {
