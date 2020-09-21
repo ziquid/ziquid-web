@@ -2,9 +2,12 @@
 # build ziquid on OVH3 or local
 
 set -xe
+DIRNAME=$(dirname "$0")
+BASENAME=$(basename "$0")
+FULLNAME="$DIRNAME/$BASENAME"
 
 # Linux/non-apache?  sudo to apache
-[ $(uname) == Linux ] && [ $(whoami) != apache ] && exec sudo su -l apache -s /bin/bash "$0" "$@"
+[ $(uname) == Linux ] && [ $(whoami) != apache ] && exec sudo su -l apache -s /bin/bash "$FULLNAME" "$@"
 
 function update() {
   drush cr -l $1 || :

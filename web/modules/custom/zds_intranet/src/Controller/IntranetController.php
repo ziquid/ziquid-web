@@ -3,6 +3,7 @@
 namespace Drupal\zds_intranet\Controller;
 
 use Drupal\Component\Render\FormattableMarkup;
+use Drupal\Component\Utility\Html;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Link;
@@ -94,6 +95,7 @@ class IntranetController extends ControllerBase {
       '#attached' => [
         'library' => [
           'zds_intranet/css_styles',
+          'zds_intranet/collapse',
         ],
       ],
     ];
@@ -126,10 +128,18 @@ class IntranetController extends ControllerBase {
     foreach ($tree as $key => $item) {
       $desc = $item->description__value;
       $term = $this->entityTypeManager->getStorage('taxonomy_term')->load($item->tid);
+      $class = Html::getClass('title-' . $item->name);
       $build['wrapper'][$key] = [
         '#prefix' => '<span class="taxo-tree-item tree-level-' . $level . '">',
         'title' => [
-          '#prefix' => '<span class="taxo-tree-item-title">',
+          '#prefix' => '<span class="taxo-tree-item-title ' . $class . '">',
+          'collapseButton' => [
+            '#type' => 'button',
+            '#value' => '(+/-)',
+            '#attributes' => [
+              'onclick' => 'return false;',
+            ],
+          ],
           'link' => [
             '#type' => 'link',
             '#title' => $item->name,
@@ -186,9 +196,10 @@ class IntranetController extends ControllerBase {
             $tagKey = 'tid_' . $tid;
 
             if (!array_key_exists($tagKey, $build['wrapper'][$key])) {
+              $class = Html::getClass('tag-' . $tag);
               $build['wrapper'][$key][$tagKey] = [
                 '#prefix' => '<div class="taxo-tree-item-tag-wrapper tid-' . $tid . '">',
-                '#markup' => '<div class="taxo-tree-item-tag">' . $tag . '</div>',
+                '#markup' => '<div class="taxo-tree-item-tag ' . $class . '">' . $tag . '</div>',
                 '#suffix' => '</div>',
               ];
             }
@@ -222,6 +233,12 @@ class IntranetController extends ControllerBase {
   protected function nodeBuild(NodeInterface $node, string $tag = '') {
     $title = $node->get('title')->value;
     $desc = $node->get('body')->value;
+    if (strlen($tag)) {
+      $class = Html::getClass('tag-' . $tag . '-node');
+    }
+    else {
+      $class = '';
+    }
     try {
       $url = $node->get('field_intranet_link_link')->first()->getUrl();
     }
@@ -229,7 +246,7 @@ class IntranetController extends ControllerBase {
       $url = $node->toUrl();
     }
     $array = [
-      '#prefix' => '<div class="taxo-tree-item-node">',
+      '#prefix' => '<div class="taxo-tree-item-node ' . $class . '">',
       'link' => [
         '#type' => 'link',
         '#title' => $title,

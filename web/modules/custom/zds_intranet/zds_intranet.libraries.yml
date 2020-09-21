@@ -2,3 +2,9 @@ css_styles:
   css:
     theme:
       css/styles.css: {}
+collapse:
+  js:
+    js/collapse.js: { }
+  dependencies:
+    - core/jquery
+    - core/drupal

@@ -23,12 +23,19 @@
 
 .taxo-tree-item-title {
   background-color: lightgrey;
-  padding: 3px;
+  padding: 3px 3px 3px 34px;
   text-align: center;
   width: 100%;
   display: inline-block;
   border-bottom: 2px solid #080808;
   box-sizing: border-box;
+  position: relative;
+}
+
+.taxo-tree-item-title input.button {
+  position: absolute;
+  left: 3px;
+  font-size: 75%;
 }
 
 .taxo-tree-item-tag-wrapper {
@@ -45,9 +52,22 @@
   border-radius: 5px;
 }
 
+.taxo-tree-item-tag.tag-quick-links {
+  display: none;
+}
+
 .taxo-tree-item-node {
   margin: 2px 2px 6px;
   max-width: 49%;
+}
+
+.taxo-tree-item-node.tag-quick-links-node {
+  display: inline-block;
+  padding: 2px 8px 4px;
+  border-radius: 0 0 7px 7px;
+  background-color: #dcf1f5;
+  margin-top: 0;
+  border: 1px solid lightgrey;
 }
 
 .taxo-tree-item-node-edit-link {
