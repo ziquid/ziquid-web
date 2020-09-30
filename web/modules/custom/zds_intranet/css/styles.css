@@ -45,6 +45,9 @@
 
 .taxo-tree-item-tag-wrapper {
   background-color: aliceblue;
+  position: relative;
+  padding-left: 42px;
+  min-height: 84px;
 }
 
 .taxo-tree-item-tag {
@@ -55,6 +58,9 @@
   box-sizing: border-box;
   margin-top: 8px;
   border-radius: 5px;
+  position: absolute;
+  transform: rotate(-90deg) translate(calc(-100% + 3px), -37px);
+  transform-origin: top left;
 }
 
 .taxo-tree-item-tag.tag-quick-links {
