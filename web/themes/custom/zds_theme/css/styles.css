@@ -71,6 +71,10 @@ main {
   padding-bottom: 196px;
 }
 
+.view-id-logos li {
+  list-style-image: none;
+}
+
 .region-footer {
   background-color: #eaedee;
   background-image: linear-gradient(to bottom, transparent, #fafdfe);
