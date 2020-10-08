@@ -1,0 +1,30 @@
+uuid: b5d5cf91-70c7-4a54-8bec-9934e5cf5b84
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.logos
+  module:
+    - system
+    - views
+  theme:
+    - zds_theme
+id: views_block__logos_block_1
+theme: zds_theme
+region: content
+weight: -2
+provider: null
+plugin: 'views_block:logos-block_1'
+settings:
+  id: 'views_block:logos-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /portfolio
+    negate: false
+    context_mapping: {  }

@@ -11,7 +11,7 @@ _core:
 id: zds_theme_help
 theme: zds_theme
 region: content
-weight: -30
+weight: -5
 provider: null
 plugin: help_block
 settings:
