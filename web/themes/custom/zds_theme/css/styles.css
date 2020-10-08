@@ -72,7 +72,15 @@ main {
 }
 
 .view-id-logos li {
-  list-style-image: none;
+  list-style-type: none;
+  display: inline-block;
+}
+
+.view-id-logos li img {
+  min-width: 80px;
+  padding: 4px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .region-footer {
