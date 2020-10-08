@@ -5,10 +5,11 @@ dependencies: {  }
 name: client_logo
 label: 'Client Logo 80x80'
 effects:
-  34c1d2f0-211e-4353-b21c-f61a083acecf:
-    uuid: 34c1d2f0-211e-4353-b21c-f61a083acecf
-    id: image_resize
+  19770202-3c97-462c-aad9-948519273d78:
+    uuid: 19770202-3c97-462c-aad9-948519273d78
+    id: image_scale
     weight: 1
     data:
       width: 80
       height: 80
+      upscale: false
