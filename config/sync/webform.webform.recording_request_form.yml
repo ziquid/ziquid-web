@@ -191,6 +191,7 @@ handlers:
   email:
     id: email
     label: 'Email to talk@ziquid.com'
+    notes: ''
     handler_id: email
     status: true
     conditions: {  }

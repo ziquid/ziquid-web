@@ -190,6 +190,7 @@ handlers:
   email:
     id: email
     label: 'Upwork Job Email'
+    notes: ''
     handler_id: email
     status: true
     conditions: {  }
