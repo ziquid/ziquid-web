@@ -52,6 +52,19 @@ ul.menu a.is-active {
   opacity: 67%;
 }
 
+#zds-menu-link {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background: url(../images/zds_80x54.png);
+  width: 27px;
+  height: 18px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 body.page-node-type-person .block-page-title-block {
   display: none;
 }

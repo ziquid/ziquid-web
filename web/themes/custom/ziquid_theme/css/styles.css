@@ -9,6 +9,10 @@ ul.menu a.is-active {
   text-decoration: none;
 }
 
+body.user-logged-in .anonymous-only {
+  display: none;
+}
+
 .region-header {
   background-color: #404040;
   background-image: linear-gradient(to bottom, black, transparent);
@@ -50,6 +54,19 @@ ul.menu a.is-active {
 
 #block-ziquid-theme-main-menu ul.menu li a:hover {
   opacity: 67%;
+}
+
+#ziquid-menu-link {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background: url(../images/ziquid_64x64.png);
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .region-content {
