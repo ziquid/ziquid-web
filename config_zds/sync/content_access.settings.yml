@@ -3,6 +3,7 @@ content_access_roles_gids:
   authenticated: 2
   employee: 3
   administrator: 4
+  content_editor: 5
 _core:
   default_config_hash: 7LkiviGITIpniIOOIzpuxR7r4XzqqYN_cwu0fb0kx1M
 content_access_node_type:
