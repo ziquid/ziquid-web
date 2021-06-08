@@ -1,0 +1,29 @@
+uuid: 61b4f2c0-f227-4f48-8055-3351f40d6cb0
+langcode: en
+status: true
+dependencies:
+  module:
+    - webform
+id: google_tag_manager
+label: 'Google Tag Manager'
+weight: 0
+container_id: GTM-TCZMWZS
+data_layer: dataLayer
+include_classes: false
+whitelist_classes: ''
+blacklist_classes: ''
+include_environment: false
+environment_id: ''
+environment_token: ''
+path_toggle: 'exclude listed'
+path_list: "/admin*\n/batch*\n/node/add*\n/node/*/edit\n/node/*/delete\n/user/*/edit*\n/user/*/cancel*"
+role_toggle: 'exclude listed'
+role_list: {  }
+status_toggle: 'exclude listed'
+status_list: "403\n404"
+conditions:
+  webform:
+    id: webform
+    webforms: {  }
+    negate: false
+    context_mapping: {  }
