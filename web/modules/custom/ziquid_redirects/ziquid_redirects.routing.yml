@@ -5,12 +5,14 @@ zoom:
     _title: 'Zoom URL Redirect'
   requirements:
     _permission: 'access content'
+zoom:
   path: '/zoom/marjory'
   defaults:
     _controller: '\Drupal\ziquid_redirects\Controller\ZiquidRedirectController::zoomRedirect'
     _title: 'Zoom URL Redirect'
   requirements:
     _permission: 'access content'
+zoom:
   path: '/zoom/norlin'
   defaults:
     _controller: '\Drupal\ziquid_redirects\Controller\ZiquidRedirectController::zoomRedirect'
