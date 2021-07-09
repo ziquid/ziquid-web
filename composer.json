@@ -35,6 +35,7 @@
         "drupal/libraries": "^3.0@alpha",
         "drupal/menus_attribute": "^1.1",
         "drupal/metatag": "^1.10",
+        "drupal/paragraphs": "^1.12",
         "drupal/redirect": "^1.4",
         "drupal/simple_background_image_formatter": "1.x-dev",
         "drupal/simple_sitemap": "^3.7",

@@ -23,6 +23,7 @@ module:
   dynamic_page_cache: 0
   editor: 0
   entity_clone: 0
+  entity_reference_revisions: 0
   entityqueue: 0
   entityqueue_smartqueue: 0
   field: 0
@@ -94,6 +95,7 @@ module:
   menu_link_content: 1
   typekit_api: 10
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
   stable: 0
