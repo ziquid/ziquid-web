@@ -26,7 +26,7 @@
         "drupal/adminimal_admin_toolbar": "^1.9",
         "drupal/adminimal_theme": "^1.5",
         "drupal/content_access": "^1.0",
-        "drupal/core-recommended": "^8.8.5",
+        "drupal/core-recommended": "^8.9.17",
         "drupal/entity_clone": "^1.0@beta",
         "drupal/entityqueue": "1.x-dev",
         "drupal/fontyourface": "3.x-dev",
