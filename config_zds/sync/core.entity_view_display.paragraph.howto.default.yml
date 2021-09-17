@@ -1,0 +1,49 @@
+uuid: e0c7ebf5-d675-4d71-ae6a-8a0e91a88238
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.howto.field_body
+    - field.field.paragraph.howto.field_media
+    - field.field.paragraph.howto.field_tip
+    - field.field.paragraph.howto.field_title
+    - paragraphs.paragraphs_type.howto
+  module:
+    - text
+id: paragraph.howto.default
+targetEntityType: paragraph
+bundle: howto
+mode: default
+content:
+  field_body:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_media:
+    type: entity_reference_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_tip:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

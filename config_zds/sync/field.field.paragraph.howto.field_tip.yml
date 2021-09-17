@@ -1,0 +1,21 @@
+uuid: 3169f8bd-ffc9-477e-bea5-2bc1711fd009
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tip
+    - paragraphs.paragraphs_type.howto
+  module:
+    - text
+id: paragraph.howto.field_tip
+field_name: field_tip
+entity_type: paragraph
+bundle: howto
+label: Tip
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
