@@ -1,0 +1,28 @@
+name: ziquid
+recipe: drupal8
+config:
+  webroot: web
+  php: '7.4'
+  via: apache
+  database: mariadb
+  xdebug: false
+  composer_version: 2-latest
+# excludes:
+#   - vendor
+#   - node_modules
+#   - modules/contrib
+services:
+  appserver:
+    build:
+      - composer install
+    build_as_root:
+      - apt update -y && apt install nano -y
+    overrides:
+      environment:
+        PHP_MEMORY_LIMIT: 1024M
+    scanner: false
+tooling:
+  edit:
+    service: appserver
+    cmd: nano
+    description: edit this file inside the container with nano
