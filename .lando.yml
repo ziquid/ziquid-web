@@ -1,5 +1,5 @@
 name: ziquid
-recipe: drupal8
+recipe: drupal9
 config:
   webroot: web
   php: '7.4'
@@ -11,6 +11,10 @@ config:
 #   - vendor
 #   - node_modules
 #   - modules/contrib
+proxy:
+  appserver:
+    - ziquid.lndo.site
+    - zds.lndo.site
 services:
   appserver:
     build:
@@ -21,6 +25,20 @@ services:
       environment:
         PHP_MEMORY_LIMIT: 1024M
     scanner: false
+  database:
+    type: mariadb:10.4
+    portforward: true
+    creds:
+      user: drupal
+      password: drupal
+      database: ziquid
+  zds:
+    type: mariadb:10.4
+    portforward: true
+    creds:
+      user: drupal
+      password: drupal
+      database: zds
 tooling:
   edit:
     service: appserver
