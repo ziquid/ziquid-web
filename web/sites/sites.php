@@ -58,5 +58,7 @@
 
 
 // URL: http://www.zds.group/
+$sites['dev.zds.group'] = 'zds';
 $sites['www.zds.group'] = 'zds';
 $sites['zds.group'] = 'zds';
+$sites['zds.lndo.site'] = 'zds';
