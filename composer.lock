@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "65cd7ed6db111ef4b0a2379947867b10",
+    "content-hash": "bf053158efc8aff827661a89ac0d5b6c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1689,26 +1689,29 @@
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "2.5.0",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-                "reference": "8.x-2.5"
+                "reference": "3.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-2.5.zip",
-                "reference": "8.x-2.5",
-                "shasum": "c71e58051b8d6818272df96d14cb11407d5e5ceb"
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.0.3.zip",
+                "reference": "3.0.3",
+                "shasum": "ce735c931c0bd6da79bd8e45ca459d61015bbe44"
             },
             "require": {
                 "drupal/core": "^8.8.0 || ^9.0"
             },
+            "require-dev": {
+                "drupal/admin_toolbar_tools": "*"
+            },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.5",
-                    "datestamp": "1629907119",
+                    "version": "3.0.3",
+                    "datestamp": "1632322497",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3279,33 +3282,36 @@
         },
         {
             "name": "drupal/webform",
-            "version": "5.31.0",
+            "version": "6.1.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform.git",
-                "reference": "8.x-5.31"
+                "reference": "6.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.31.zip",
-                "reference": "8.x-5.31",
-                "shasum": "4141fa84299d0514b111bebd06c76e5842e0bdec"
+                "url": "https://ftp.drupal.org/files/projects/webform-6.1.2.zip",
+                "reference": "6.1.2",
+                "shasum": "3afb96566f5d31474483e163b4e0138d43cffdcd"
             },
             "require": {
-                "drupal/core": "^8.8"
+                "drupal/core": "^8.8 || ^9"
             },
             "require-dev": {
                 "drupal/address": "~1.0",
                 "drupal/bootstrap": "~3.0",
                 "drupal/captcha": "~1.0",
-                "drupal/chosen": "~2.0",
-                "drupal/clientside_validation": "~3.0",
+                "drupal/chosen": "~3.0",
+                "drupal/clientside_validation": "*",
                 "drupal/clientside_validation_jquery": "*",
-                "drupal/devel": "~3.0",
+                "drupal/devel": "*",
                 "drupal/entity": "~1.0",
-                "drupal/entity_print": "~2.0",
+                "drupal/entity_print": "*",
                 "drupal/gnode": "*",
-                "drupal/group": "1.0",
+                "drupal/group": "*",
+                "drupal/jquery_ui": "~1.0",
+                "drupal/jquery_ui_checkboxradio": "*",
+                "drupal/jquery_ui_datepicker": "~1.0",
                 "drupal/lingotek": "~3.0",
                 "drupal/mailsystem": "~4.0",
                 "drupal/paragraphs": "~1.0",
@@ -3313,7 +3319,7 @@
                 "drupal/smtp": "~1.0",
                 "drupal/styleguide": "~1.0",
                 "drupal/telephone_validation": "~2.0",
-                "drupal/token": "~1.0",
+                "drupal/token": "*",
                 "drupal/variationcache": "~1.0",
                 "drupal/webform_access": "*",
                 "drupal/webform_attachment": "*",
@@ -3327,11 +3333,15 @@
                 "drupal/webform_share": "*",
                 "drupal/webform_ui": "*"
             },
+            "suggest": {
+                "drupal/jquery_ui_checkboxradio": "Provides jQuery UI Checkboxradio library. Required by the Webform jQueryUI Buttons module. The Webform jQueryUI Buttons module is deprecated because jQueryUI is no longer maintained.",
+                "drupal/jquery_ui_datepicker": "Provides jQuery UI Datepicker library. Required to support datepickers. The Webform jQueryUI Datepicker module is deprecated because jQueryUI is no longer maintained."
+            },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-5.31",
-                    "datestamp": "1638988667",
+                    "version": "6.1.2",
+                    "datestamp": "1638988073",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7041,16 +7051,16 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.23.1",
+            "version": "v1.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "1100343ed1a92e3a38f9ae122fc0eb21602547be"
+                "reference": "57b712b08eddb97c762a8caa32c84e037892d2e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/1100343ed1a92e3a38f9ae122fc0eb21602547be",
-                "reference": "1100343ed1a92e3a38f9ae122fc0eb21602547be",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/57b712b08eddb97c762a8caa32c84e037892d2e9",
+                "reference": "57b712b08eddb97c762a8caa32c84e037892d2e9",
                 "shasum": ""
             },
             "require": {
@@ -7104,7 +7114,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.23.1"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.24.0"
             },
             "funding": [
                 {
@@ -7120,7 +7130,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-28T13:41:28+00:00"
+            "time": "2021-09-13T13:58:33+00:00"
         },
         {
             "name": "symfony/polyfill-util",
@@ -7705,16 +7715,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v4.4.34",
+            "version": "v4.4.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "2d0c056b2faaa3d785bdbd5adecc593a5be9c16e"
+                "reference": "02685c62fcbc4262235cc72a54fbd45ab719ce3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/2d0c056b2faaa3d785bdbd5adecc593a5be9c16e",
-                "reference": "2d0c056b2faaa3d785bdbd5adecc593a5be9c16e",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/02685c62fcbc4262235cc72a54fbd45ab719ce3c",
+                "reference": "02685c62fcbc4262235cc72a54fbd45ab719ce3c",
                 "shasum": ""
             },
             "require": {
@@ -7774,7 +7784,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v4.4.34"
+                "source": "https://github.com/symfony/var-dumper/tree/v4.4.36"
             },
             "funding": [
                 {
@@ -7790,7 +7800,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-12T10:50:54+00:00"
+            "time": "2021-12-29T09:28:53+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -10949,16 +10959,16 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.5.1",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "a12f7e301eb7258bb68acd89d4aefa05c2906cae"
+                "reference": "93ebd0014cab80c4ea9f5e297ea48672f1b87706"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/a12f7e301eb7258bb68acd89d4aefa05c2906cae",
-                "reference": "a12f7e301eb7258bb68acd89d4aefa05c2906cae",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/93ebd0014cab80c4ea9f5e297ea48672f1b87706",
+                "reference": "93ebd0014cab80c4ea9f5e297ea48672f1b87706",
                 "shasum": ""
             },
             "require": {
@@ -10993,9 +11003,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.5.1"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.0"
             },
-            "time": "2021-10-02T14:08:47+00:00"
+            "time": "2022-01-04T19:58:01+00:00"
         },
         {
             "name": "phpspec/prophecy",
