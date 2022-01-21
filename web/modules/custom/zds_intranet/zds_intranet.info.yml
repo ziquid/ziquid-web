@@ -2,5 +2,5 @@ name: ZDS Intranet
 description: Powers the ZDS Intranet.
 type: module
 version: 1.0
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 Package: ZDS
