@@ -8285,12 +8285,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziquid/taxonomy_tree.git",
-                "reference": "9f262b1247f3554f03b187eab0d6c519c5100a87"
+                "reference": "38c52a5a333ded51ebc3b06352af20a83dea31b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziquid/taxonomy_tree/zipball/9f262b1247f3554f03b187eab0d6c519c5100a87",
-                "reference": "9f262b1247f3554f03b187eab0d6c519c5100a87",
+                "url": "https://api.github.com/repos/ziquid/taxonomy_tree/zipball/38c52a5a333ded51ebc3b06352af20a83dea31b0",
+                "reference": "38c52a5a333ded51ebc3b06352af20a83dea31b0",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8300,7 +8300,7 @@
             "support": {
                 "source": "https://github.com/ziquid/taxonomy_tree/tree/master"
             },
-            "time": "2020-09-02T11:18:16+00:00"
+            "time": "2022-01-21T19:04:12+00:00"
         },
         {
             "name": "ziquid/trello",
