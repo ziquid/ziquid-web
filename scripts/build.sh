@@ -14,7 +14,7 @@ function _linux() {
 }
 
 # Linux/non-apache?  sudo to apache
-_linux && [ $(whoami) != apache ] && exec sudo su -l apache -s /bin/bash "$FULLNAME" "$@"
+# _linux && [ $(whoami) != apache ] && exec sudo su -l apache -s /bin/bash "$FULLNAME" "$@"
 # _linux && [ $(whoami) != root ] && exec sudo su -l root -s /bin/bash "$FULLNAME" "$@"
 
 function update() {

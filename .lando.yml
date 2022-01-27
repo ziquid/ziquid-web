@@ -6,7 +6,7 @@ config:
   via: apache
   database: mariadb
   xdebug: false
-  composer_version: 2-latest
+  composer_version: 2
 # excludes:
 #   - vendor
 #   - node_modules
@@ -21,6 +21,7 @@ services:
       - composer install
     build_as_root:
       - apt update -y && apt install nano -y
+    composer_version: 2
     overrides:
       environment:
         PHP_MEMORY_LIMIT: 1024M
