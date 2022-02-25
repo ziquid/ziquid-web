@@ -8268,12 +8268,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziquid/trello.git",
-                "reference": "c0ef64b576bbe3c04a2e2b04680f160351157357"
+                "reference": "0c206bb9249cc908c297640fab8a601a3fdc54b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziquid/trello/zipball/c0ef64b576bbe3c04a2e2b04680f160351157357",
-                "reference": "c0ef64b576bbe3c04a2e2b04680f160351157357",
+                "url": "https://api.github.com/repos/ziquid/trello/zipball/0c206bb9249cc908c297640fab8a601a3fdc54b4",
+                "reference": "0c206bb9249cc908c297640fab8a601a3fdc54b4",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8283,7 +8283,7 @@
             "support": {
                 "source": "https://github.com/ziquid/trello/tree/master"
             },
-            "time": "2020-07-25T19:35:29+00:00"
+            "time": "2022-02-25T22:38:50+00:00"
         }
     ],
     "packages-dev": [
