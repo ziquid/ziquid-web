@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # dump a (sanitized?) copy of the db
 
 # shellcheck disable=SC2112
