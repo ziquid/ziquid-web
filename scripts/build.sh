@@ -1,5 +1,5 @@
 #!/bin/bash
-# build ziquid on OVH3 or local
+# build ziquid on OVH4 or local
 
 set -xe
 cd $(dirname "$0")
@@ -24,7 +24,7 @@ function update() {
   _linux && drush cim -y sync -l $1 || drush cim -y sync --partial -l $1
   drush cr -l $1
   drush cc views -l $1
-  chown -R apache:apache .
+#  chown -R apache:apache .
 }
 
 # main()
