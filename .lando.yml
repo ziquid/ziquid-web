@@ -15,6 +15,7 @@ proxy:
   appserver:
     - ziquid.lndo.site
     - zds.lndo.site
+    - cheek.lndo.site
 services:
   appserver:
     build:
@@ -40,6 +41,16 @@ services:
       user: drupal
       password: drupal
       database: zds
+  cheek:
+    type: mariadb:10.4
+    portforward: true
+    creds:
+      user: drupal
+      password: drupal
+      database: cheek
+      run_as_root:
+        # Creates the extra databases as root since the app user does not have those privileges
+        - mysql -uroot -e "CREATE DATABASE IF NOT EXISTS cheek; GRANT ALL PRIVILEGES ON cheek.* TO 'drupal'@'%' IDENTIFIED by 'drupal';"
 tooling:
   edit:
     service: appserver

@@ -56,6 +56,11 @@
  * @see https://www.drupal.org/documentation/install/multi-site
  */
 
+// URL: http://www.cheek.tv/
+$sites['cheek.tv'] = 'cheek';
+$sites['dev.cheek.tv'] = 'cheek';
+$sites['www.cheek.tv'] = 'cheek';
+$sites['cheek.lndo.site'] = 'cheek';
 
 // URL: http://www.zds.group/
 $sites['dev.zds.group'] = 'zds';
