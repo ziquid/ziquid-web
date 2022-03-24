@@ -13,6 +13,12 @@ function _linux() {
   return 1
 }
 
+function _prod() {
+  echo $(pwd) | grep -q -s prod$ && return 0
+  echo $(pwd) | grep -q -s prod/ && return 0
+  return 1
+}
+
 # Linux/non-apache?  sudo to apache
 # _linux && [ $(whoami) != apache ] && exec sudo su -l apache -s /bin/bash "$FULLNAME" "$@"
 # _linux && [ $(whoami) != root ] && exec sudo su -l root -s /bin/bash "$FULLNAME" "$@"
@@ -41,5 +47,6 @@ composer.phar install
 
 update ziquid
 update zds
+update cheek
 
-scripts/db-dump.sh
+_prod && scripts/db-dump.sh
