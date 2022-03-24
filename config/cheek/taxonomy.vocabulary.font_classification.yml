@@ -1,0 +1,10 @@
+uuid: ba2ea119-c296-402f-86ae-50aeceaaf862
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vabvm5Pvko9TYXjS1o85Wmppa2AOTfUZ6HQUz1xf-Cg
+name: Classification
+vid: font_classification
+description: 'This is the general font type.'
+weight: 0
