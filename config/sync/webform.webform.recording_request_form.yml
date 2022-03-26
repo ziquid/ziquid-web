@@ -2,9 +2,9 @@ uuid: 4d65a692-1b63-4723-a5f1-e5bc3c121ef0
 langcode: en
 status: open
 dependencies: {  }
+weight: 0
 open: null
 close: null
-weight: 0
 uid: 1
 template: false
 archive: false
@@ -12,7 +12,228 @@ id: recording_request_form
 title: 'Recording Request Form'
 description: 'Form to request a recording session or just get more information.'
 category: ''
-elements: "header:\n  '#type': webform_markup\n  '#markup': '<h3>Recording Information Request Form</h3>'\nyour_name:\n  '#type': textfield\n  '#title': 'Your name'\n  '#required': true\n  '#label_attributes':\n    style: 'width: 144px; display: inline-block;'\ne_mail_address:\n  '#type': email\n  '#title': 'E-mail address'\n  '#required': true\n  '#label_attributes':\n    style: 'width: 144px; display: inline-block;'\nphone_number:\n  '#type': tel\n  '#title': 'Phone number'\n  '#required': true\n  '#label_attributes':\n    style: 'width: 144px; display: inline-block;'\n  '#international_preferred_countries': {  }\ngroup_name_if_any:\n  '#type': textfield\n  '#title': 'Group name, if any'\n  '#description': 'If you are requesting information on behalf of a group (band, business, etc.), please enter the group name here.'\n  '#label_attributes':\n    style: 'width: 144px; display: inline-block;'\ntype_of_request:\n  '#type': radios\n  '#title': 'Type of request'\n  '#options':\n    information: Information\n    tour: 'Book a tour'\n    appointment: 'Book an appointment'\n  '#required': true\nhow_can_we_help_you_:\n  '#type': textarea\n  '#title': 'How can we help you?'\n  '#description': 'Please tell us what you would like to know.'\n  '#states':\n    visible-slide:\n      ':input[name=\"type_of_request\"]':\n        value: information\nvisit_flexbox:\n  '#type': webform_section\n  '#title': 'Pick up to three times that you are available for a tour'\n  '#title_tag': h3\n  '#required': true\n  '#states':\n    visible-slide:\n      ':input[name=\"type_of_request\"]':\n        value: tour\n  flexbox:\n    '#type': webform_flexbox\n    date_1:\n      '#type': date\n      '#title': Date\n      '#required': true\n      '#date_date_min': today\n      '#date_date_max': '+1 year'\n      '#date_days':\n        - '1'\n        - '2'\n        - '3'\n        - '4'\n        - '5'\n        - '6'\n      '#datepicker': true\n      '#datepicker_button': true\n      '#date_date_format': d-M-Y\n      '#date_part_order':\n        - year\n        - month\n        - day\n        - hour\n      '#date_year_range': '2019:2050'\n    time_1:\n      '#type': select\n      '#title': Time\n      '#options':\n        'Morning (9AM - 12:30PM)': 'Morning (9AM - 12:30PM)'\n        'Afternoon (1PM - 4:30PM)': 'Afternoon (1PM - 4:30PM)'\n        'Evening (7PM - 10:30PM)': 'Evening (7PM - 10:30PM)'\n      '#required': true\n    space_1:\n      '#type': webform_markup\n      '#flex': 2\n      '#markup': '&nbsp;'\n  flexbox_2:\n    '#type': webform_flexbox\n    date_2:\n      '#type': date\n      '#title': Date\n      '#date_date_min': today\n      '#date_date_max': '+1 year'\n      '#date_days':\n        - '1'\n        - '2'\n        - '3'\n        - '4'\n        - '5'\n        - '6'\n      '#datepicker': true\n      '#datepicker_button': true\n      '#date_date_format': d-M-Y\n      '#date_part_order':\n        - year\n        - month\n        - day\n        - hour\n      '#date_year_range': '2019:2050'\n    time_2:\n      '#type': select\n      '#title': Time\n      '#options':\n        'Morning (9AM - 12:30PM)': 'Morning (9AM - 12:30PM)'\n        'Afternoon (1PM - 4:30PM)': 'Afternoon (1PM - 4:30PM)'\n        'Evening (7PM - 10:30PM)': 'Evening (7PM - 10:30PM)'\n      '#states':\n        required:\n          ':input[name=\"date_2\"]':\n            filled: true\n    space_2:\n      '#type': webform_markup\n      '#flex': 2\n      '#markup': '&nbsp;'\n  flexbox_3:\n    '#type': webform_flexbox\n    date_3:\n      '#type': date\n      '#title': Date\n      '#date_date_min': today\n      '#date_date_max': '+1 year'\n      '#date_days':\n        - '1'\n        - '2'\n        - '3'\n        - '4'\n        - '5'\n        - '6'\n      '#datepicker': true\n      '#datepicker_button': true\n      '#date_date_format': d-M-Y\n      '#date_part_order':\n        - year\n        - month\n        - day\n        - hour\n      '#date_year_range': '2019:2050'\n    time_3:\n      '#type': select\n      '#title': Time\n      '#options':\n        'Morning (9AM - 12:30PM)': 'Morning (9AM - 12:30PM)'\n        'Afternoon (1PM - 4:30PM)': 'Afternoon (1PM - 4:30PM)'\n        'Evening (7PM - 10:30PM)': 'Evening (7PM - 10:30PM)'\n      '#states':\n        required:\n          ':input[name=\"date_3\"]':\n            filled: true\n    space_3:\n      '#type': webform_markup\n      '#flex': 2\n      '#markup': '&nbsp;'\nwhen_can_we_schedule_you_:\n  '#type': webform_section\n  '#title': 'When can we schedule you?'\n  '#title_tag': h3\n  '#states':\n    visible-slide:\n      ':input[name=\"type_of_request\"]':\n        value: appointment\n  flexbox_4:\n    '#type': webform_flexbox\n    date_appt:\n      '#type': date\n      '#title': Date\n      '#required': true\n      '#date_date_min': today\n      '#date_date_max': '+1 year'\n      '#date_days':\n        - '1'\n        - '2'\n        - '3'\n        - '4'\n        - '5'\n        - '6'\n      '#datepicker': true\n      '#datepicker_button': true\n      '#date_date_format': d-M-Y\n      '#date_part_order':\n        - year\n        - month\n        - day\n        - hour\n      '#date_year_range': '2019:2050'\n    time_appt:\n      '#type': select\n      '#title': Time\n      '#options':\n        'Morning (9AM - 12:30PM)': 'Morning (9AM - 12:30PM)'\n        'Afternoon (1PM - 4:30PM)': 'Afternoon (1PM - 4:30PM)'\n        'Evening (7PM - 10:30PM)': 'Evening (7PM - 10:30PM)'\n      '#required': true\n    space_appt:\n      '#type': webform_markup\n      '#flex': 2\n      '#markup': '&nbsp;'\ncomments:\n  '#type': textarea\n  '#title': Comments\n  '#states':\n    visible-slide:\n      -\n        ':input[name=\"type_of_request\"]':\n          value: tour\n      - or\n      -\n        ':input[name=\"type_of_request\"]':\n          value: appointment\n"
+elements: |
+  header:
+    '#type': webform_markup
+    '#markup': '<h3>Recording Information Request Form</h3>'
+  your_name:
+    '#type': textfield
+    '#title': 'Your name'
+    '#required': true
+    '#label_attributes':
+      style: 'width: 144px; display: inline-block;'
+  e_mail_address:
+    '#type': email
+    '#title': 'E-mail address'
+    '#required': true
+    '#label_attributes':
+      style: 'width: 144px; display: inline-block;'
+  phone_number:
+    '#type': tel
+    '#title': 'Phone number'
+    '#required': true
+    '#label_attributes':
+      style: 'width: 144px; display: inline-block;'
+    '#international_preferred_countries': {  }
+  group_name_if_any:
+    '#type': textfield
+    '#title': 'Group name, if any'
+    '#description': 'If you are requesting information on behalf of a group (band, business, etc.), please enter the group name here.'
+    '#label_attributes':
+      style: 'width: 144px; display: inline-block;'
+  type_of_request:
+    '#type': radios
+    '#title': 'Type of request'
+    '#options':
+      information: Information
+      tour: 'Book a tour'
+      appointment: 'Book an appointment'
+    '#required': true
+  how_can_we_help_you_:
+    '#type': textarea
+    '#title': 'How can we help you?'
+    '#description': 'Please tell us what you would like to know.'
+    '#states':
+      visible-slide:
+        ':input[name="type_of_request"]':
+          value: information
+  visit_flexbox:
+    '#type': webform_section
+    '#title': 'Pick up to three times that you are available for a tour'
+    '#title_tag': h3
+    '#required': true
+    '#states':
+      visible-slide:
+        ':input[name="type_of_request"]':
+          value: tour
+    flexbox:
+      '#type': webform_flexbox
+      date_1:
+        '#type': date
+        '#title': Date
+        '#required': true
+        '#date_date_min': today
+        '#date_date_max': '+1 year'
+        '#date_days':
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+          - '5'
+          - '6'
+        '#datepicker': true
+        '#datepicker_button': true
+        '#date_date_format': d-M-Y
+        '#date_part_order':
+          - year
+          - month
+          - day
+          - hour
+        '#date_year_range': '2019:2050'
+      time_1:
+        '#type': select
+        '#title': Time
+        '#options':
+          'Morning (9AM - 12:30PM)': 'Morning (9AM - 12:30PM)'
+          'Afternoon (1PM - 4:30PM)': 'Afternoon (1PM - 4:30PM)'
+          'Evening (7PM - 10:30PM)': 'Evening (7PM - 10:30PM)'
+        '#required': true
+      space_1:
+        '#type': webform_markup
+        '#flex': 2
+        '#markup': '&nbsp;'
+    flexbox_2:
+      '#type': webform_flexbox
+      date_2:
+        '#type': date
+        '#title': Date
+        '#date_date_min': today
+        '#date_date_max': '+1 year'
+        '#date_days':
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+          - '5'
+          - '6'
+        '#datepicker': true
+        '#datepicker_button': true
+        '#date_date_format': d-M-Y
+        '#date_part_order':
+          - year
+          - month
+          - day
+          - hour
+        '#date_year_range': '2019:2050'
+      time_2:
+        '#type': select
+        '#title': Time
+        '#options':
+          'Morning (9AM - 12:30PM)': 'Morning (9AM - 12:30PM)'
+          'Afternoon (1PM - 4:30PM)': 'Afternoon (1PM - 4:30PM)'
+          'Evening (7PM - 10:30PM)': 'Evening (7PM - 10:30PM)'
+        '#states':
+          required:
+            ':input[name="date_2"]':
+              filled: true
+      space_2:
+        '#type': webform_markup
+        '#flex': 2
+        '#markup': '&nbsp;'
+    flexbox_3:
+      '#type': webform_flexbox
+      date_3:
+        '#type': date
+        '#title': Date
+        '#date_date_min': today
+        '#date_date_max': '+1 year'
+        '#date_days':
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+          - '5'
+          - '6'
+        '#datepicker': true
+        '#datepicker_button': true
+        '#date_date_format': d-M-Y
+        '#date_part_order':
+          - year
+          - month
+          - day
+          - hour
+        '#date_year_range': '2019:2050'
+      time_3:
+        '#type': select
+        '#title': Time
+        '#options':
+          'Morning (9AM - 12:30PM)': 'Morning (9AM - 12:30PM)'
+          'Afternoon (1PM - 4:30PM)': 'Afternoon (1PM - 4:30PM)'
+          'Evening (7PM - 10:30PM)': 'Evening (7PM - 10:30PM)'
+        '#states':
+          required:
+            ':input[name="date_3"]':
+              filled: true
+      space_3:
+        '#type': webform_markup
+        '#flex': 2
+        '#markup': '&nbsp;'
+  when_can_we_schedule_you_:
+    '#type': webform_section
+    '#title': 'When can we schedule you?'
+    '#title_tag': h3
+    '#states':
+      visible-slide:
+        ':input[name="type_of_request"]':
+          value: appointment
+    flexbox_4:
+      '#type': webform_flexbox
+      date_appt:
+        '#type': date
+        '#title': Date
+        '#required': true
+        '#date_date_min': today
+        '#date_date_max': '+1 year'
+        '#date_days':
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+          - '5'
+          - '6'
+        '#datepicker': true
+        '#datepicker_button': true
+        '#date_date_format': d-M-Y
+        '#date_part_order':
+          - year
+          - month
+          - day
+          - hour
+        '#date_year_range': '2019:2050'
+      time_appt:
+        '#type': select
+        '#title': Time
+        '#options':
+          'Morning (9AM - 12:30PM)': 'Morning (9AM - 12:30PM)'
+          'Afternoon (1PM - 4:30PM)': 'Afternoon (1PM - 4:30PM)'
+          'Evening (7PM - 10:30PM)': 'Evening (7PM - 10:30PM)'
+        '#required': true
+      space_appt:
+        '#type': webform_markup
+        '#flex': 2
+        '#markup': '&nbsp;'
+  comments:
+    '#type': textarea
+    '#title': Comments
+    '#states':
+      visible-slide:
+        -
+          ':input[name="type_of_request"]':
+            value: tour
+        - or
+        -
+          ':input[name="type_of_request"]':
+            value: appointment
 css: ''
 javascript: ''
 settings:
@@ -27,9 +248,9 @@ settings:
   page_theme_name: ''
   form_title: both
   form_submit_once: false
-  form_exception_message: ''
   form_open_message: ''
   form_close_message: ''
+  form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
@@ -39,31 +260,36 @@ settings:
   form_prepopulate_source_entity: false
   form_prepopulate_source_entity_required: false
   form_prepopulate_source_entity_type: ''
-  form_reset: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
   form_disable_autocomplete: false
   form_novalidate: false
   form_disable_inline_errors: false
   form_required: false
-  form_unsaved: false
-  form_disable_back: false
-  form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
+  form_reset: false
   form_access_denied: default
   form_access_denied_title: ''
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_attributes: {  }
   form_method: ''
   form_action: ''
-  form_attributes: {  }
   share: false
   share_node: false
   share_theme_name: ''
   share_title: true
   share_page_body_attributes: {  }
   submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
   submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
   submission_views: {  }
   submission_views_replace: {  }
   submission_user_columns: {  }
@@ -72,11 +298,6 @@ settings:
   submission_access_denied_title: ''
   submission_access_denied_message: ''
   submission_access_denied_attributes: {  }
-  submission_exception_message: ''
-  submission_locked_message: ''
-  submission_excluded_elements: {  }
-  submission_exclude_empty: false
-  submission_exclude_empty_checkbox: false
   previous_submission_message: ''
   previous_submissions_message: ''
   autofill: false
@@ -87,13 +308,13 @@ settings:
   wizard_progress_percentage: false
   wizard_progress_link: false
   wizard_progress_states: false
-  wizard_auto_forward: true
-  wizard_auto_forward_hide_next_button: false
-  wizard_keyboard: true
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
   wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
@@ -116,9 +337,9 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: page
+  confirmation_url: ''
   confirmation_title: ''
   confirmation_message: ''
-  confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -197,9 +418,9 @@ access:
 handlers:
   email:
     id: email
+    handler_id: email
     label: 'Email to talk@ziquid.com'
     notes: ''
-    handler_id: email
     status: true
     conditions: {  }
     weight: 0
@@ -208,13 +429,17 @@ handlers:
         - completed
       to_mail: _default
       to_options: {  }
-      cc_mail: '[webform_submission:values:e_mail_address:raw]'
-      cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
+      cc_mail: '[webform_submission:values:e_mail_address:raw]'
+      cc_options: {  }
       from_mail: _default
       from_options: {  }
       from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
       subject: _default
       body: _default
       excluded_elements: {  }
@@ -225,11 +450,7 @@ handlers:
       html: true
       attachments: false
       twig: false
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
       theme_name: ''
       parameters: {  }
+      debug: false
 variants: {  }

@@ -1,12 +1,12 @@
+favicon:
+  mimetype: image/png
+  path: themes/custom/ziquid_theme/favicon.png
+  use_default: false
 features:
-  node_user_picture: true
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
+  node_user_picture: true
 logo:
-  use_default: false
   path: themes/custom/ziquid_theme/ziquid-logo.png
-favicon:
   use_default: false
-  path: themes/custom/ziquid_theme/favicon.png
-  mimetype: image/png

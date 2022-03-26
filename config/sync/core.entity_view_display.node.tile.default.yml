@@ -21,31 +21,31 @@ bundle: tile
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   field_tile_:
-    weight: 1
+    type: responsive_image
     label: hidden
     settings:
       responsive_image_style: wide
       image_link: ''
     third_party_settings: {  }
-    type: responsive_image
+    weight: 1
     region: content
   field_tile_type:
-    weight: 3
+    type: entity_reference_label
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 3
     region: content
   field_url:
-    weight: 2
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -54,7 +54,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 2
     region: content
 hidden:
   field_black_or_white_bg: true

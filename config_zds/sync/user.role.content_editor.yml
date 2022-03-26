@@ -1,7 +1,50 @@
 uuid: d9aa8d35-2152-42f8-b927-d03240cd8e51
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.article
+    - node.type.intranet_link
+    - node.type.intranet_page
+    - node.type.page
+    - node.type.person
+    - node.type.web_project
+    - node.type.webform
+    - taxonomy.vocabulary.brand_name
+    - taxonomy.vocabulary.contracted_through
+    - taxonomy.vocabulary.end_client
+    - taxonomy.vocabulary.font_classification
+    - taxonomy.vocabulary.font_designer
+    - taxonomy.vocabulary.font_foundry
+    - taxonomy.vocabulary.font_tags
+    - taxonomy.vocabulary.hobbies
+    - taxonomy.vocabulary.intranet_link_tags
+    - taxonomy.vocabulary.intranet_links
+    - taxonomy.vocabulary.keywords
+    - taxonomy.vocabulary.languages_supported
+    - taxonomy.vocabulary.skills
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.technologies_used
+  module:
+    - content_access
+    - entity_clone
+    - entityqueue
+    - layout_builder
+    - media
+    - node
+    - path
+    - quickedit
+    - system
+    - taxonomy
+    - tour
+    - webform
+    - webform_node
+    - zds_intranet
 id: content_editor
 label: 'Content Editor'
 weight: -6

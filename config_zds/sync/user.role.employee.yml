@@ -1,7 +1,13 @@
 uuid: 01d240af-f773-4b54-9937-a301c74741ee
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.intranet_link
+    - node.type.intranet_page
+  module:
+    - node
+    - zds_intranet
 id: employee
 label: Employee
 weight: -8

@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: r8uAx4mTBwCkgDFbdKCmhjgbb91BQ4HbWSYRKrlowMY
+load_all_enabled_fonts: 0
 enabled_fonts:
   - 'https://typekit.com/fonts/scriptorama-tradeshow-jf#n4'
   - 'https://typekit.com/fonts/abril-titling-condensed#n4'
@@ -35,6 +38,3 @@ enabled_fonts:
   - 'https://typekit.com/fonts/source-sans-pro#i4'
   - 'https://typekit.com/fonts/source-sans-pro#n6'
   - 'https://typekit.com/fonts/source-sans-pro#i6'
-load_all_enabled_fonts: 0
-_core:
-  default_config_hash: r8uAx4mTBwCkgDFbdKCmhjgbb91BQ4HbWSYRKrlowMY
