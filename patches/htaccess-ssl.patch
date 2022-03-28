@@ -1,0 +1,33 @@
+diff --git a/web/.htaccess b/web/.htaccess
+index bd9e83e9..b13f8551 100644
+--- a/web/.htaccess
++++ b/web/.htaccess
+@@ -95,10 +95,24 @@ AddEncoding gzip svgz
+   # To redirect all users to access the site WITH the 'www.' prefix,
+   # (http://example.com/foo will be redirected to http://www.example.com/foo)
+   # uncomment the following:
+-  RewriteCond %{HTTP_HOST} .
+-  RewriteCond %{HTTP_HOST} !^www\. [NC]
+-  RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+-  #
++  # RewriteCond %{HTTP_HOST} .
++  # RewriteCond %{HTTP_HOST} !^www\. [NC]
++  # RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
++
++  # Rewrite https://zds.group to https://www.zds.group
++  RewriteCond %{HTTPS} on
++  RewriteCond %{HTTP_HOST} ^zds\.group$ [NC]
++  RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=302]
++
++  # Rewrite http://ziquid.com to https://ziquid.com
++  RewriteCond %{HTTPS} off
++  RewriteCond %{HTTP_HOST} ^ziquid\.com$ [NC]
++  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
++
++  # Rewrite www.ziquid.com to https://ziquid.com
++  RewriteCond %{HTTP_HOST} ^www\.ziquid\.com$ [NC]
++  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
++
+   # To redirect all users to access the site WITHOUT the 'www.' prefix,
+   # (http://www.example.com/foo will be redirected to http://example.com/foo)
+   # uncomment the following:
