@@ -1,18 +1,12 @@
 diff --git a/web/.htaccess b/web/.htaccess
-index bd9e83e9..b13f8551 100644
+index b1ee36bf..b13f8551 100644
 --- a/web/.htaccess
 +++ b/web/.htaccess
-@@ -95,10 +95,24 @@ AddEncoding gzip svgz
-   # To redirect all users to access the site WITH the 'www.' prefix,
-   # (http://example.com/foo will be redirected to http://www.example.com/foo)
-   # uncomment the following:
--  RewriteCond %{HTTP_HOST} .
--  RewriteCond %{HTTP_HOST} !^www\. [NC]
--  RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+@@ -98,7 +98,21 @@ AddEncoding gzip svgz
+   # RewriteCond %{HTTP_HOST} .
+   # RewriteCond %{HTTP_HOST} !^www\. [NC]
+   # RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 -  #
-+  # RewriteCond %{HTTP_HOST} .
-+  # RewriteCond %{HTTP_HOST} !^www\. [NC]
-+  # RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 +
 +  # Rewrite https://zds.group to https://www.zds.group
 +  RewriteCond %{HTTPS} on

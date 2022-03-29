@@ -6,6 +6,7 @@
 /web/themes/contrib/
 /web/profiles/contrib/
 /web/libraries/
+/web/.htaccess
 
 # Ignore sensitive information
 /web/sites/*/settings.php
@@ -26,5 +27,3 @@
 # Ignore db dumps
 *.sql
 *.sql.gz
-
-/web/marjory
