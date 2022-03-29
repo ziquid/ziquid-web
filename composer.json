@@ -96,6 +96,9 @@
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-drupal-scaffold-cmd": [
+          "cd web && patch -p2 <../patches/htaccess-ssl.patch"
         ]
     },
     "extra": {

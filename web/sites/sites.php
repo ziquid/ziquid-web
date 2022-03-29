@@ -56,7 +56,7 @@
  * @see https://www.drupal.org/documentation/install/multi-site
  */
 
-// URL: http://www.cheek.tv/
+// cheek.tv
 $sites['cheek.tv'] = 'cheek';
 $sites['dev.cheek.tv'] = 'cheek';
 $sites['www.cheek.tv'] = 'cheek';
@@ -67,3 +67,9 @@ $sites['dev.zds.group'] = 'zds';
 $sites['www.zds.group'] = 'zds';
 $sites['zds.group'] = 'zds';
 $sites['zds.lndo.site'] = 'zds';
+
+// pam.zds.group
+$sites['dev.pam.zds.group'] = 'pam';
+$sites['www.pam.zds.group'] = 'pam';
+$sites['pam.zds.group'] = 'pam';
+$sites['pam.lndo.site'] = 'pam';
