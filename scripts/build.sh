@@ -48,5 +48,6 @@ composer.phar install
 update ziquid
 update zds
 update cheek
+update pam
 
 _prod && scripts/db-dump.sh

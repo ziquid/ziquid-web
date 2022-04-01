@@ -58,3 +58,4 @@ function do_dump() {
 $DUMP ziquid
 $DUMP zds
 $DUMP cheek
+$DUMP pam
