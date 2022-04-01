@@ -1,4 +1,4 @@
-uuid: 66148eb6-83e3-4823-88d3-164c4cb3037f
+uuid: d7b412a1-718a-46f5-9bbb-846aeb4caa5f
 langcode: en
 status: true
 dependencies: {  }
@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - info@cheek.tv
+  - pam@zds.group
 reply: ''
 weight: 0
 message: 'Your message has been sent.'
