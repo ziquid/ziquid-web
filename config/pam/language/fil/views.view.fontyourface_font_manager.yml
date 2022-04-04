@@ -1,0 +1,18 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: 'Ibalik sa pamantayan'
+      fields:
+        operations:
+          label: 'Mga operasyon'
+      filters:
+        name:
+          expose:
+            label: Pangalan
+        field_tags_target_id:
+          expose:
+            label: 'Mga etiketa'
+  page_1:
+    display_title: Pahina
