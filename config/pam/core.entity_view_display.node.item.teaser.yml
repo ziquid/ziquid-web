@@ -1,0 +1,27 @@
+uuid: c87eb31d-df94-469d-8c9c-61de50121001
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.item.field_hierarchy_type
+    - field.field.node.item.field_item_parent
+    - field.field.node.item.field_summary
+    - node.type.item
+  module:
+    - user
+id: node.item.teaser
+targetEntityType: node
+bundle: item
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_hierarchy_type: true
+  field_item_parent: true
+  field_summary: true
+  langcode: true

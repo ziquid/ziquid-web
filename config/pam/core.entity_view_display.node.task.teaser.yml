@@ -1,0 +1,41 @@
+uuid: 750d72b3-0290-4b9a-9b9d-7b6ceab682f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.task.field_acceptance_criteria
+    - field.field.node.task.field_assignee
+    - field.field.node.task.field_associated_item
+    - field.field.node.task.field_description
+    - field.field.node.task.field_files
+    - field.field.node.task.field_links
+    - field.field.node.task.field_results
+    - field.field.node.task.field_summary
+    - field.field.node.task.field_time_to_complete_estimated
+    - field.field.node.task.field_total_time_spent
+    - node.type.task
+  module:
+    - user
+id: node.task.teaser
+targetEntityType: node
+bundle: task
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_acceptance_criteria: true
+  field_assignee: true
+  field_associated_item: true
+  field_description: true
+  field_files: true
+  field_links: true
+  field_results: true
+  field_summary: true
+  field_time_to_complete_estimated: true
+  field_total_time_spent: true
+  langcode: true

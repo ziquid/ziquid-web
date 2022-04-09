@@ -1,0 +1,28 @@
+uuid: b6bedf4d-d0d7-4c86-bba3-9c192d6b8ac0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_item_parent
+    - node.type.item
+id: node.item.field_item_parent
+field_name: field_item_parent
+entity_type: node
+bundle: item
+label: 'Item Parent'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      item: item
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

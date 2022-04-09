@@ -1,0 +1,116 @@
+uuid: a06c744c-776c-4997-8a41-ab8f91e7131b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.task.field_acceptance_criteria
+    - field.field.node.task.field_assignee
+    - field.field.node.task.field_associated_item
+    - field.field.node.task.field_description
+    - field.field.node.task.field_files
+    - field.field.node.task.field_links
+    - field.field.node.task.field_results
+    - field.field.node.task.field_summary
+    - field.field.node.task.field_time_to_complete_estimated
+    - field.field.node.task.field_total_time_spent
+    - node.type.task
+  module:
+    - link
+    - options
+    - text
+    - user
+id: node.task.default
+targetEntityType: node
+bundle: task
+mode: default
+content:
+  field_acceptance_criteria:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_assignee:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_associated_item:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_files:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_links:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_results:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_summary:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_time_to_complete_estimated:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_total_time_spent:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

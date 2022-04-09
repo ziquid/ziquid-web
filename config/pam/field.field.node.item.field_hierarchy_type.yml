@@ -1,0 +1,29 @@
+uuid: e83dc27f-9d97-405c-a67d-0d66469ba739
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hierarchy_type
+    - node.type.item
+    - taxonomy.vocabulary.task_organization
+id: node.item.field_hierarchy_type
+field_name: field_hierarchy_type
+entity_type: node
+bundle: item
+label: 'Hierarchy Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      task_organization: task_organization
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

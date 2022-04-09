@@ -1,0 +1,22 @@
+uuid: 35f78bc2-5a21-407b-ab23-bf01485c4a0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.task
+id: node.task.promote
+field_name: promote
+entity_type: node
+bundle: task
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

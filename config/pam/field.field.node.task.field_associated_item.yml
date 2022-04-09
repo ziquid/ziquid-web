@@ -1,0 +1,29 @@
+uuid: 0c359007-b746-4145-b9a1-949ef65adb06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_associated_item
+    - node.type.item
+    - node.type.task
+id: node.task.field_associated_item
+field_name: field_associated_item
+entity_type: node
+bundle: task
+label: 'Associated Item'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      item: item
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

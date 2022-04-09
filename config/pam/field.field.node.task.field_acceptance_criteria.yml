@@ -1,0 +1,21 @@
+uuid: 5c0eec48-5f9e-4e74-a3fa-6de9708f76cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acceptance_criteria
+    - node.type.task
+  module:
+    - options
+id: node.task.field_acceptance_criteria
+field_name: field_acceptance_criteria
+entity_type: node
+bundle: task
+label: 'Acceptance Criteria'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

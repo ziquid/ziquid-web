@@ -1,0 +1,54 @@
+uuid: 74c86c60-65a5-4bd8-bf24-d44fb115ced8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.item.field_hierarchy_type
+    - field.field.node.item.field_item_parent
+    - field.field.node.item.field_summary
+    - node.type.item
+  module:
+    - user
+id: node.item.default
+targetEntityType: node
+bundle: item
+mode: default
+content:
+  field_hierarchy_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_item_parent:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_summary:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  langcode:
+    type: language
+    label: inline
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
