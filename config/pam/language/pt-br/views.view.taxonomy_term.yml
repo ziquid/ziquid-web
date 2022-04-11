@@ -6,9 +6,6 @@ display:
     display_options:
       pager:
         options:
-          tags:
-            next: ››
-            previous: ‹‹
           expose:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Tudo -'
@@ -24,8 +21,5 @@ display:
         tid:
           exception:
             title: Tudo
-          title: '{{ arguments.tid }}'
-  feed_1:
-    display_title: Feed
   page_1:
     display_title: Página

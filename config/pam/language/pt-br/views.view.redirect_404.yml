@@ -15,9 +15,6 @@ display:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Tudo -'
             offset_label: Deslocamento
-          tags:
-            previous: ‹‹
-            next: ››
       fields:
         path:
           label: Caminho

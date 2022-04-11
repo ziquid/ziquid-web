@@ -27,7 +27,5 @@ display:
           content: "Ainda não foi criado nenhum conteúdo para a página inicial.\r\n<br /> Siga o <a target=\"_blank\" href=\"https://www.drupal.org/docs/user_guide/en/index.html\">Guia do Usuário</a> para começar a construir seu site."
         title:
           title: 'Bem-vindo a [site:name]'
-  feed_1:
-    display_title: Feed
   page_1:
     display_title: Página

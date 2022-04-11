@@ -13,9 +13,6 @@ display:
           label: 'Última atualização'
       pager:
         options:
-          tags:
-            next: ››
-            previous: ‹‹
           expose:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Tudo -'

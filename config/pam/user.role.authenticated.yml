@@ -1,11 +1,14 @@
 uuid: 20c1c6d1-caf6-4043-beed-2a1b7362dd09
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - toolbar
 _core:
   default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
 id: authenticated
 label: 'Authenticated user'
 weight: -9
 is_admin: false
-permissions: {  }
+permissions:
+  - 'access toolbar'

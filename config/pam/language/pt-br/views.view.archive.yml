@@ -7,9 +7,6 @@ display:
       title: 'Arquivamento mensal'
       pager:
         options:
-          tags:
-            next: ››
-            previous: ‹‹
           expose:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Tudo -'
@@ -21,14 +18,7 @@ display:
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Ascendente
           sort_desc_label: Decrescente
-      arguments:
-        created_year_month:
-          title: '{{ arguments.created_year_month }}'
   block_1:
     display_title: Bloco
-    display_options:
-      arguments:
-        created_year_month:
-          title: '{{ arguments.created_year_month }}'
   page_1:
     display_title: Página

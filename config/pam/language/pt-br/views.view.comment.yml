@@ -10,22 +10,14 @@ display:
           action_title: Ação
         subject:
           label: Assunto
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Autor
-          separator: ', '
         entity_id:
           label: 'Enviado em'
-          separator: ', '
         changed:
           label: Atualizado
-          separator: ', '
         operations:
           label: Operações
-        name_1:
-          separator: ', '
       pager:
         options:
           tags:
@@ -73,22 +65,14 @@ display:
           action_title: Ação
         subject:
           label: Assunto
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Autor
-          separator: ', '
         entity_id:
           label: 'Enviado em'
-          separator: ', '
         changed:
           label: Atualizado
-          separator: ', '
         operations:
           label: Operações
-        name_1:
-          separator: ', '
       filters:
         subject:
           expose:

@@ -1,4 +1,3 @@
-label: Watchdog
 description: 'Mensagens recentes do registro'
 display:
   default:
@@ -8,8 +7,6 @@ display:
       fields:
         nothing:
           admin_label: Ícone
-        wid:
-          label: WID
         severity:
           label: Severidade
         type:
@@ -18,19 +15,12 @@ display:
           label: Data
         message:
           label: Mensagem
-          alter:
-            path: 'admin/reports/dblog/event/{{ wid }}'
-            alt: '{{ message }}'
         name:
           label: Usuário
-          separator: ', '
         link:
           label: Operações
       pager:
         options:
-          tags:
-            next: ››
-            previous: ‹‹
           expose:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Tudo -'

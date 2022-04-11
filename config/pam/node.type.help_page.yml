@@ -1,0 +1,17 @@
+uuid: d9a57fee-056c-4825-b29d-53b79240ce2a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Help Page'
+type: help_page
+description: 'A page for help content.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

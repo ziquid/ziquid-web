@@ -26,7 +26,6 @@ display:
           action_title: 'Selecione a ação'
         redirect_source__path:
           label: De
-          separator: ', '
         created:
           label: Criado
       filters:

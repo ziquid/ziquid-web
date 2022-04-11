@@ -1,0 +1,69 @@
+uuid: b0602f42-59b1-4998-950d-c96786dd9fcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.help_page.body
+    - field.field.node.help_page.layout_builder__layout
+    - node.type.help_page
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          2e781a74-3c5b-4e4c-87f0-ddd8940993a0:
+            uuid: 2e781a74-3c5b-4e4c-87f0-ddd8940993a0
+            region: content
+            configuration:
+              id: 'extra_field_block:node:help_page:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          a132c7d9-471d-4414-836b-ae64909bc218:
+            uuid: a132c7d9-471d-4414-836b-ae64909bc218
+            region: content
+            configuration:
+              id: 'field_block:node:help_page:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: node.help_page.default
+targetEntityType: node
+bundle: help_page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true

@@ -1,11 +1,16 @@
 uuid: 8d5377b4-875a-450d-8a95-4ae0c7fb7e20
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - system
+    - toolbar
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
 id: anonymous
 label: 'Anonymous user'
 weight: -10
 is_admin: false
-permissions: {  }
+permissions:
+  - 'access content'
+  - 'access toolbar'

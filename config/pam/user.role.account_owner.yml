@@ -10,6 +10,7 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - media.type.video
+    - node.type.help_page
     - node.type.task
     - taxonomy.vocabulary.account_organization
     - taxonomy.vocabulary.tags
@@ -32,16 +33,18 @@ weight: -7
 is_admin: null
 permissions:
   - 'access content'
+  - 'access content overview'
   - 'access contextual links'
   - 'access site-wide contact form'
+  - 'access taxonomy overview'
   - 'access user contact forms'
   - 'access user profiles'
   - 'administer contact forms'
   - 'administer media'
   - 'administer users'
-  - 'bypass node access'
   - 'create audio media'
   - 'create document media'
+  - 'create help_page content'
   - 'create image media'
   - 'create media'
   - 'create remote_video media'
@@ -59,6 +62,7 @@ permissions:
   - 'delete media'
   - 'delete own audio media'
   - 'delete own document media'
+  - 'delete own help_page content'
   - 'delete own image media'
   - 'delete own remote_video media'
   - 'delete own task content'
@@ -74,6 +78,7 @@ permissions:
   - 'edit own audio media'
   - 'edit own comments'
   - 'edit own document media'
+  - 'edit own help_page content'
   - 'edit own image media'
   - 'edit own remote_video media'
   - 'edit own task content'
