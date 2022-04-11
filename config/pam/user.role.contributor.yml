@@ -1,0 +1,67 @@
+uuid: 32f72e07-363a-4776-b2b2-c836f6838a5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.restricted_html
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - taxonomy.vocabulary.tags
+  module:
+    - comment
+    - config_translation
+    - contact
+    - content_translation
+    - contextual
+    - filter
+    - locale
+    - media
+    - node
+    - search
+    - system
+    - taxonomy
+_core:
+  default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
+id: contributor
+label: Contributor
+weight: -8
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access contextual links'
+  - 'access site-wide contact form'
+  - 'access user profiles'
+  - 'create audio media'
+  - 'create document media'
+  - 'create image media'
+  - 'create media'
+  - 'create remote_video media'
+  - 'create terms in tags'
+  - 'create video media'
+  - 'delete media'
+  - 'delete own audio media'
+  - 'delete own document media'
+  - 'delete own image media'
+  - 'delete own remote_video media'
+  - 'delete own video media'
+  - 'edit own audio media'
+  - 'edit own comments'
+  - 'edit own document media'
+  - 'edit own image media'
+  - 'edit own remote_video media'
+  - 'edit own video media'
+  - 'search content'
+  - 'translate any entity'
+  - 'translate configuration'
+  - 'translate editable entities'
+  - 'translate interface'
+  - 'update media'
+  - 'use text format basic_html'
+  - 'use text format restricted_html'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view user email addresses'

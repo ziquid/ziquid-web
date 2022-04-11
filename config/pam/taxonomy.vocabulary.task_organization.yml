@@ -1,8 +1,0 @@
-uuid: 9408d435-0327-4509-91e9-d5295cd14cc6
-langcode: en
-status: true
-dependencies: {  }
-name: 'Task Organization'
-vid: task_organization
-description: 'Hierarchy of Tasks within an organization.'
-weight: 0

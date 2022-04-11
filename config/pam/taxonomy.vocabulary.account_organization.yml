@@ -1,0 +1,8 @@
+uuid: 5d3b010c-d8b9-4834-95a2-5a8542655523
+langcode: en
+status: true
+dependencies: {  }
+name: 'Account Organization'
+vid: account_organization
+description: 'Organization and Divisions within an Account'
+weight: 0

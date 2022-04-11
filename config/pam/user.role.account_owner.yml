@@ -1,0 +1,96 @@
+uuid: 9dccebc3-d0f7-48af-9290-36ef62da8d1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.restricted_html
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.task
+    - taxonomy.vocabulary.account_organization
+    - taxonomy.vocabulary.tags
+  module:
+    - comment
+    - config_translation
+    - contact
+    - content_translation
+    - contextual
+    - filter
+    - locale
+    - media
+    - node
+    - search
+    - system
+    - taxonomy
+id: account_owner
+label: 'Account owner'
+weight: -7
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access contextual links'
+  - 'access site-wide contact form'
+  - 'access user contact forms'
+  - 'access user profiles'
+  - 'administer contact forms'
+  - 'administer media'
+  - 'administer users'
+  - 'bypass node access'
+  - 'create audio media'
+  - 'create document media'
+  - 'create image media'
+  - 'create media'
+  - 'create remote_video media'
+  - 'create task content'
+  - 'create terms in account_organization'
+  - 'create terms in tags'
+  - 'create video media'
+  - 'delete any audio media'
+  - 'delete any document media'
+  - 'delete any image media'
+  - 'delete any media'
+  - 'delete any remote_video media'
+  - 'delete any task content'
+  - 'delete any video media'
+  - 'delete media'
+  - 'delete own audio media'
+  - 'delete own document media'
+  - 'delete own image media'
+  - 'delete own remote_video media'
+  - 'delete own task content'
+  - 'delete own video media'
+  - 'delete terms in account_organization'
+  - 'delete terms in tags'
+  - 'edit any audio media'
+  - 'edit any document media'
+  - 'edit any image media'
+  - 'edit any remote_video media'
+  - 'edit any task content'
+  - 'edit any video media'
+  - 'edit own audio media'
+  - 'edit own comments'
+  - 'edit own document media'
+  - 'edit own image media'
+  - 'edit own remote_video media'
+  - 'edit own task content'
+  - 'edit own video media'
+  - 'edit terms in account_organization'
+  - 'edit terms in tags'
+  - 'search content'
+  - 'select account cancellation method'
+  - 'translate any entity'
+  - 'translate configuration'
+  - 'translate editable entities'
+  - 'translate interface'
+  - 'update any media'
+  - 'update media'
+  - 'use text format basic_html'
+  - 'use text format restricted_html'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view user email addresses'

@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_associated_item
-    - node.type.item
     - node.type.task
 id: node.task.field_associated_item
 field_name: field_associated_item
@@ -19,8 +18,7 @@ default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
-    target_bundles:
-      item: item
+    target_bundles: {  }
     sort:
       field: _none
       direction: ASC
