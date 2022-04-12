@@ -15,6 +15,10 @@
         {
             "type": "vcs",
             "url":  "git@github.com:ziquid/taxonomy_tree.git"
+        },
+        {
+                    "url": "https://git.drupalcode.org/sandbox/cheekdotcom-3274888.git",
+                    "type": "vcs"
         }
     ],
     "require": {
@@ -49,6 +53,7 @@
         "drupal/upgrade_status": "^3.13",
         "drupal/views_add_button": "^2.0",
         "drupal/views_slideshow": "^4.7",
+        "drupal/visjs_dev": "dev-9.x-1.x",
         "drupal/webform": "^6",
         "drush/drush": "^10.0.0",
         "vlucas/phpdotenv": "^2.4",

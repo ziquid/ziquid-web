@@ -62,6 +62,7 @@ module:
   search: 0
   shortcut: 0
   system: 0
+  system_stream_wrapper: 0
   taxonomy: 0
   taxonomy_tree: 0
   telephone: 0
@@ -72,6 +73,7 @@ module:
   user: 0
   views_add_button: 0
   views_ui: 0
+  visjs: 0
   content_translation: 10
   views: 10
   paragraphs: 11
