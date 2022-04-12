@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - taxonomy.vocabulary.account_organization
+    - user.role.account_owner
+    - user.role.administrator
+    - user.role.contributor
   module:
     - taxonomy
     - user
@@ -187,9 +190,12 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            contributor: contributor
+            account_owner: account_owner
+            administrator: administrator
       cache:
         type: tag
         options: {  }
@@ -354,7 +360,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - user.permissions
+        - user.roles
       tags: {  }
   block_1:
     id: block_1
@@ -369,5 +375,5 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - user.permissions
+        - user.roles
       tags: {  }
