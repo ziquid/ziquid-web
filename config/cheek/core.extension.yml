@@ -62,10 +62,13 @@ module:
   path: 0
   path_alias: 0
   quickedit: 0
+  rabbit_hole: 0
   rdf: 0
   redirect: 0
   redirect_domain: 0
   responsive_image: 0
+  rh_node: 0
+  rh_user: 0
   search: 0
   shortcut: 0
   simple_background_image_formatter: 0
@@ -81,6 +84,8 @@ module:
   update: 0
   upgrade_status: 0
   user: 0
+  views_slideshow: 0
+  views_slideshow_cycle: 0
   views_ui: 0
   webform: 0
   webform_access: 0
