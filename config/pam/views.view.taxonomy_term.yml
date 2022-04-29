@@ -3,11 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.card
   module:
     - node
     - taxonomy
     - user
+    - views_add_button
 _core:
   default_config_hash: YKgw0f77GEmCu6_6Om9Mbig0mON9JdfVuMxTtd0WQaI
 id: taxonomy_term
@@ -60,7 +61,12 @@ display:
       cache:
         type: tag
         options: {  }
-      empty: {  }
+      empty:
+        views_add_button:
+          id: views_add_button
+          table: views
+          field: views_add_button
+          plugin_id: views_add_button_area
       sorts:
         sticky:
           id: sticky
@@ -222,7 +228,8 @@ display:
       row:
         type: 'entity:node'
         options:
-          view_mode: teaser
+          relationship: none
+          view_mode: card
       query:
         type: views_query
         options:
@@ -303,9 +310,40 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      empty:
+        views_add_button:
+          id: views_add_button
+          table: views
+          field: views_add_button
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: views_add_button_area
+          empty: true
+          tokenize: 0
+          type: node+project
+          render_plugin: ''
+          access_plugin: ''
+          context: ''
+          button_text: ''
+          button_classes: button
+          button_attributes: ''
+          button_access_denied:
+            value: ''
+            format: basic_html
+          button_prefix:
+            value: ''
+            format: basic_html
+          button_suffix:
+            value: ''
+            format: basic_html
+          query_string: ''
+          destination: 1
       query:
         type: views_query
         options: {  }
+      defaults:
+        empty: false
       display_extenders: {  }
       path: taxonomy/term/%
     cache_metadata:

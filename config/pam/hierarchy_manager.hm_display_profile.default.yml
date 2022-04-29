@@ -1,0 +1,9 @@
+uuid: 01719495-6e7a-4eff-a558-2a389018076f
+langcode: en
+status: true
+dependencies: {  }
+id: default
+label: Default
+plugin: hm_display_jstree
+config: '{}'
+confirm: true

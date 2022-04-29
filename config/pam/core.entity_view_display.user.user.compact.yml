@@ -26,5 +26,7 @@ content:
     weight: 0
     region: content
 hidden:
+  breadcrumbs: true
   langcode: true
   member_for: true
+  roles: true

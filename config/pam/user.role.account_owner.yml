@@ -11,6 +11,7 @@ dependencies:
     - media.type.remote_video
     - media.type.video
     - node.type.help_page
+    - node.type.project
     - node.type.task
     - taxonomy.vocabulary.account_organization
     - taxonomy.vocabulary.tags
@@ -32,6 +33,7 @@ label: 'Account owner'
 weight: -7
 is_admin: null
 permissions:
+  - 'access comments'
   - 'access content'
   - 'access content overview'
   - 'access contextual links'
@@ -41,12 +43,14 @@ permissions:
   - 'access user profiles'
   - 'administer contact forms'
   - 'administer media'
+  - 'administer nodes'
   - 'administer users'
   - 'create audio media'
   - 'create document media'
   - 'create help_page content'
   - 'create image media'
   - 'create media'
+  - 'create project content'
   - 'create remote_video media'
   - 'create task content'
   - 'create terms in account_organization'
@@ -56,6 +60,7 @@ permissions:
   - 'delete any document media'
   - 'delete any image media'
   - 'delete any media'
+  - 'delete any project content'
   - 'delete any remote_video media'
   - 'delete any task content'
   - 'delete any video media'
@@ -64,6 +69,7 @@ permissions:
   - 'delete own document media'
   - 'delete own help_page content'
   - 'delete own image media'
+  - 'delete own project content'
   - 'delete own remote_video media'
   - 'delete own task content'
   - 'delete own video media'
@@ -72,6 +78,7 @@ permissions:
   - 'edit any audio media'
   - 'edit any document media'
   - 'edit any image media'
+  - 'edit any project content'
   - 'edit any remote_video media'
   - 'edit any task content'
   - 'edit any video media'
@@ -80,11 +87,13 @@ permissions:
   - 'edit own document media'
   - 'edit own help_page content'
   - 'edit own image media'
+  - 'edit own project content'
   - 'edit own remote_video media'
   - 'edit own task content'
   - 'edit own video media'
   - 'edit terms in account_organization'
   - 'edit terms in tags'
+  - 'post comments'
   - 'search content'
   - 'select account cancellation method'
   - 'translate any entity'

@@ -1,0 +1,28 @@
+uuid: ed79310e-eaf0-4287-8f81-8f9645f6698e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.project.field_comments
+    - field.field.node.project.field_description
+    - field.field.node.project.field_parent_program
+    - node.type.project
+  module:
+    - user
+id: node.project.teaser
+targetEntityType: node
+bundle: project
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  breadcrumbs: true
+  field_comments: true
+  field_description: true
+  field_parent_program: true
+  langcode: true

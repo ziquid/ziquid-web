@@ -1,0 +1,17 @@
+uuid: 5443f1aa-38b4-44c8-b1ff-49c1bba8270d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Project
+type: project
+description: 'A project, part of a program.  It contains epics.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

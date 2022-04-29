@@ -1,0 +1,28 @@
+--- HmDisplayPlugin/HmDisplayJstree.php.orig	2022-04-29 13:44:45.000000000 -0600
++++ HmDisplayPlugin/HmDisplayJstree.php	2022-04-29 13:47:15.000000000 -0600
+@@ -42,10 +42,9 @@
+ 
+       // Search input.
+       $form['search'] = [
+-        '#type' => 'textfield',
++        '#type' => 'search',
+         '#title' => $this
+         ->t('Search'),
+-        '#description' => $this->t('Type in the search keyword here to filter the tree below. Multiple keywords separated by spaces. Empty the keyword to reset the tree.'),
+         '#attributes' => [
+           'name' => 'jstree-search',
+           'id' => isset($parent_id) ? 'hm-jstree-search-' . $parent_id : 'hm-jstree-search',
+@@ -61,11 +60,12 @@
+ 
+       $form['jstree'] = [
+         '#type' => 'html_tag',
+-        '#suffix' => '<div class="description">' . $this->t('Click an item to edit it. Drag and drop items to change their position in the tree.') . '</div>',
++        '#prefix' => '<div class="description form-item__description">' . $this->t('Click an item to edit it. Drag and drop items to change their position in the tree.') . '</div>',
+         '#tag' => 'div',
+         '#value' => '',
+         '#attributes' => [
+           'class' => [
++            'form-item',
+             'hm-jstree',
+           ],
+           'id' => isset($parent_id) ? 'hm-jstree-' . $parent_id : 'hm-jstree',
