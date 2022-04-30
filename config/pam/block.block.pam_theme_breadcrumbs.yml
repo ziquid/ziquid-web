@@ -1,0 +1,22 @@
+uuid: c6652048-2fa0-4516-a0ec-3254e8b62ede
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pam_theme
+_core:
+  default_config_hash: 8by5KRsb7ZpmjHj0ms1d7xAG_xH54AWsOX6spDLJ59U
+id: pam_theme_breadcrumbs
+theme: pam_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }
