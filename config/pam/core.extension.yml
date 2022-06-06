@@ -91,4 +91,6 @@ theme:
   adminimal_theme: 0
   pam_theme: 0
   bootstrap_barrio: 0
+  bootstrap_barrio_subtheme: 0
+  stark: 0
 profile: standard
