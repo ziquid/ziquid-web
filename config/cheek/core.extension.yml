@@ -19,6 +19,7 @@ module:
   contact: 0
   content_access: 0
   contextual: 0
+  ctools: 0
   datetime: 0
   dblog: 0
   devel: 0
@@ -96,6 +97,7 @@ module:
   webform_submission_log: 0
   webform_ui: 0
   fontyourface: 1
+  pathauto: 1
   typekit_api: 10
   views: 10
   paragraphs: 11
