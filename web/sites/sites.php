@@ -62,6 +62,12 @@ $sites['dev.cheek.tv'] = 'cheek';
 $sites['www.cheek.tv'] = 'cheek';
 $sites['cheek.lndo.site'] = 'cheek';
 
+// glamma.cheek.tv
+$sites['glamma.cheek.tv'] = 'glamma';
+$sites['dev.glamma.cheek.tv'] = 'glamma';
+$sites['www.glamma.cheek.tv'] = 'glamma';
+$sites['glamma.lndo.site'] = 'glamma';
+
 // URL: http://www.zds.group/
 $sites['dev.zds.group'] = 'zds';
 $sites['www.zds.group'] = 'zds';

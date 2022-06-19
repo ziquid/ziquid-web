@@ -49,5 +49,6 @@ update ziquid
 update zds
 update cheek
 update pam
+update glamma
 
 _prod && scripts/db-dump.sh

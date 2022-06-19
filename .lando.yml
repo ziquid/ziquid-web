@@ -17,6 +17,7 @@ proxy:
     - zds.lndo.site
     - pam.lndo.site
     - cheek.lndo.site
+    - glamma.lndo.site
 services:
   appserver:
     build:
@@ -62,6 +63,16 @@ services:
       run_as_root:
         # Creates the extra databases as root since the app user does not have those privileges
         - mysql -uroot -e "CREATE DATABASE IF NOT EXISTS pam; GRANT ALL PRIVILEGES ON pam.* TO 'drupal'@'%' IDENTIFIED by 'drupal';"
+  glamma:
+    type: mariadb:10.4
+    portforward: true
+    creds:
+      user: drupal
+      password: drupal
+      database: glamma
+      run_as_root:
+        # Creates the extra databases as root since the app user does not have those privileges
+        - mysql -uroot -e "CREATE DATABASE IF NOT EXISTS glamma; GRANT ALL PRIVILEGES ON glamma.* TO 'drupal'@'%' IDENTIFIED by 'drupal';"
 tooling:
   edit:
     service: appserver
