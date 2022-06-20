@@ -1,9 +1,26 @@
 uuid: 717c0167-1119-439c-890b-4727e107858b
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.blog_page
+  module:
+    - contextual
+    - node
+    - path
+    - quickedit
 id: tester
 label: Tester
 weight: -6
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access contextual links'
+  - 'access in-place editing'
+  - 'administer url aliases'
+  - 'create blog_page content'
+  - 'create url aliases'
+  - 'delete any blog_page content'
+  - 'delete own blog_page content'
+  - 'edit any blog_page content'
+  - 'edit own blog_page content'
+  - 'view own unpublished content'

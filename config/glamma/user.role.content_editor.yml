@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - node.type.article
+    - node.type.blog_page
     - node.type.page
     - taxonomy.vocabulary.tags
   module:
@@ -12,6 +13,7 @@ dependencies:
     - file
     - node
     - path
+    - quickedit
     - system
     - taxonomy
     - toolbar
@@ -27,18 +29,24 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access in-place editing'
   - 'access toolbar'
   - 'access tour'
   - 'administer url aliases'
   - 'create article content'
+  - 'create blog_page content'
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
+  - 'delete any blog_page content'
   - 'delete article revisions'
   - 'delete own article content'
+  - 'delete own blog_page content'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'edit any blog_page content'
   - 'edit own article content'
+  - 'edit own blog_page content'
   - 'edit own comments'
   - 'edit own page content'
   - 'edit terms in tags'

@@ -10,8 +10,8 @@ third_party_settings:
     parent: ''
 name: 'Blog page'
 type: blog_page
-description: 'A blog page'
+description: 'A blog page.'
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 1
 display_submitted: false

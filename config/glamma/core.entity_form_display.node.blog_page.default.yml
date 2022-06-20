@@ -5,14 +5,9 @@ dependencies:
   config:
     - field.field.node.blog_page.body
     - field.field.node.blog_page.field_date
-    - field.field.node.blog_page.field_images
-    - field.field.node.blog_page.field_show_photos_on_right_side
-    - image.style.large
     - node.type.blog_page
   module:
     - datetime
-    - image
-    - imce
     - path
     - text
 id: node.blog_page.default
@@ -41,23 +36,6 @@ content:
     weight: 1
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_images:
-    type: image_image
-    weight: 2
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: large
-    third_party_settings:
-      imce:
-        enabled: false
-  field_show_photos_on_right_side:
-    type: boolean_checkbox
-    weight: 3
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   path:
     type: path

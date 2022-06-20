@@ -1,18 +1,14 @@
 uuid: e0e24e8c-1095-4c1c-be2a-af4990f827c2
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.blog_roll
     - field.field.node.blog_page.body
     - field.field.node.blog_page.field_date
-    - field.field.node.blog_page.field_images
-    - field.field.node.blog_page.field_show_photos_on_right_side
     - node.type.blog_page
-    - responsive_image.styles.narrow
   module:
     - datetime
-    - responsive_image
     - text
     - user
 id: node.blog_page.blog_roll
@@ -35,25 +31,6 @@ content:
       format_type: olivero_medium
     third_party_settings: {  }
     weight: 1
-    region: content
-  field_images:
-    type: responsive_image
-    label: hidden
-    settings:
-      responsive_image_style: narrow
-      image_link: ''
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_show_photos_on_right_side:
-    type: boolean
-    label: inline
-    settings:
-      format: yes-no
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 2
     region: content
   links:
     settings: {  }

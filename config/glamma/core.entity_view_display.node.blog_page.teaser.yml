@@ -6,8 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.blog_page.body
     - field.field.node.blog_page.field_date
-    - field.field.node.blog_page.field_images
-    - field.field.node.blog_page.field_show_photos_on_right_side
     - node.type.blog_page
   module:
     - text
@@ -32,5 +30,3 @@ content:
     region: content
 hidden:
   field_date: true
-  field_images: true
-  field_show_photos_on_right_side: true
