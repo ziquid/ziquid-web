@@ -1,0 +1,22 @@
+uuid: 1d5e94a6-1c96-4033-b257-44eab6f7ba00
+langcode: en
+status: true
+dependencies:
+  theme:
+    - glamma
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: glamma_primary_local_tasks
+theme: glamma
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

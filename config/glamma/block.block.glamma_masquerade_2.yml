@@ -1,0 +1,30 @@
+uuid: e8c78eb8-bb6d-4582-9238-5b07f68229f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - masquerade
+    - user
+  theme:
+    - glamma
+id: glamma_masquerade_2
+theme: glamma
+region: footer_bottom
+weight: 0
+provider: null
+plugin: masquerade
+settings:
+  id: masquerade
+  label: Masquerade
+  label_display: '0'
+  provider: masquerade
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      content_editor: content_editor
+      tester: tester
+      administrator: administrator

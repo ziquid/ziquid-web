@@ -1,0 +1,22 @@
+uuid: 5a6b59cf-9845-4361-94f4-d4691517ea67
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - glamma
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: glamma_content
+theme: glamma
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }
