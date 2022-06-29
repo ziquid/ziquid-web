@@ -5,7 +5,7 @@ description: "Glamma's theme."
 core_version_requirement: ^8.8 || ^9
 
 libraries:
-  - glamma/global-styling
+  - glamma/override-styling
 
 regions:
   header: Header
