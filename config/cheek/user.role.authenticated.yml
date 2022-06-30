@@ -12,6 +12,7 @@ dependencies:
     - search
     - shortcut
     - system
+    - tour
 _core:
   default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
 id: authenticated
@@ -23,8 +24,11 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'access tour'
+  - 'edit own comments'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
+  - 'use advanced search'
   - 'use text format basic_html'
   - 'view media'

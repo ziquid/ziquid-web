@@ -5,10 +5,13 @@ dependencies:
   config:
     - node.type.blog_page
   module:
+    - comment
     - contextual
     - node
     - path
     - quickedit
+    - toolbar
+    - webform_node
 id: blogger
 label: Blogger
 weight: -8
@@ -16,8 +19,13 @@ is_admin: null
 permissions:
   - 'access contextual links'
   - 'access in-place editing'
+  - 'access toolbar'
   - 'create blog_page content'
   - 'create url aliases'
   - 'delete own blog_page content'
-  - 'edit any blog_page content'
+  - 'delete webform submissions own node'
+  - 'edit own blog_page content'
+  - 'edit own comments'
+  - 'edit webform submissions own node'
   - 'view own unpublished content'
+  - 'view webform submissions own node'

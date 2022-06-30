@@ -3,19 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.full_html
     - node.type.article
+    - node.type.blog_page
     - node.type.page
     - taxonomy.vocabulary.tags
   module:
+    - admin_toolbar_search
     - comment
     - contextual
     - file
+    - filter
     - node
     - path
+    - search
     - system
     - taxonomy
     - toolbar
     - tour
+    - webform_node
 _core:
   default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
 id: content_editor
@@ -27,22 +33,38 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access site in maintenance mode'
   - 'access toolbar'
   - 'access tour'
+  - 'administer comment types'
+  - 'administer comments'
+  - 'administer content types'
+  - 'administer nodes'
+  - 'administer search'
   - 'administer url aliases'
   - 'create article content'
+  - 'create blog_page content'
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
+  - 'delete any blog_page content'
   - 'delete article revisions'
   - 'delete own article content'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'delete webform submissions any node'
+  - 'delete webform submissions own node'
   - 'edit own article content'
   - 'edit own comments'
   - 'edit own page content'
   - 'edit terms in tags'
+  - 'edit webform submissions any node'
+  - 'edit webform submissions own node'
   - 'revert all revisions'
+  - 'use admin toolbar search'
+  - 'use text format full_html'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'view the administration theme'
+  - 'view webform submissions any node'
+  - 'view webform submissions own node'

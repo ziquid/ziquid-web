@@ -1,9 +1,60 @@
 uuid: 717c0167-1119-439c-890b-4727e107858b
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.article
+    - node.type.blog_page
+    - node.type.page
+  module:
+    - admin_toolbar_search
+    - comment
+    - contextual
+    - file
+    - filter
+    - node
+    - path
+    - search
+    - system
+    - toolbar
+    - tour
+    - update
+    - webform_node
 id: tester
 label: Tester
 weight: -6
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access toolbar'
+  - 'access tour'
+  - 'administer comment types'
+  - 'administer comments'
+  - 'administer content types'
+  - 'administer nodes'
+  - 'administer search'
+  - 'administer software updates'
+  - 'administer url aliases'
+  - 'create blog_page content'
+  - 'create url aliases'
+  - 'delete any blog_page content'
+  - 'delete webform submissions any node'
+  - 'delete webform submissions own node'
+  - 'edit own article content'
+  - 'edit own comments'
+  - 'edit own page content'
+  - 'edit webform submissions any node'
+  - 'edit webform submissions own node'
+  - 'use admin toolbar search'
+  - 'use text format full_html'
+  - 'view own unpublished content'
+  - 'view the administration theme'
+  - 'view update notifications'
+  - 'view webform submissions any node'
+  - 'view webform submissions own node'
