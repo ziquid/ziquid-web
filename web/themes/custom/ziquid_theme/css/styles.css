@@ -69,6 +69,12 @@ body.user-logged-in .anonymous-only {
   background-repeat: no-repeat;
 }
 
+#full-page-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .region-content {
   padding: 0;
 }
@@ -214,6 +220,10 @@ main {
 
 .views-view-table .views-field-name {
   margin: 0 0 0 16px;
+}
+
+footer {
+  margin-top: auto;
 }
 
 .region-footer {
