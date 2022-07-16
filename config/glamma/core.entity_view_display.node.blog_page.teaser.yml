@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.blog_page.body
+    - field.field.node.blog_page.comment
     - field.field.node.blog_page.field_date
     - node.type.blog_page
   module:
@@ -29,4 +30,5 @@ content:
     weight: 100
     region: content
 hidden:
+  comment: true
   field_date: true

@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.blog_page.body
+    - field.field.node.blog_page.comment
     - field.field.node.blog_page.field_date
     - node.type.blog_page
   module:
+    - comment
     - datetime
     - path
     - text
@@ -24,6 +26,12 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
+    third_party_settings: {  }
+  comment:
+    type: comment_default
+    weight: 26
+    region: content
+    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp

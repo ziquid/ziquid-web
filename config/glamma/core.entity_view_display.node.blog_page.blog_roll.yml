@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.blog_roll
     - field.field.node.blog_page.body
+    - field.field.node.blog_page.comment
     - field.field.node.blog_page.field_date
     - node.type.blog_page
   module:
@@ -37,4 +38,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  comment: true
