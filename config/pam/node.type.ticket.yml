@@ -1,4 +1,4 @@
-uuid: a55ed5e0-f9cb-422b-bac3-2aa648ffb6ba
+uuid: b38c0ded-d4b0-4dcd-8dcc-4e40503bfec0
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,9 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Task
-type: task
-description: ''
+name: Ticket
+type: ticket
+description: 'An actionable task (Epic, Story, Task, Subtask).  Potentially contains a list of other actionable tasks.'
 help: ''
 new_revision: false
 preview_mode: 1

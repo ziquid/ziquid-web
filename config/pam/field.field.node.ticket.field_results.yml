@@ -1,16 +1,16 @@
-uuid: 8c876fce-dd10-4867-a277-1a7e4280967e
+uuid: 159fc62e-fb76-4fa8-9708-e9dc2294c12f
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_results
-    - node.type.task
+    - node.type.ticket
   module:
     - text
-id: node.task.field_results
+id: node.ticket.field_results
 field_name: field_results
 entity_type: node
-bundle: task
+bundle: ticket
 label: Results
 description: ''
 required: false

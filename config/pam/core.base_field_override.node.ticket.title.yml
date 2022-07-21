@@ -1,13 +1,13 @@
-uuid: ececa8ef-eaa3-488d-a141-70c6d8f4e420
+uuid: 2be788b3-207b-4f49-9073-558739f5e08d
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.task
-id: node.task.title
+    - node.type.ticket
+id: node.ticket.title
 field_name: title
 entity_type: node
-bundle: task
+bundle: ticket
 label: Name
 description: ''
 required: true

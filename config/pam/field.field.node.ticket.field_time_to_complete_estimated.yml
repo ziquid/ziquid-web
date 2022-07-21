@@ -1,16 +1,16 @@
-uuid: d243f3c1-1bab-4949-b410-000f54ed2336
+uuid: dd7dddb0-13ad-4fe9-90d9-774cf02c5ab9
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_time_to_complete_estimated
-    - node.type.task
+    - node.type.ticket
   module:
     - options
-id: node.task.field_time_to_complete_estimated
+id: node.ticket.field_time_to_complete_estimated
 field_name: field_time_to_complete_estimated
 entity_type: node
-bundle: task
+bundle: ticket
 label: 'Time to Complete (Estimated)'
 description: ''
 required: true

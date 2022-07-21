@@ -1,14 +1,14 @@
-uuid: 9314fe57-7910-4c23-aa37-e6695e0e4b78
+uuid: 96d44204-a362-4e26-9522-e9c582420478
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_total_time_spent
-    - node.type.task
-id: node.task.field_total_time_spent
+    - node.type.ticket
+id: node.ticket.field_total_time_spent
 field_name: field_total_time_spent
 entity_type: node
-bundle: task
+bundle: ticket
 label: 'Total Time Spent'
 description: 'The total amount of time spent, in minutes.'
 required: false

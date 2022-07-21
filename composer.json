@@ -29,6 +29,7 @@
         "drupal/adminimal_admin_toolbar": "^1.9",
         "drupal/adminimal_theme": "^1.6",
         "drupal/bootstrap_barrio": "^5.5",
+        "drupal/config_split": "^1.9",
         "drupal/content_access": "1.x-dev@dev",
         "drupal/core": "^9.4.1",
         "drupal/core-composer-scaffold": "^9.3",

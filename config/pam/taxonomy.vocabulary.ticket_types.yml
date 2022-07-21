@@ -1,0 +1,8 @@
+uuid: 508c8f8b-2f29-47d6-a07d-c320c84eba7b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Ticket Types'
+vid: ticket_types
+description: 'The types of tickets supported'
+weight: 0

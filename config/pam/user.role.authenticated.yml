@@ -2,7 +2,10 @@ uuid: 20c1c6d1-caf6-4043-beed-2a1b7362dd09
 langcode: en
 status: true
 dependencies:
+  config:
+    - taxonomy.vocabulary.ticket_types
   module:
+    - content_translation
     - toolbar
 _core:
   default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
@@ -12,3 +15,4 @@ weight: -9
 is_admin: false
 permissions:
   - 'access toolbar'
+  - 'translate ticket_types taxonomy_term'

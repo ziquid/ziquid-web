@@ -1,16 +1,16 @@
-uuid: 7c8815aa-8351-4bc4-b097-2943f7fd3231
+uuid: 18664e15-88b9-4da8-b3b4-4e09b6f7d30d
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_links
-    - node.type.task
+    - node.type.ticket
   module:
     - link
-id: node.task.field_links
+id: node.ticket.field_links
 field_name: field_links
 entity_type: node
-bundle: task
+bundle: ticket
 label: Links
 description: ''
 required: false

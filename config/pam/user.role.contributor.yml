@@ -10,6 +10,7 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - media.type.video
+    - node.type.ticket
     - taxonomy.vocabulary.tags
   module:
     - comment
@@ -42,18 +43,21 @@ permissions:
   - 'create media'
   - 'create remote_video media'
   - 'create terms in tags'
+  - 'create ticket content'
   - 'create video media'
   - 'delete media'
   - 'delete own audio media'
   - 'delete own document media'
   - 'delete own image media'
   - 'delete own remote_video media'
+  - 'delete own ticket content'
   - 'delete own video media'
   - 'edit own audio media'
   - 'edit own comments'
   - 'edit own document media'
   - 'edit own image media'
   - 'edit own remote_video media'
+  - 'edit own ticket content'
   - 'edit own video media'
   - 'post comments'
   - 'search content'

@@ -1,4 +1,4 @@
-uuid: 1df043f7-a280-4bbe-8082-df634c7785b6
+uuid: e8b1c9c6-448e-47dd-a4f4-26868ebc88ad
 langcode: en
 status: true
 dependencies:
@@ -9,11 +9,11 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - media.type.video
-    - node.type.task
-id: node.task.field_files
+    - node.type.ticket
+id: node.ticket.field_files
 field_name: field_files
 entity_type: node
-bundle: task
+bundle: ticket
 label: Files
 description: ''
 required: false

@@ -12,9 +12,10 @@ dependencies:
     - media.type.video
     - node.type.help_page
     - node.type.project
-    - node.type.task
+    - node.type.ticket
     - taxonomy.vocabulary.account_organization
     - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.ticket_types
   module:
     - comment
     - config_translation
@@ -52,9 +53,10 @@ permissions:
   - 'create media'
   - 'create project content'
   - 'create remote_video media'
-  - 'create task content'
   - 'create terms in account_organization'
   - 'create terms in tags'
+  - 'create terms in ticket_types'
+  - 'create ticket content'
   - 'create video media'
   - 'delete any audio media'
   - 'delete any document media'
@@ -62,7 +64,7 @@ permissions:
   - 'delete any media'
   - 'delete any project content'
   - 'delete any remote_video media'
-  - 'delete any task content'
+  - 'delete any ticket content'
   - 'delete any video media'
   - 'delete media'
   - 'delete own audio media'
@@ -71,16 +73,18 @@ permissions:
   - 'delete own image media'
   - 'delete own project content'
   - 'delete own remote_video media'
-  - 'delete own task content'
+  - 'delete own ticket content'
   - 'delete own video media'
   - 'delete terms in account_organization'
   - 'delete terms in tags'
+  - 'delete terms in ticket_types'
+  - 'delete ticket revisions'
   - 'edit any audio media'
   - 'edit any document media'
   - 'edit any image media'
   - 'edit any project content'
   - 'edit any remote_video media'
-  - 'edit any task content'
+  - 'edit any ticket content'
   - 'edit any video media'
   - 'edit own audio media'
   - 'edit own comments'
@@ -89,11 +93,13 @@ permissions:
   - 'edit own image media'
   - 'edit own project content'
   - 'edit own remote_video media'
-  - 'edit own task content'
+  - 'edit own ticket content'
   - 'edit own video media'
   - 'edit terms in account_organization'
   - 'edit terms in tags'
+  - 'edit terms in ticket_types'
   - 'post comments'
+  - 'revert ticket revisions'
   - 'search content'
   - 'select account cancellation method'
   - 'translate any entity'
@@ -107,4 +113,5 @@ permissions:
   - 'view media'
   - 'view own unpublished content'
   - 'view own unpublished media'
+  - 'view ticket revisions'
   - 'view user email addresses'

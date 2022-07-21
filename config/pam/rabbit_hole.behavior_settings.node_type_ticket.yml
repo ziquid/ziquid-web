@@ -1,0 +1,14 @@
+uuid: 9ef0917b-a457-42ee-9b16-8a97391c38e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ticket
+id: node_type_ticket
+entity_type_id: node_type
+entity_id: ticket
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

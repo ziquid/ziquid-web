@@ -1,13 +1,13 @@
-uuid: 35f78bc2-5a21-407b-ab23-bf01485c4a0c
+uuid: f6fa5480-411a-4f0d-a552-1bf06e87c5a9
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.task
-id: node.task.promote
+    - node.type.ticket
+id: node.ticket.promote
 field_name: promote
 entity_type: node
-bundle: task
+bundle: ticket
 label: 'Promoted to front page'
 description: ''
 required: false

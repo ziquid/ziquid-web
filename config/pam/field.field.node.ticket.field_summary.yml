@@ -1,14 +1,14 @@
-uuid: 2c07bc11-a0b5-4a18-8d59-5dceea0b4a19
+uuid: ca91b0a9-148b-4da8-85e9-67f70f89b324
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_summary
-    - node.type.task
-id: node.task.field_summary
+    - node.type.ticket
+id: node.ticket.field_summary
 field_name: field_summary
 entity_type: node
-bundle: task
+bundle: ticket
 label: Summary
 description: ''
 required: true

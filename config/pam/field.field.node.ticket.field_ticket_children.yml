@@ -1,24 +1,25 @@
-uuid: 0c359007-b746-4145-b9a1-949ef65adb06
+uuid: 3071f9b0-292e-465c-8b73-b99aa1434328
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_associated_item
-    - node.type.task
-id: node.task.field_associated_item
-field_name: field_associated_item
+    - field.storage.node.field_ticket_children
+    - node.type.ticket
+id: node.ticket.field_ticket_children
+field_name: field_ticket_children
 entity_type: node
-bundle: task
-label: 'Associated Item'
+bundle: ticket
+label: Children
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      ticket: ticket
     sort:
       field: _none
       direction: ASC

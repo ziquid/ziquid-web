@@ -1,16 +1,16 @@
-uuid: 8ffaddc0-ba34-491e-8352-464027289964
+uuid: a8d74fb9-9744-4296-aa12-f135aa690821
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_assignee
-    - node.type.task
+    - node.type.ticket
   content:
     - 'user:user:314942f7-7f88-4f29-8b74-2eaf3efa1042'
-id: node.task.field_assignee
+id: node.ticket.field_assignee
 field_name: field_assignee
 entity_type: node
-bundle: task
+bundle: ticket
 label: Assignee
 description: ''
 required: true
