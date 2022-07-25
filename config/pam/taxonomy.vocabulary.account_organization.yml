@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'Account Organization'
 vid: account_organization
-description: 'Organization and Divisions within an Account'
+description: 'Organizations, Divisions, and Programs within an Account'
 weight: 0

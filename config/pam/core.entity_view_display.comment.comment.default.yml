@@ -22,7 +22,10 @@ content:
     weight: 0
     region: content
   links:
+    settings: {  }
+    third_party_settings: {  }
     weight: 100
     region: content
 hidden:
+  breadcrumbs: true
   langcode: true

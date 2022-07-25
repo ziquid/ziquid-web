@@ -1,0 +1,22 @@
+uuid: 67b76347-4331-45a4-b7ef-6d922698fb9b
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: org_div_prog
+label: Org-Div-Prog
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:parents:join-path]/[term:name]'
+selection_criteria:
+  0a422197-38b3-494d-9296-96de10f129f4:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 0a422197-38b3-494d-9296-96de10f129f4
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      account_organization: account_organization
+selection_logic: and
+weight: -5
+relationships: {  }
