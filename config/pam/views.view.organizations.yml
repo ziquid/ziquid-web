@@ -339,7 +339,7 @@ display:
           render_plugin: ''
           access_plugin: views_add_button_default
           context: ''
-          button_text: 'Add another Organization'
+          button_text: 'Add another Organization / Division / Program'
           button_classes: button
           button_attributes: ''
           button_access_denied:
