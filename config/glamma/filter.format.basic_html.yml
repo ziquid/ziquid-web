@@ -19,7 +19,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <span> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <u> <br class="clear-both"> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title>'
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <span> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <u> <br class="clear-both"> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <p class="clear-both">'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:

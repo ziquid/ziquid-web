@@ -57,7 +57,7 @@ settings:
             - PasteFromWord
   plugins:
     stylescombo:
-      styles: 'br.clear-both|Clear Line Break'
+      styles: 'p.clear-both|New Paragraph'
 image_upload:
   status: true
   scheme: public
