@@ -19,6 +19,8 @@ settings:
           items:
             - Bold
             - Italic
+            - Underline
+            - SpecialChar
         -
           name: Linking
           items:
@@ -34,22 +36,33 @@ settings:
           items:
             - Blockquote
             - DrupalImage
+            - DrupalMediaLibrary
         -
           name: 'Block Formatting'
           items:
             - Format
+            - Styles
         -
           name: Tools
           items:
             - Source
+            - ShowBlocks
+        -
+          name: Clipboard
+          items:
+            - Cut
+            - Copy
+            - Paste
+            - PasteText
+            - PasteFromWord
   plugins:
     stylescombo:
-      styles: ''
+      styles: 'br.clear-both|Clear Line Break'
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null
