@@ -49,6 +49,14 @@ class VisJsTestBlock extends BlockBase {
     );
 
     $nodeData = $edgeData = [];
+    $nodeData[] = [
+      'id' => 0,
+      'label' => 'Organizations',
+      'value' => 28,
+      'margin' => 14,
+    ];
+
+//     $numNodesByType = [0, 0, 0];
 
     foreach ($tree as $term) {
       $nodeData[] = [
@@ -57,12 +65,15 @@ class VisJsTestBlock extends BlockBase {
         'value' => 24 - ($term->depth * 4),
         'margin' => 12 - ($term->depth * 2),
       ];
-      if ($term->depth > 0) {
+      $numNodesByType[$term->depth]++;
+      if (TRUE || $term->depth > 0) {
         $edgeData[] = [
           'from' => $term->parents[0],
           'to' => $term->tid,
         ];
       }
+
+      // Add a 'root' node if there
     }
 
     return ['nodeData' => $nodeData, 'edgeData' => $edgeData];
