@@ -28,7 +28,7 @@
           arrows: "to",
           smooth: {
             type: "vertical",
-            roundedness: 1,
+            roundness: 1,
           }
         }
       };

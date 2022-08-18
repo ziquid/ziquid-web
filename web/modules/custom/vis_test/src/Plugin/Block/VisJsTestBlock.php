@@ -9,8 +9,8 @@ use Drupal\Core\Block\BlockBase;
  *
  * @Block(
  *   id = "vis_test_vis_js_test",
- *   admin_label = @Translation("Vis.JS Test"),
- *   category = @Translation("Custom")
+ *   admin_label = @Translation("Organizations"),
+ *   category = @Translation("PAM")
  * )
  */
 class VisJsTestBlock extends BlockBase {
