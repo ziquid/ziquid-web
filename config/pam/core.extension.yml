@@ -26,6 +26,8 @@ module:
   custom_breadcrumbs: 0
   datetime: 0
   dblog: 0
+  devel: 0
+  devel_php: 0
   displayrole: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
