@@ -1,0 +1,13 @@
+visjs-blocksupport:
+  version: 1.x
+  css:
+    theme:
+      css/orgblock.css: {}
+  js:
+    js/orgblock.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - visjs/vis.network
+    - core/drupalSettings

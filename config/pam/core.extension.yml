@@ -87,6 +87,7 @@ module:
   views_add_button: 0
   views_tree: 0
   views_ui: 0
+  vis_test: 0
   visjs: 0
   pathauto: 1
   content_translation: 10
