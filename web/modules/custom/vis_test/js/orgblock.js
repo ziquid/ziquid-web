@@ -44,6 +44,10 @@
           minVelocity: 0.75,
           solver: "hierarchicalRepulsion",
         },
+        interaction: {
+          navigationButtons: true,
+          keyboard: true,
+        },
       };
 
       function draw() {

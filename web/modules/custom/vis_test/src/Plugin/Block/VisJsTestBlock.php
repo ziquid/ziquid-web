@@ -48,32 +48,99 @@ class VisJsTestBlock extends BlockBase {
       'account_organization', 0, 3, FALSE
     );
 
+    $orgLabels = [
+      'Organization',
+      'Division',
+      'Program',
+    ];
+
+    $shortOrgLabels = [
+      'Org',
+      'Div',
+      'Prog',
+    ];
+
+    $colors = [
+      '#FFA807',
+      'lightblue',
+      'pink',
+    ];
+
     $nodeData = $edgeData = [];
     $nodeData[] = [
       'id' => 0,
       'label' => 'Organizations',
-      'value' => 28,
+      'value' => 24,
       'margin' => 14,
+    ];
+    $nodeData[] = [
+      'id' => '0-add-child',
+      'label' => '(new)' . "\n" . '`' . $shortOrgLabels[0] . '`',
+      'value' => 17,
+      'margin' => 10,
+      'font' => [
+        'multi' => 'md',
+      ],
+      'shape' => 'ellipse',
+      'color' => '#7BE141',
+    ];
+    $edgeData[] = [
+      'from' => 0,
+      'to' => '0-add-child',
     ];
 
 //     $numNodesByType = [0, 0, 0];
 
     foreach ($tree as $term) {
+      $label = $term->name;
+      $depth = $term->depth;
+      if (isset($orgLabels[$depth])) {
+        $label .= "\n" . '`' . $orgLabels[$depth] . '`';
+      };
+      $color = $colors[$depth] ?: $colors[0];
+
       $nodeData[] = [
         'id' => $term->tid,
-        'label' => $term->name,
-        'value' => 24 - ($term->depth * 4),
-        'margin' => 12 - ($term->depth * 2),
+        'label' => $label,
+        'value' => 20 - ($depth * 3),
+        'margin' => 12 - ($depth * 2),
+        'font' => [
+          'multi' => 'md',
+          'align' => 'left',
+        ],
+        'color' => $color,
       ];
-      $numNodesByType[$term->depth]++;
-      if (TRUE || $term->depth > 0) {
-        $edgeData[] = [
-          'from' => $term->parents[0],
-          'to' => $term->tid,
-        ];
-      }
 
-      // Add a 'root' node if there
+      // Parent?  Show "add" node.
+      if ($depth < 2) {
+        $label = '(new)';
+        if (isset($shortOrgLabels[$depth + 1])) {
+          $label .= "\n" . '`' . $shortOrgLabels[$depth + 1] . '`';
+        };
+        $nodeData[] = [
+          'id' => $term->tid . '-add-child',
+          'label' => $label,
+          'value' => 14 - ($depth * 3),
+          'margin' => 8 - ($depth * 2),
+          'font' => [
+            'multi' => 'md',
+          ],
+          'shape' => 'ellipse',
+          'color' => '#7BE141',
+        ];
+        $edgeData[] = [
+          'from' => $term->tid,
+          'to' => $term->tid . '-add-child',
+        ];
+
+      };
+
+
+      $edgeData[] = [
+        'from' => $term->parents[0],
+        'to' => $term->tid,
+      ];
+
     }
 
     return ['nodeData' => $nodeData, 'edgeData' => $edgeData];
