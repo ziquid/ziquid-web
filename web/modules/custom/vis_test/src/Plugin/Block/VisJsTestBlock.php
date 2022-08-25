@@ -92,16 +92,25 @@ class VisJsTestBlock extends BlockBase {
 //     $numNodesByType = [0, 0, 0];
 
     foreach ($tree as $term) {
-      $label = $term->name;
+      $title = $label = $term->name;
       $depth = $term->depth;
+      $tid = $term->tid ?: $term->id();
+
+      $nodes = $this->getProjects($tid);
+      $numNodes = count($nodes);
+      $title .= " ($numNodes)";
+      $label .= " ($numNodes)";
+
       if (isset($orgLabels[$depth])) {
         $label .= "\n" . '`' . $orgLabels[$depth] . '`';
       };
+
       $color = $colors[$depth] ?: $colors[0];
 
       $nodeData[] = [
-        'id' => $term->tid,
+        'id' => $tid,
         'label' => $label,
+        'title' => $title,
         'value' => 20 - ($depth * 3),
         'margin' => 12 - ($depth * 2),
         'font' => [
@@ -109,6 +118,8 @@ class VisJsTestBlock extends BlockBase {
           'align' => 'left',
         ],
         'color' => $color,
+        'clickUrl' => '/taxonomy/term/' . $tid,
+        'dblClkUrl' => '/taxonomy/term/' . $tid . '/edit',
       ];
 
       // Parent?  Show "add" node.
@@ -118,7 +129,7 @@ class VisJsTestBlock extends BlockBase {
           $label .= "\n" . '`' . $shortOrgLabels[$depth + 1] . '`';
         };
         $nodeData[] = [
-          'id' => $term->tid . '-add-child',
+          'id' => $tid . '-add-child',
           'label' => $label,
           'value' => 14 - ($depth * 3),
           'margin' => 8 - ($depth * 2),
@@ -127,10 +138,12 @@ class VisJsTestBlock extends BlockBase {
           ],
           'shape' => 'ellipse',
           'color' => '#7BE141',
+          'clickUrl' => '/admin/structure/taxonomy/manage/account_organization/add',
+          'dblClkUrl' => '/admin/structure/taxonomy/manage/account_organization/add',
         ];
         $edgeData[] = [
-          'from' => $term->tid,
-          'to' => $term->tid . '-add-child',
+          'from' => $tid,
+          'to' => $tid . '-add-child',
         ];
 
       };
@@ -138,11 +151,20 @@ class VisJsTestBlock extends BlockBase {
 
       $edgeData[] = [
         'from' => $term->parents[0],
-        'to' => $term->tid,
+        'to' => $tid,
       ];
 
     }
 
     return ['nodeData' => $nodeData, 'edgeData' => $edgeData];
+  }
+
+  protected function getProjects($tid) {
+    $nodes = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
+      'field_parent_program' => $tid,
+      'type' => 'project',
+    ]);
+//     ksm($nodes, 'nodes for tid ' . $tid);
+    return $nodes;
   }
 }

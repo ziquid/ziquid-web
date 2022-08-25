@@ -5,13 +5,13 @@
         // Apply the myCustomBehaviour effect to the elements only once.
         // create an array with nodes
 
-      var nodes = new vis.DataSet(drupalSettings.visTest.nodeData);
+      this.nodeDataSet = new vis.DataSet(drupalSettings.visTest.nodeData);
       var edges = new vis.DataSet(drupalSettings.visTest.edgeData);
 
       this.container = document.getElementById("organizations");
 
       this.data = {
-        nodes: nodes,
+        nodes: this.nodeDataSet,
         edges: edges,
       };
       this.options = {
@@ -47,8 +47,13 @@
         interaction: {
           navigationButtons: true,
           keyboard: true,
+          hover: true,
         },
+//         manipulation: {
+//           enabled: true,
+//         },
       };
+
 
       function draw() {
         // Clean up old network.
@@ -60,25 +65,40 @@
         this.network = new vis.Network(this.container, this.data, this.options);
       };
 
-//       Drupal.behaviors.visTestBehavior.draw();
+
       this.draw();
-//       });
+      this.network.on("click", (params) => {
+        var nodeId = params.nodes[0]; // 14; // this.getNodeAt(params.pointer.DOM);
+//         console.log("click event for node: " + nodeId);
+        var node = this.nodeDataSet.get(nodeId);
+        console.log(node);
+        var dialogModalAjaxObject = Drupal.ajax({
+          url: node.clickUrl,
+          dialogType: 'modal',
+          dialog: { width: '80%', height: '80%', title: node.title },
+        });
+        dialogModalAjaxObject.execute();
+      });
+      this.network.on("doubleClick", (params) => {
+        var nodeId = params.nodes[0]; // 14; // this.getNodeAt(params.pointer.DOM);
+//         console.log("click event for node: " + nodeId);
+        var node = this.nodeDataSet.get(nodeId);
+        console.log(node);
+        var dialogModalAjaxObject = Drupal.ajax({
+          url: node.dblClkUrl,
+          dialogType: 'modal',
+          dialog: { width: '80%', height: '80%', title: node.title },
+        });
+        dialogModalAjaxObject.execute();
+      });
+
     },
-//     draw: function() {
-//       // Clean up old network.
-//       if (Drupal.behaviors.visTestBehavior.network != null) {
-//         Drupal.behaviors.visTestBehavior.network.destroy();
-//         Drupal.behaviors.visTestBehavior.network = null;
-//       };
-//
-//       Drupal.behaviors.visTestBehavior.network = new vis.Network(container, data, options);
-//       };
-//     },
     container: null,
     data: null,
     draw: function() {
       this.network = this.reDraw(this.network, this.container, this.data, this.options);
     },
+    nodeDataSet: null,
     network: null,
     options: null,
     reDraw: function(network, container, data, options) {

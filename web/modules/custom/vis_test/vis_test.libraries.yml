@@ -11,3 +11,5 @@ visjs-blocksupport:
     - core/once
     - visjs/vis.network
     - core/drupalSettings
+    - core/drupal.ajax
+    - core/drupal.dialog.ajax
