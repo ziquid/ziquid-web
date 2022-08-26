@@ -118,8 +118,8 @@ class VisJsTestBlock extends BlockBase {
           'align' => 'left',
         ],
         'color' => $color,
-        'clickUrl' => '/taxonomy/term/' . $tid,
-        'dblClkUrl' => '/taxonomy/term/' . $tid . '/edit',
+        'clickUrl' => '/taxonomy/term/' . $tid . '?destination=/',
+        'dblClkUrl' => '/taxonomy/term/' . $tid . '/edit?destination=/',
       ];
 
       // Parent?  Show "add" node.
@@ -138,8 +138,8 @@ class VisJsTestBlock extends BlockBase {
           ],
           'shape' => 'ellipse',
           'color' => '#7BE141',
-          'clickUrl' => '/admin/structure/taxonomy/manage/account_organization/add',
-          'dblClkUrl' => '/admin/structure/taxonomy/manage/account_organization/add',
+          'clickUrl' => '/admin/structure/taxonomy/manage/account_organization/add?destination=/',
+          'dblClkUrl' => '/admin/structure/taxonomy/manage/account_organization/add?destination=/',
         ];
         $edgeData[] = [
           'from' => $tid,

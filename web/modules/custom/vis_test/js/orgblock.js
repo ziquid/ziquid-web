@@ -32,6 +32,11 @@
             roundness: 0.9,
           },
         },
+        layout: {
+          hierarchical: {
+            direction: 'LR',
+          },
+        },
         physics: {
           barnesHut: {
             avoidOverlap: 1,
@@ -68,8 +73,7 @@
 
       this.draw();
       this.network.on("click", (params) => {
-        var nodeId = params.nodes[0]; // 14; // this.getNodeAt(params.pointer.DOM);
-//         console.log("click event for node: " + nodeId);
+        var nodeId = params.nodes[0];
         var node = this.nodeDataSet.get(nodeId);
         console.log(node);
         var dialogModalAjaxObject = Drupal.ajax({
@@ -80,14 +84,13 @@
         dialogModalAjaxObject.execute();
       });
       this.network.on("doubleClick", (params) => {
-        var nodeId = params.nodes[0]; // 14; // this.getNodeAt(params.pointer.DOM);
-//         console.log("click event for node: " + nodeId);
+        var nodeId = params.nodes[0];
         var node = this.nodeDataSet.get(nodeId);
         console.log(node);
         var dialogModalAjaxObject = Drupal.ajax({
           url: node.dblClkUrl,
           dialogType: 'modal',
-          dialog: { width: '80%', height: '80%', title: node.title },
+          dialog: { width: '80%', height: '80%', title: node.title + ' (Edit)'},
         });
         dialogModalAjaxObject.execute();
       });
