@@ -32,11 +32,6 @@
             roundness: 0.9,
           },
         },
-        layout: {
-          hierarchical: {
-            direction: 'LR',
-          },
-        },
         physics: {
           barnesHut: {
             avoidOverlap: 1,
@@ -48,6 +43,7 @@
           maxVelocity: 20,
           minVelocity: 0.75,
           solver: "hierarchicalRepulsion",
+//           wind: { x:0, y: 0.1 },
         },
         interaction: {
           navigationButtons: true,
