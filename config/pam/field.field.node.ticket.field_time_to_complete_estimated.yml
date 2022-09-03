@@ -12,8 +12,8 @@ field_name: field_time_to_complete_estimated
 entity_type: node
 bundle: ticket
 label: 'Time to Complete (Estimated)'
-description: ''
-required: true
+description: 'How long will it take to complete this ticket only?  Do not include time for child tickets.'
+required: false
 translatable: true
 default_value:
   -

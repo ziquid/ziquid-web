@@ -8,7 +8,7 @@ id: node.ticket.title
 field_name: title
 entity_type: node
 bundle: ticket
-label: Name
+label: Summary
 description: ''
 required: true
 translatable: true
