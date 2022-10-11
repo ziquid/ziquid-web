@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.project.field_comments
     - field.field.node.project.field_description
     - field.field.node.project.field_parent_program
+    - field.field.node.project.field_project_status
     - node.type.project
   module:
     - layout_builder
@@ -31,5 +32,6 @@ hidden:
   breadcrumbs: true
   field_comments: true
   field_parent_program: true
+  field_project_status: true
   langcode: true
   links: true
