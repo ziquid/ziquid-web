@@ -1,8 +1,0 @@
-uuid: 9d785f6a-84ab-4cae-8734-7cea7b663049
-langcode: en
-status: true
-dependencies: {  }
-name: 'Project status'
-vid: project_status
-description: 'The status of a project'
-weight: 0

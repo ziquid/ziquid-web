@@ -27,10 +27,10 @@ function update() {
   drush cr -l $1 || :
   drush updb -y -l $1
   drush cr -l $1 || :
-  _linux && drush cim -y sync -l $1 || drush cim -y sync --partial -l $1
+  drush cim -y sync -l $1 || drush cim -y sync -l $1
   drush cr -l $1
   drush cc views -l $1
-#  chown -R apache:apache .
+  _linux && chown -R www_data:www_data .
 }
 
 # main()
