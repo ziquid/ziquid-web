@@ -25,4 +25,5 @@ hidden:
   field_comments: true
   field_description: true
   field_parent_program: true
+  field_project_status: true
   langcode: true

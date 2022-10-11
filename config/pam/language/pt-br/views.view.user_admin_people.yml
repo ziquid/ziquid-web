@@ -11,7 +11,6 @@ display:
         name:
           label: 'Nome de usuário'
         status:
-          label: Status
           settings:
             format_custom_false: Bloqueado
             format_custom_true: Ativo
@@ -53,7 +52,6 @@ display:
             label: 'Nome ou email contém'
         status:
           group_info:
-            label: Status
             group_items:
               1:
                 title: Ativo

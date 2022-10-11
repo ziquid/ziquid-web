@@ -13,7 +13,6 @@ display:
         filesize:
           label: Tamanho
         status:
-          label: Status
           settings:
             format_custom_false: Temporário
             format_custom_true: Permanente
@@ -49,9 +48,6 @@ display:
         filemime:
           expose:
             label: 'Tipo MIME'
-        status:
-          expose:
-            label: Status
   page_1:
     display_title: 'Visão geral de arquivos'
     display_options:
