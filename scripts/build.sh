@@ -30,7 +30,7 @@ function update() {
   drush cim -y sync -l $1 || drush cim -y sync -l $1
   drush cr -l $1
   drush cc views -l $1
-  _linux && chown -R www_data:www_data .
+  _linux && chown -R www-data:www-data .
 }
 
 # main()
