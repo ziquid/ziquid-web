@@ -18,10 +18,12 @@ dependencies:
     - contact
     - content_translation
     - contextual
+    - editablefields
     - filter
     - locale
     - media
     - node
+    - quickedit
     - search
     - system
     - taxonomy
@@ -34,7 +36,9 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
+  - 'access content overview'
   - 'access contextual links'
+  - 'access in-place editing'
   - 'access site-wide contact form'
   - 'access user profiles'
   - 'create audio media'
@@ -63,11 +67,13 @@ permissions:
   - 'search content'
   - 'translate any entity'
   - 'translate configuration'
-  - 'translate editable entities'
   - 'translate interface'
   - 'update media'
+  - 'use advanced search'
+  - 'use editablefields'
   - 'use text format basic_html'
   - 'use text format restricted_html'
+  - 'view media'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view user email addresses'

@@ -6,6 +6,8 @@ dependencies:
     - taxonomy.vocabulary.ticket_types
   module:
     - content_translation
+    - node
+    - system
     - toolbar
 _core:
   default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
@@ -14,5 +16,8 @@ label: 'Authenticated user'
 weight: -9
 is_admin: false
 permissions:
+  - 'access content'
   - 'access toolbar'
+  - 'change own username'
   - 'translate ticket_types taxonomy_term'
+  - 'view own unpublished content'

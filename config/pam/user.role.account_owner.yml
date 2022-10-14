@@ -14,6 +14,7 @@ dependencies:
     - node.type.project
     - node.type.ticket
     - taxonomy.vocabulary.account_organization
+    - taxonomy.vocabulary.project_status
     - taxonomy.vocabulary.tags
     - taxonomy.vocabulary.ticket_types
   module:
@@ -26,6 +27,8 @@ dependencies:
     - locale
     - media
     - node
+    - path
+    - quickedit
     - search
     - system
     - taxonomy
@@ -34,10 +37,13 @@ label: 'Account owner'
 weight: -7
 is_admin: null
 permissions:
+  - 'access administration pages'
   - 'access comments'
   - 'access content'
   - 'access content overview'
   - 'access contextual links'
+  - 'access in-place editing'
+  - 'access site in maintenance mode'
   - 'access site-wide contact form'
   - 'access taxonomy overview'
   - 'access user contact forms'
@@ -45,6 +51,7 @@ permissions:
   - 'administer contact forms'
   - 'administer media'
   - 'administer nodes'
+  - 'administer url aliases'
   - 'administer users'
   - 'create audio media'
   - 'create document media'
@@ -54,9 +61,11 @@ permissions:
   - 'create project content'
   - 'create remote_video media'
   - 'create terms in account_organization'
+  - 'create terms in project_status'
   - 'create terms in tags'
   - 'create terms in ticket_types'
   - 'create ticket content'
+  - 'create url aliases'
   - 'create video media'
   - 'delete any audio media'
   - 'delete any document media'
@@ -76,6 +85,7 @@ permissions:
   - 'delete own ticket content'
   - 'delete own video media'
   - 'delete terms in account_organization'
+  - 'delete terms in project_status'
   - 'delete terms in tags'
   - 'delete terms in ticket_types'
   - 'delete ticket revisions'
@@ -96,6 +106,7 @@ permissions:
   - 'edit own ticket content'
   - 'edit own video media'
   - 'edit terms in account_organization'
+  - 'edit terms in project_status'
   - 'edit terms in tags'
   - 'edit terms in ticket_types'
   - 'post comments'
@@ -108,10 +119,12 @@ permissions:
   - 'translate interface'
   - 'update any media'
   - 'update media'
+  - 'use advanced search'
   - 'use text format basic_html'
   - 'use text format restricted_html'
   - 'view media'
   - 'view own unpublished content'
   - 'view own unpublished media'
+  - 'view the administration theme'
   - 'view ticket revisions'
   - 'view user email addresses'
