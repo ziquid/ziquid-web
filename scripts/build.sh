@@ -50,5 +50,6 @@ update zds
 update cheek
 update pam
 update glamma
+update fl92
 
 _prod && scripts/db-dump.sh
