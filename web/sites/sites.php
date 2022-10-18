@@ -62,6 +62,12 @@ $sites['dev.cheek.tv'] = 'cheek';
 $sites['www.cheek.tv'] = 'cheek';
 $sites['cheek.lndo.site'] = 'cheek';
 
+// flabbierlime92.org
+$sites['flabbierlime92.org'] = 'fl92';
+$sites['dev.flabbierlime92.org'] = 'fl92';
+$sites['www.flabbierlime92.org'] = 'fl92';
+$sites['fl92.lndo.site'] = 'fl92';
+
 // glamma.cheek.tv
 $sites['glamma.cheek.tv'] = 'glamma';
 $sites['dev.glamma.cheek.tv'] = 'glamma';
