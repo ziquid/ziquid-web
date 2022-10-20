@@ -1,0 +1,27 @@
+uuid: a02ded6f-7fe8-414e-96c7-27d28569163f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog_page
+  module:
+    - contextual
+    - node
+    - path
+    - toolbar
+    - tour
+    - webform_node
+id: blogger
+label: Blogger
+weight: -8
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'access toolbar'
+  - 'access tour'
+  - 'create blog_page content'
+  - 'create url aliases'
+  - 'delete webform submissions own node'
+  - 'edit webform submissions own node'
+  - 'view own unpublished content'
+  - 'view webform submissions own node'

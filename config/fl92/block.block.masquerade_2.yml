@@ -1,0 +1,30 @@
+uuid: 8032f388-bfc1-4220-ae20-bd3f32dcf397
+langcode: en
+status: true
+dependencies:
+  module:
+    - masquerade
+    - user
+  theme:
+    - olivero
+id: masquerade_2
+theme: olivero
+region: footer_bottom
+weight: 0
+provider: null
+plugin: masquerade
+settings:
+  id: masquerade
+  label: Masquerade
+  label_display: '0'
+  provider: masquerade
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      content_editor: content_editor
+      tester: tester
+      administrator: administrator
