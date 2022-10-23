@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - filter.format.full_html
+    - media.type.remote_video
+    - media.type.video
     - node.type.article
     - node.type.blog_page
     - node.type.page
@@ -12,9 +14,11 @@ dependencies:
   module:
     - admin_toolbar_search
     - comment
+    - content_access
     - contextual
     - file
     - filter
+    - media
     - node
     - path
     - quickedit
@@ -37,6 +41,7 @@ permissions:
   - 'access contextual links'
   - 'access files overview'
   - 'access in-place editing'
+  - 'access media overview'
   - 'access site in maintenance mode'
   - 'access toolbar'
   - 'access tour'
@@ -48,14 +53,20 @@ permissions:
   - 'administer url aliases'
   - 'create article content'
   - 'create blog_page content'
+  - 'create media'
   - 'create page content'
+  - 'create remote_video media'
   - 'create terms in tags'
   - 'create url aliases'
+  - 'create video media'
   - 'delete any blog_page content'
   - 'delete article revisions'
+  - 'delete media'
   - 'delete own article content'
   - 'delete own blog_page content'
   - 'delete own page content'
+  - 'delete own remote_video media'
+  - 'delete own video media'
   - 'delete page revisions'
   - 'delete webform submissions any node'
   - 'delete webform submissions own node'
@@ -65,12 +76,17 @@ permissions:
   - 'edit own blog_page content'
   - 'edit own comments'
   - 'edit own page content'
+  - 'edit own remote_video media'
+  - 'edit own video media'
   - 'edit terms in tags'
   - 'edit webform submissions any node'
   - 'edit webform submissions own node'
+  - 'grant own content access'
   - 'revert all revisions'
+  - 'update media'
   - 'use admin toolbar search'
   - 'use text format full_html'
+  - 'view all media revisions'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'view the administration theme'

@@ -3,10 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - media.type.remote_video
+    - media.type.video
     - node.type.blog_page
   module:
     - comment
     - contextual
+    - media
     - node
     - path
     - quickedit
@@ -17,15 +20,28 @@ label: Blogger
 weight: -8
 is_admin: null
 permissions:
+  - 'access content overview'
   - 'access contextual links'
   - 'access in-place editing'
+  - 'access media overview'
   - 'access toolbar'
   - 'create blog_page content'
+  - 'create media'
+  - 'create remote_video media'
   - 'create url aliases'
+  - 'create video media'
+  - 'delete media'
   - 'delete own blog_page content'
+  - 'delete own remote_video media'
+  - 'delete own video media'
   - 'delete webform submissions own node'
   - 'edit own blog_page content'
   - 'edit own comments'
+  - 'edit own remote_video media'
+  - 'edit own video media'
   - 'edit webform submissions own node'
+  - 'update media'
+  - 'view media'
   - 'view own unpublished content'
+  - 'view own unpublished media'
   - 'view webform submissions own node'
