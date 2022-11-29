@@ -42,7 +42,7 @@
         "drupal/editablefields": "^1.0@beta",
         "drupal/entity_clone": "^1.0@beta",
         "drupal/entityqueue": "1.x-dev",
-        "drupal/eva": "^2.1",
+        "drupal/eva": "^3.0",
         "drupal/field_permissions": "^1.1",
         "drupal/fontyourface": "3.x-dev",
         "drupal/google_tag": "^1.3",
