@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.field_attachments
     - field.field.node.page.field_meta_tags
     - node.type.page
   module:
@@ -26,7 +27,10 @@ content:
     weight: 100
     region: content
   links:
+    settings: {  }
+    third_party_settings: {  }
     weight: 101
     region: content
 hidden:
+  field_attachments: true
   field_meta_tags: true
