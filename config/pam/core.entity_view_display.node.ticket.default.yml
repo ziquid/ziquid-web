@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.ticket.field_description
     - field.field.node.ticket.field_files
     - field.field.node.ticket.field_links
     - field.field.node.ticket.field_ticket_children
@@ -19,13 +18,6 @@ targetEntityType: node
 bundle: ticket
 mode: default
 content:
-  field_description:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
   field_files:
     type: entity_reference_entity_view
     label: above
