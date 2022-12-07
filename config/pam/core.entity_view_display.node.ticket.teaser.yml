@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.ticket.field_description
     - field.field.node.ticket.field_files
     - field.field.node.ticket.field_links
     - field.field.node.ticket.field_ticket_children
@@ -25,7 +24,6 @@ content:
     region: content
 hidden:
   breadcrumbs: true
-  field_description: true
   field_files: true
   field_links: true
   field_ticket_children: true
