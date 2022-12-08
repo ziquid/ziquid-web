@@ -1,0 +1,18 @@
+uuid: ff953d23-2e19-4e84-b2ea-d0575ee83eda
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.help_page
+id: node.help_page.created
+field_name: created
+entity_type: node
+bundle: help_page
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

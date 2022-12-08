@@ -9,6 +9,7 @@ url:
     fil: fil
     pt-br: pt-br
     es: es
+    '': null
   domains:
     en: ''
     fil: ''

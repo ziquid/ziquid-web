@@ -1,16 +1,16 @@
-uuid: 040131d1-515c-4319-abbc-a3dbfaa0cf5c
+uuid: 5bb94e7a-cef7-41e9-b0db-93385e09c4ba
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_description
-    - node.type.ticket
+    - node.type.project
   module:
     - text
-id: node.ticket.field_description
+id: node.project.field_description
 field_name: field_description
 entity_type: node
-bundle: ticket
+bundle: project
 label: Description
 description: ''
 required: false
