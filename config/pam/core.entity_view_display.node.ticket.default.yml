@@ -25,7 +25,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 12
+    weight: 3
     region: content
   field_files:
     type: entity_reference_entity_view
@@ -34,7 +34,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 11
+    weight: 6
     region: content
   field_links:
     type: link
@@ -46,7 +46,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 10
+    weight: 5
     region: content
   field_ticket_children:
     type: entity_reference_label
@@ -54,7 +54,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 8
+    weight: 4
     region: content
   field_ticket_type:
     type: entity_reference_label
@@ -69,7 +69,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 2
     region: content
   links:
     settings: {  }
