@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.ticket.field_description
     - field.field.node.ticket.field_files
     - field.field.node.ticket.field_links
     - field.field.node.ticket.field_ticket_children
@@ -13,6 +14,7 @@ dependencies:
     - link
     - media_library
     - path
+    - text
 id: node.ticket.default
 targetEntityType: node
 bundle: ticket
@@ -23,6 +25,14 @@ content:
     weight: 3
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea
+    weight: 26
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
   field_files:
     type: media_library_widget
