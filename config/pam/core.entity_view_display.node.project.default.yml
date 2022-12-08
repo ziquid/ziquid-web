@@ -7,9 +7,11 @@ dependencies:
     - field.field.node.project.field_comments
     - field.field.node.project.field_description
     - field.field.node.project.field_parent_program
+    - field.field.node.project.field_project_status
     - node.type.project
   module:
     - comment
+    - text
     - user
 id: node.project.default
 targetEntityType: node
@@ -26,11 +28,11 @@ content:
     weight: 3
     region: content
   field_description:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 4
     region: content
   field_parent_program:
     type: entity_reference_label

@@ -1,20 +1,20 @@
-uuid: 27f334b1-3a1f-4220-839a-00bf8042b424
+uuid: ac2b2813-c2cd-465e-bfd2-a79b2a9f5626
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.help_page
-id: node.help_page.promote
-field_name: promote
+id: node.help_page.status
+field_name: status
 entity_type: node
 bundle: help_page
-label: 'Promoted to front page'
+label: Published
 description: ''
 required: false
 translatable: false
 default_value:
   -
-    value: 0
+    value: 1
 default_value_callback: ''
 settings:
   on_label: 'On'

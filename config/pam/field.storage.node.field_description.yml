@@ -1,22 +1,22 @@
-uuid: 1c12052b-bdf4-4d3e-95f6-582904c68732
+uuid: cd0d31da-850e-4ab8-8191-f0384d5312d3
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
     - node
+    - text
 third_party_settings:
   field_permissions:
     permission_type: public
 id: node.field_description
 field_name: field_description
 entity_type: node
-type: string_long
-settings:
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
