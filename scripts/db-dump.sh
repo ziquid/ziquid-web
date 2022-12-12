@@ -2,6 +2,29 @@
 # dump a (sanitized?) copy of the db
 
 # shellcheck disable=SC2112
+
+set -xe
+cd $(dirname "$0")
+DIRNAME=$(pwd -P)
+BASENAME=$(basename "$0")
+FULLNAME="$DIRNAME/$BASENAME"
+UNAME=$(uname)
+
+function _linux() {
+  [ $UNAME == Linux ] && return 0
+  return 1
+}
+
+function _prod() {
+  echo $(pwd) | grep -q -s prod$ && return 0
+  echo $(pwd) | grep -q -s prod/ && return 0
+  return 1
+}
+
+# Linux/non-ubuntu?  sudo to ubuntu
+_linux && [ $(whoami) != ubuntu ] && exec sudo su -l ubuntu -s /bin/bash "$FULLNAME" "$@"
+# _linux && [ $(whoami) != root ] && exec sudo su -l root -s /bin/bash "$FULLNAME" "$@"
+
 function do_dump_san() {
 
   echo
@@ -56,10 +79,6 @@ function do_dump() {
 
   set +x
 }
-
-# Linux/non-ubuntu?  sudo to ubuntu
-_linux && [ $(whoami) != ubuntu ] && exec sudo su -l ubuntu -s /bin/bash "$FULLNAME" "$@"
-# _linux && [ $(whoami) != root ] && exec sudo su -l root -s /bin/bash "$FULLNAME" "$@"
 
 [ $(uname) == Linux ] && DUMP=do_dump_san || DUMP=do_dump
 $DUMP ziquid
