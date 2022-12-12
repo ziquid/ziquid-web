@@ -17,8 +17,8 @@ function do_dump_san() {
   drush -q sqlsan --sanitize-email=email+%uid@example.com --sanitize-password=no -y -l $1
 
   # dump the sanitized version
-  drush sql-dump -l $1 | sed -e 's,utf8mb4_0900_ai_ci,utf8mb4_general_ci,g' -e \
-    's,^INSERT.INTO..cache_container..VALUES.*,,gi' > $1.san.sql
+  drush sql-dump -l $1 | grep -v '^INSERT.INTO..cache_container..VALUES' | \
+    sed -e 's,utf8mb4_0900_ai_ci,utf8mb4_general_ci,g' > $1.san.sql
 
   # reload the production db and remove the dump on the file system
   drush sqlc -l $1 < $1.sql
