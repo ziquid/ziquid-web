@@ -80,6 +80,9 @@ function do_dump() {
   set +x
 }
 
+# main()
+cd ..
+
 [ $(uname) == Linux ] && DUMP=do_dump_san || DUMP=do_dump
 $DUMP ziquid
 $DUMP zds
