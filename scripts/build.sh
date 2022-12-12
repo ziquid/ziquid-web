@@ -19,8 +19,8 @@ function _prod() {
   return 1
 }
 
-# Linux/non-apache?  sudo to apache
-# _linux && [ $(whoami) != apache ] && exec sudo su -l apache -s /bin/bash "$FULLNAME" "$@"
+# Linux/non-ubuntu?  sudo to ubuntu
+_linux && [ $(whoami) != ubuntu ] && exec sudo su -l ubuntu -s /bin/bash "$FULLNAME" "$@"
 # _linux && [ $(whoami) != root ] && exec sudo su -l root -s /bin/bash "$FULLNAME" "$@"
 
 function update() {
