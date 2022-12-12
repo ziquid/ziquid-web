@@ -57,6 +57,10 @@ function do_dump() {
   set +x
 }
 
+# Linux/non-ubuntu?  sudo to ubuntu
+_linux && [ $(whoami) != ubuntu ] && exec sudo su -l ubuntu -s /bin/bash "$FULLNAME" "$@"
+# _linux && [ $(whoami) != root ] && exec sudo su -l root -s /bin/bash "$FULLNAME" "$@"
+
 [ $(uname) == Linux ] && DUMP=do_dump_san || DUMP=do_dump
 $DUMP ziquid
 $DUMP zds
