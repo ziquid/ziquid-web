@@ -1,5 +1,5 @@
 #!/bin/bash
-# export build ziquid on OVH4 or local
+# export ziquid config on OVH4 or local
 
 set -xe
 cd $(dirname "$0")
@@ -19,8 +19,8 @@ function _prod() {
   return 1
 }
 
-# Linux/non-apache?  sudo to apache
-# _linux && [ $(whoami) != apache ] && exec sudo su -l apache -s /bin/bash "$FULLNAME" "$@"
+# Linux/non-ubuntu?  sudo to ubuntu
+_linux && [ $(whoami) != apache ] && exec sudo su -l ubuntu -s /bin/bash "$FULLNAME" "$@"
 # _linux && [ $(whoami) != root ] && exec sudo su -l root -s /bin/bash "$FULLNAME" "$@"
 
 function update() {
@@ -28,9 +28,6 @@ function update() {
   drush updb -y -l $1
   drush cr -l $1 || :
   drush cex -y sync -l $1 || drush cex -y sync -l $1
-  drush cr -l $1
-  drush cc views -l $1
-  _linux && sudo chown -R www-data:www-data web/sites/$1/files || :
 }
 
 # main()
@@ -43,13 +40,9 @@ if [ "$1" != "" ]; then
   git pull
 fi
 
-composer.phar install
-
 update ziquid
 update zds
 update cheek
 update pam
 update glamma
 update fl92
-
-_prod && scripts/db-dump.sh
