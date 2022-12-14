@@ -1,0 +1,46 @@
+#!/bin/bash
+# pull (fetch and merge) the latest dbs onto your local dev env.
+
+# shellcheck disable=SC2112
+
+if [ "$1" == '-v' ]; then
+  echo verbose mode on...
+  shift
+  set -xe
+fi
+
+cd $(dirname "$0")
+DIRNAME=$(pwd -P)
+BASENAME=$(basename "$0")
+FULLNAME="$DIRNAME/$BASENAME"
+UNAME=$(uname)
+
+function _linux() {
+  [ $UNAME == Linux ] && return 0
+  return 1
+}
+
+function _mac() {
+  [ $UNAME == Darwin ] && return 0
+  return 1
+}
+
+function _prod() {
+  echo $(pwd) | grep -q -s prod$ && return 0
+  echo $(pwd) | grep -q -s prod/ && return 0
+  return 1
+}
+
+function _die() {
+  echo "$*" >&2
+  exit 1
+}
+
+function _warning() {
+  echo WARNING: "$*"
+  echo -n If you are sure, hit ENTER to continue or ^C to abort:' '
+  read a
+  [ $? -ne 0 ] && _die aborted...
+}
+
+./db-fetch.sh && ./db-merge.sh
