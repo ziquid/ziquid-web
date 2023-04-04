@@ -1,0 +1,5 @@
+# Schema for the configuration files of the ZuviPro theme.
+
+zuvipro.settings:
+  type: theme_settings
+  label: 'ZuviPro Settings'

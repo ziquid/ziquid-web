@@ -1,0 +1,22 @@
+uuid: 11b17b05-da4d-4e6c-8d7e-337f73545187
+langcode: en
+status: true
+dependencies:
+  theme:
+    - zuvipro
+_core:
+  default_config_hash: 9vbpTzvV_izwEh2mV8N9n5llWq063SKO3eRmat6vVU8
+id: zuvipro_local_tasks
+theme: zuvipro
+region: content
+weight: -11
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

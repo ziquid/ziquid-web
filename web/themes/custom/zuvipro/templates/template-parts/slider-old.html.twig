@@ -1,0 +1,16 @@
+<section class="slider">
+  <div class="container">
+    <div class="owl-carousel home-slider">
+      {% if slider_code != '' %}
+        {{ slider_code | striptags('<div>,<span>,<ul>,<ol>,<li>,<p>,<a>,<img>,<video>,<h1>,<h2>,<h3>,<h4>,<h5>,<h6>,<em>,<strong>,<br>,<button>,<i>,<source>,<hr>,') | raw }}
+      {% else %}
+        {% include '@zuvipro/template-parts/slider-default.html.twig' %}
+      {% endif %}
+    </div> <!--/.home-slider -->
+  </div> <!--/.container -->
+</section>
+{% if slider_wave %}
+<div class="slider-wave">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160"><path fill-opacity="1" d="M0,32L60,26.7C120,21,240,11,360,42.7C480,75,600,149,720,154.7C840,160,960,96,1080,74.7C1200,53,1320,75,1380,85.3L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+</div>
+{% endif %}

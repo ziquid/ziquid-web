@@ -1,0 +1,246 @@
+/* Text align
+-------------------------------------------- */
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+
+/* Block Alignment
+-------------------------------------------- */
+.center {
+  margin: 0 auto;
+}
+/* Text Size
+-------------------------------------------- */
+.size-2x {
+  font-size: 2em;
+}
+.size-3x {
+  font-size: 3em;
+}
+.size-4x {
+  font-size: 4em;
+}
+.size-5x {
+  font-size: 5em;
+}
+.size-6x {
+  font-size: 6em;
+}
+
+/* container width
+-------------------------------------------- */
+.width30,
+.width40,
+.width50,
+.width60,
+.width70,
+.width80,
+.width90 {
+  width: 100%;
+  clear: both;
+  display: block;
+}
+.height-full {
+  height: 100%;
+}
+/* Empty space
+-------------------------------------------- */
+.empty,
+.empty50,
+.empty70,
+.empty100,
+.empty150 {
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+.empty {
+  height: 2em;
+}
+.empty50 {
+  height: 50px;
+}
+.empty70 {
+  height: 70px;
+}
+.empty100 {
+  height: 100px;
+}
+.empty150 {
+  height: 150px;
+}
+
+/* Color
+-------------------------------------------- */
+.theme-color {
+  color: #f26c4f;
+  color: var(--pink);
+}
+.white-color {
+  color: #ffffff;
+}
+
+/* Buttons
+-------------------------------------------- */
+.round {
+  border-radius: 50px;
+}
+.button-round,
+a.button-round {
+  position: relative;
+  display: inline-block;
+  color: var(--pink);
+  background: transparent;
+  border: 2px solid var(--border-color);
+  border-radius: 30px;
+  padding: 8px 20px;
+  transition: all 0.4s ease-in-out;;
+}
+.button-round:hover,
+a.button-round:hover {
+  color: #ffffff;
+  background: var(--pink);
+  border: 2px solid #ffffff;
+}
+.button-border,
+a.button-border,
+button.button-border {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  background: transparent;
+  border: 0;
+  padding: 0.6em 0.2em 0.6em 0;
+}
+.button-border:hover,
+a.button-border:hover,
+button.button-border:hover {
+  background: transparent;
+}
+.button-border::after,
+a.button-border::after,
+button.button-border::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1.4em;
+  height: 2px;
+  background: var(--pink);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.button-border:hover::after,
+a.button-border:hover::after,
+button.button-border:hover::after {
+  width: 100%;
+}
+button.button-link {
+  background: transparent;
+}
+button.button-link,
+.button-link {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #f26c4f;
+  border: 2px solid var(--pink);
+  padding: 0.6em 1em;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+button.button-link a,
+a.button-link,
+.button-link a {
+  color: #ffffff;
+}
+button.button-link:hover,
+button.button-link a:hover,
+a.button-link:hover,
+.button-link a:hover {
+  color: #f26c4f;
+  color: var(--pink);
+  border: 2px solid #ffffff;
+}
+button.button-link:hover,
+.button-link:hover {
+  padding: 0.6em 3em 0.6em 1em;
+}
+button.button-link::after,
+.button-link::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  height: 2px;
+  width: 0;
+  background: #f26c4f;
+  background: var(--pink);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+button.button-link:hover::after,
+.button-link:hover::after {
+  width: 2em;
+}
+
+/* Services
+-------------------------------------------- */
+.services {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin: 0;
+}
+.service {
+  margin: 0 0 2em 0;
+  -webkit-box-flex: 1;
+  flex: 1 1 100%;
+  max-width: 100%;
+  background: #181a25;
+  background: var(--content-bg);
+  padding: 2em;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.service-icon {
+  position: relative;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.service-icon img {
+  width: 50px;
+  height: auto;
+}
+.service-icon i {
+  color: #f26c4f;
+  color: var(--pink);
+  font-size: 3em;
+}
+.service h3 {
+  margin: 0.8em 0;
+}
+.service .button-link {
+  text-transform: uppercase;
+}
+.service:hover .button-link {
+  color: #f26c4f;
+  color: var(--pink);
+  border: 2px solid #ffffff;
+  padding: 0.6em 3em 0.6em 1em;
+}
+.service:hover .button-link::after {
+  width: 2em;
+}
+.service:hover .service-icon {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}

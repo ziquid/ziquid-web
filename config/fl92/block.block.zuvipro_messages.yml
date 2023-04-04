@@ -1,0 +1,22 @@
+uuid: 4feba746-4263-48c0-92ab-3619d836d03f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - zuvipro
+_core:
+  default_config_hash: khykO9vj44XZkk0HGrO7owKjfdo8XEJDeOZAOQNEsgY
+id: zuvipro_messages
+theme: zuvipro
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

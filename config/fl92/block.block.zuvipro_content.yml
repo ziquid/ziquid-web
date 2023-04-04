@@ -1,0 +1,22 @@
+uuid: 72ee38c8-a1ec-4a6f-974e-12fcc24e3b30
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - zuvipro
+_core:
+  default_config_hash: ibP68yK2X7bkzTBZeSeND-yfZ0duRys5us837hdw66I
+id: zuvipro_content
+theme: zuvipro
+region: content
+weight: -8
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

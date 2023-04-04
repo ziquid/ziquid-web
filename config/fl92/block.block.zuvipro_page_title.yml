@@ -1,0 +1,20 @@
+uuid: d6df1101-b526-489c-a380-fa2613bed0bc
+langcode: en
+status: true
+dependencies:
+  theme:
+    - zuvipro
+_core:
+  default_config_hash: Lva1X5TcX3xtPktFGQHjREeCilfWpM7U3R8e9QkRUvE
+id: zuvipro_page_title
+theme: zuvipro
+region: page_header
+weight: -10
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

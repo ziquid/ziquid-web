@@ -1,0 +1,25 @@
+uuid: 2bf1854c-9b06-40d4-ad90-0de98ee76eff
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - zuvipro
+_core:
+  default_config_hash: pIEts4duFFkFJ8DSTFa5UCIbct8JrWUjX6Ohk8vNQp0
+id: zuvipro_branding
+theme: zuvipro
+region: site_branding
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

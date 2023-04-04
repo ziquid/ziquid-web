@@ -1,0 +1,20 @@
+uuid: 11035044-64ae-4cd0-9e99-ff23fa6a73c5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - zuvipro
+_core:
+  default_config_hash: e4KNoofx_Ip9r19-nbUGMM_9AB9YXUR_jPLQSgMaOy8
+id: zuvipro_local_actions
+theme: zuvipro
+region: content
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

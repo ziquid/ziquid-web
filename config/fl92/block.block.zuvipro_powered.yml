@@ -1,0 +1,22 @@
+uuid: 76adedbf-7ba1-44c8-89aa-1352dbb84c5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - zuvipro
+_core:
+  default_config_hash: gbTR8GfX-3kJTJjgjkEGrv_at82eYVh9a_Z77T3D11k
+id: zuvipro_powered
+theme: zuvipro
+region: hidden_blocks
+weight: -10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

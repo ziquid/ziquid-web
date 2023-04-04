@@ -59,6 +59,7 @@
         "drupal/rabbit_hole": "^1.0@beta",
         "drupal/recaptcha": "^3.0",
         "drupal/redirect": "^1.4",
+        "drupal/rest_api_access_token": "^1.6",
         "drupal/simple_background_image_formatter": "1.x-dev",
         "drupal/simple_sitemap": "^4.0",
         "drupal/term_csv_export_import": "^3.0",
@@ -147,6 +148,9 @@
             }
         },
         "patches": {
+            "drupal/content_access": {
+                "Fix the annoying unserialize deprecation warning": "https://www.drupal.org/files/issues/2022-07-22/3258804-14.patch"
+            },
             "drupal/fontyourface": {
                 "Allow domainless fonts to be loaded": "https://www.drupal.org/files/issues/2019-11-06/disable-domain-check-8x-3092865-2.patch"
             },

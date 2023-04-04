@@ -1,0 +1,27 @@
+uuid: 94e9630f-e267-4c7d-9500-fe80b2af9a1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - zuvipro
+_core:
+  default_config_hash: 4LI8sbbE-mmL2Zt2pFdotd7j9BiWAE8f9Uci6MJDbro
+id: zuvipro_account_menu
+theme: zuvipro
+region: hidden_blocks
+weight: -12
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

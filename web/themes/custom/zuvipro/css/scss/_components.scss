@@ -1,0 +1,94 @@
+/* Drupal system message */
+.message,
+.message-success,
+.message-info,
+.message-error,
+.message-warning,
+.message-announcement,
+.message-notice {
+  position: relative;
+  margin: 1em 0;
+  padding: 14px 14px 14px 64px;
+  color: #ffffff;
+  text-shadow: none;
+}
+.message p:last-child,
+.message-success p:last-child,
+.message-info p:last-child,
+.message-error p:last-child,
+.message-warning p:last-child,
+.message-announcement p:last-child,
+.message-notice p:last-child {
+  margin: 0;
+}
+.message a,
+.message-success a,
+.message-info a,
+.message-error a,
+.message-warning a,
+.message-announcement a,
+.message-notice a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.message-status,
+.message-success {
+  background: #89ad32;
+}
+.message-status::before,
+.message-success::before {
+  content: "\e90d";
+  background-color: #759625;
+}
+.message-error {
+  background: #c94d1c;
+}
+.message-error::before {
+  content: "\e90e";
+  background-color: #b3461b;
+}
+.message-warning {
+  background: #cd5a0a;
+}
+.message-warning::before {
+  content: "\e90f";
+  background-color: #a44707;
+}
+.message-info {
+  background: #5a82a1;
+}
+.message-info::before {
+  content: "\e919";
+  background-color: #3e6584;
+}
+.message-announcement {
+  background: #46c280;
+}
+.message-announcement::before {
+  content: "\e917";
+  background-color: #34a268;
+}
+.message-notice {
+  background: #afa82e;
+}
+.message-notice::before {
+  content: "\e918";
+  background-color: #9b941b;
+}
+.message::before,
+.message-success::before,
+.message-info::before,
+.message-error::before,
+.message-warning::before,
+.message-announcement::before,
+.message-notice::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 53px;
+  height: 100%;
+  font-family: "zuvi";
+  font-size: 2em;
+  line-height: 53px;
+  text-align: center;
+}

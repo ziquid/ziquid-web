@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Theme implementation to display front page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template.
+ *
+ */
+#}
+{% include '@zuvipro/template-parts/header.html.twig' %}
+{% if slider_show %}
+  {% include '@zuvipro/template-parts/slider.html.twig' %}
+{% endif %}
+{% include '@zuvipro/template-parts/highlighted.html.twig' %}
+<div id="main-wrapper" class="main-wrapper">
+  <div class="container clear">
+    {% include '@zuvipro/template-parts/content_home.html.twig' %}
+  </div><!--/container-->
+  <div class="container">
+    {% if front_sidebar %}
+      <div class="main-container">
+    {% endif %}
+    <main id="main" class="page-content home-content">
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+      {% include '@zuvipro/template-parts/content_top.html.twig' %}
+      {{ page.content }}
+      
+      {% include '@zuvipro/template-parts/content_bottom.html.twig' %}
+      {% if page_share_all %}
+        {% if page_share_front %}
+          {% include '@zuvipro/template-parts/share-node.html.twig' %}
+        {% endif %}
+      {% endif %}
+    </main>
+    {% if front_sidebar %}
+      {% include '@zuvipro/template-parts/sidebar_left.html.twig' %}
+      {% include '@zuvipro/template-parts/sidebar_right.html.twig' %}
+      </div> {# /.main-container #}
+    {% endif %}
+  </div> {# /.container #}
+</div>{# /main-wrapper #}
+{% if animated_sidebar_option %}
+  {% include '@zuvipro/template-parts/sidebar_sliding.html.twig' %}
+{% endif %}
+{% include '@zuvipro/template-parts/footer.html.twig' %}

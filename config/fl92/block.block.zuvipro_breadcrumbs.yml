@@ -1,0 +1,22 @@
+uuid: 0bfa7757-7061-408e-8e9b-a6d6a9d68bfe
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - zuvipro
+_core:
+  default_config_hash: cVyhFY5ul9XKDiB66s0wyKr4Ytt0LOIR_oesl7DYvVU
+id: zuvipro_breadcrumbs
+theme: zuvipro
+region: page_header
+weight: -9
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }
