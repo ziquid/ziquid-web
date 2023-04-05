@@ -54,7 +54,7 @@ animated_sidebar_option: 0
 front_sidebar: 0
 footer_wave: 1
 copyright_text: 1
-copyright_text_custom: "Copyright &copy; 2023 Joseph Cheek.  All rights reserved.\r\n\r\nWeb site design by <a href=\"https://zds.group/\">The ZDS Group</a>."
+copyright_text_custom: 'Copyright &copy; 2023 Joseph Cheek.  All rights reserved.<br/><br/>Graphic design by <a href="https://ziquid.com/">Ziquid Design Studio, LLC</a> and web site design by <a href="https://zds.group/">The ZDS Group</a>.'
 scrolltotop_on: 1
 cookie_message: 1
 cookie_message_custom: ''
