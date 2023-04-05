@@ -1,11 +1,12 @@
- :root {
+:root {
   --body-bg: #0d0f16;
   --header-bg: #020312;
   --content-bg: #181a25dd;
   --text-color: #a1a1a1;
+  --sidebar-link-color: #cfcfcf;
   --border-color: #282d38;
-  --pink: #f26c4f;
-  --violet: #f4399e;
-  --circle-color: #510a31;
-  --pink-gradient: linear-gradient(to right, #f26c4f, #f4399e);
+  --pink: #7dfdfe;
+  --violet: #9c32ce;
+  --circle-color: #9c32ce;
+  --pink-gradient: linear-gradient(to right, #7dfdfe, #9c32ce);
 }

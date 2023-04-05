@@ -181,7 +181,7 @@
     width: 70%;
   }
   #page-header {
-    padding: 5em 0 1em 0;
+    padding: 2em 0 1em 0;
   }
   .header-circle1,
   .header-circle2,
@@ -211,7 +211,9 @@
   .cursor-click {
     animation: cursorclick 0.5s forwards;
   }
-
+  .node-view-mode-teaser, .node-view-mode-full {
+    border-radius: 2rem;
+  }
 }
 @media (min-width: 1170px) {
   .container {
