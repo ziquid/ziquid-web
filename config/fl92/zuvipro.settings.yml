@@ -1,14 +1,17 @@
 _core:
   default_config_hash: 5tuWovWYUcoR60VOYvthBtW6fYQ2GO3jLByGaSkCZAw
 favicon:
-  use_default: true
+  mimetype: image/png
+  path: themes/custom/zuvipro/favicon.png
+  use_default: false
 features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
   node_user_picture: true
 logo:
-  use_default: true
+  path: themes/custom/zuvipro/logo.jpg
+  use_default: false
 sticky_header_option: 1
 header_circle_slider: 1
 header_circle_header: 1
@@ -37,7 +40,7 @@ google_font: googlecdn
 animated_content: 1
 comment_user_pic: 1
 node_author_pic: 0
-node_tags: 0
+node_tags: 1
 font_icon_fontawesome: 0
 fontawesome_five: 0
 font_icon_material: 0
@@ -47,11 +50,11 @@ page_share_article: 1
 page_share_book: 0
 page_share_other: 0
 page_share_front: 1
-animated_sidebar_option: 1
+animated_sidebar_option: 0
 front_sidebar: 0
 footer_wave: 1
 copyright_text: 1
-copyright_text_custom: ''
+copyright_text_custom: "Copyright &copy; 2023 Joseph Cheek.  All rights reserved.\r\n\r\nWeb site design by <a href=\"https://zds.group/\">The ZDS Group</a>."
 scrolltotop_on: 1
 cookie_message: 1
 cookie_message_custom: ''

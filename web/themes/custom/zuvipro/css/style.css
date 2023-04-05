@@ -35,8 +35,9 @@ body {
   font-size: 0.9em;
   font-weight: 400;
   line-height: 1.7;
-  background: #0d0f16;
-  background: var(--body-bg);
+  background: #0d0f16 url('../images/bg-image.png') no-repeat fixed center;
+  background: var(--body-bg) url('../images/bg-image.png') no-repeat fixed center;
+  background-blend-mode: difference;
   color: #a1a1a1;
   color: var(--text-color);
   overflow-x: hidden;
