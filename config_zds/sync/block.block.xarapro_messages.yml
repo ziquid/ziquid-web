@@ -1,0 +1,22 @@
+uuid: 52a1da4c-0da5-40c7-8385-078684c043d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - xarapro
+_core:
+  default_config_hash: AmFJ49--9QzykDhLBxTHqR_76haAN7if92LKnsvExsg
+id: xarapro_messages
+theme: xarapro
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: be11cc21-8505-4e40-bb74-ff077abd08f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - xarapro
+_core:
+  default_config_hash: 1v9WYlPyRtqaH82gCmQ0V7dimUbJHG0aphMGGjcMTvE
+id: xarapro_help
+theme: xarapro
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 78a7c079-a1b5-4775-b511-33ed50f2859a
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - thexpro
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: thexpro_branding
+theme: thexpro
+region: header
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

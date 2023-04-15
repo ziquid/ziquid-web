@@ -1,0 +1,20 @@
+uuid: 98e464c5-b0ed-40a8-a562-56fe278eb0d6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - thexpro
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: thexpro_page_title
+theme: thexpro
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

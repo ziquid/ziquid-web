@@ -1,0 +1,244 @@
+<?php
+/**
+ * @file
+ * Extra Functions for XARAPRO theme.
+ */
+use Drupal\file\Entity\File;
+/**
+ * Sanitise input urls.
+ */
+function santise_val_url($url) {
+	if ($url != '') {
+
+		// Sanitise (remove all illegal characters) from url.
+		$url = filter_var($url, FILTER_SANITIZE_URL);
+
+		// Validate url.
+		if (filter_var($url, FILTER_VALIDATE_URL) == TRUE) {
+			$url = $url;
+		} else {
+			$url = '#';
+		}
+		return $url;
+	}
+}
+function xarapro_preprocess_html(&$variables) {
+	$variables['base_path'] = base_path();
+  $variables['xarapro_path'] = \Drupal::service('extension.list.theme')->getPath('xarapro');
+	$variables['font_src'] = theme_get_setting('font_src', 'xarapro');
+	$variables['styling'] = theme_get_setting('styling', 'xarapro');
+	$variables['styling_code'] = theme_get_setting('styling_code', 'xarapro');
+	$variables['insert_head'] = theme_get_setting('insert_head', 'xarapro');
+	$variables['head_code'] = theme_get_setting('head_code', 'xarapro');
+	$variables['insert_body_start'] = theme_get_setting('insert_body_start', 'xarapro');
+	$variables['body_start_code'] = theme_get_setting('body_start_code', 'xarapro');
+	$variables['insert_body_end'] = theme_get_setting('insert_body_end', 'xarapro');
+	$variables['body_end_code'] = theme_get_setting('body_end_code', 'xarapro');
+	$variables['localcssfile'] = theme_get_setting('localcssfile', 'xarapro');
+	$variables['localcssfilename'] = theme_get_setting('localcssfilename', 'xarapro');
+
+	// slider
+	$variables['slider_show'] = theme_get_setting('slider_show', 'xarapro');
+	$variables['slider_speed'] = theme_get_setting('slider_speed', 'xarapro');
+
+	// Color -> Use a color scheme
+	$variables['color_scheme_use'] = theme_get_setting('color_scheme_use', 'xarapro');
+
+	// Color -> Set custom theme base colors
+	$variables['color_bodybg'] = theme_get_setting('color_bodybg', 'xarapro');
+	$variables['color_bodytext'] = theme_get_setting('color_bodytext', 'xarapro');
+	$variables['color_bold'] = theme_get_setting('color_bold', 'xarapro');
+	$variables['theme_color_one'] = theme_get_setting('theme_color_one', 'xarapro');
+	$variables['theme_color_two'] = theme_get_setting('theme_color_two', 'xarapro');
+	$variables['theme_color_dark'] = theme_get_setting('theme_color_dark', 'xarapro');
+	$variables['theme_color_light'] = theme_get_setting('theme_color_light', 'xarapro');
+	$variables['theme_color_border'] = theme_get_setting('theme_color_border', 'xarapro');
+
+	// Color -> Header
+	$variables['color_header_sticky'] = theme_get_setting('color_header_sticky', 'xarapro');
+}
+function xarapro_preprocess_page(array &$variables) {
+	// theme path
+	$variables['page_xarapro_path'] = \Drupal::service('extension.list.theme')->getPath('xarapro');
+	
+	// Layout
+	$variables['container_width'] = theme_get_setting('container_width', 'xarapro');
+	$variables['header_width'] = theme_get_setting('header_width', 'xarapro');
+	$variables['main_width'] = theme_get_setting('main_width', 'xarapro');
+	$variables['footer_width'] = theme_get_setting('footer_width', 'xarapro');
+
+	// homepage slider
+	$variables['slider_show'] = theme_get_setting('slider_show', 'xarapro');
+	$variables['slider_code'] = theme_get_setting('slider_code', 'xarapro');
+	$variables['slider_image'] = theme_get_setting('slider_image', 'xarapro');
+	$slider_image_id = theme_get_setting('slider_image', 'xarapro');
+	if(!empty($slider_image_id)) {
+		$slider_image_file = File::load($slider_image_id[0]);
+		// $slider_image_file->status = FILE_STATUS_PERMANENT;
+		$slider_image_file->setPermanent();
+		$slider_image_file->save();
+		$slider_image_file_usage = \Drupal::service('file.usage');
+		$slider_image_file_usage->add($slider_image_file, 'xarapro', 'theme', $slider_image_id[0]);
+	};
+	if(!empty($slider_image_file)) {
+    $imageuri = $slider_image_file->getFileUri();
+		$variables['slider_image_path'] = \Drupal::service('file_url_generator')->generateAbsoluteString($imageuri);
+	};
+
+	// Header
+	$variables['sticky_header'] = theme_get_setting('sticky_header', 'xarapro');
+	$variables['header_main_default'] = theme_get_setting('header_main_default', 'xarapro');
+	$variables['header_main_padding_top'] = theme_get_setting('header_main_padding_top', 'xarapro');
+	$variables['header_main_padding_bottom'] = theme_get_setting('header_main_padding_bottom', 'xarapro');
+	$variables['header_page_default'] = theme_get_setting('header_page_default', 'xarapro');
+	$variables['header_page_padding_top'] = theme_get_setting('header_page_padding_top', 'xarapro');
+	$variables['header_page_padding_bottom'] = theme_get_setting('header_page_padding_bottom', 'xarapro');
+	$variables['header_page_content_position'] = theme_get_setting('header_page_content_position', 'xarapro');
+
+	// Sidebar
+	$variables['sliding_sidebar'] = theme_get_setting('sliding_sidebar', 'xarapro');
+	$variables['front_sidebar'] = theme_get_setting('front_sidebar', 'xarapro');
+	$variables['sidebar_width_default'] = theme_get_setting('sidebar_width_default', 'xarapro');
+	$variables['sidebar_width_left'] = theme_get_setting('sidebar_width_left', 'xarapro');
+	$variables['sidebar_width_right'] = theme_get_setting('sidebar_width_right', 'xarapro');
+	$variables['sidebar_block_default'] = theme_get_setting('sidebar_block_default', 'xarapro');	
+	$variables['sidebar_padding'] = theme_get_setting('sidebar_padding', 'xarapro');
+	$variables['sidebar_radius'] = theme_get_setting('sidebar_radius', 'xarapro');
+	$variables['sidebar_margin'] = theme_get_setting('sidebar_margin', 'xarapro');
+	$variables['sidebar_title_font_size'] = theme_get_setting('sidebar_title_font_size', 'xarapro');
+	$variables['sidebar_title_transform'] = theme_get_setting('sidebar_title_transform', 'xarapro');
+
+	// Footer
+	$variables['copyright_text'] = theme_get_setting('copyright_text', 'xarapro');
+	$variables['copyright_text_custom'] = theme_get_setting('copyright_text_custom', 'xarapro');
+
+	// content
+	$variables['animated_content'] = theme_get_setting('animated_content', 'xarapro');
+	$variables['rtl'] = theme_get_setting('rtl');
+
+	// Social
+	$variables['social_icons_show'] = theme_get_setting('social_icons_show', 'xarapro');
+	$variables['facebook_url'] = santise_val_url(theme_get_setting('facebook_url', 'xarapro'));
+	$variables['twitter_url'] = santise_val_url(theme_get_setting('twitter_url', 'xarapro'));
+	$variables['instagram_url'] = santise_val_url(theme_get_setting('instagram_url', 'xarapro'));
+	$variables['linkedin_url'] = santise_val_url(theme_get_setting('linkedin_url', 'xarapro'));
+	$variables['youtube_url'] = santise_val_url(theme_get_setting('youtube_url', 'xarapro'));
+	$variables['vimeo_url'] = santise_val_url(theme_get_setting('vimeo_url', 'xarapro'));
+  $variables['telegram_url'] = santise_val_url(theme_get_setting('telegram_url', 'xarapro'));
+  $variables['whatsapp_url'] = santise_val_url(theme_get_setting('whatsapp_url', 'xarapro'));
+  $variables['github_url'] = santise_val_url(theme_get_setting('github_url', 'xarapro'));
+	$variables['vk_url'] = santise_val_url(theme_get_setting('vk_url', 'xarapro'));
+
+	// Share page
+	$variables['page_share_all'] = theme_get_setting('page_share_all', 'xarapro');
+	$variables['page_share_front'] = theme_get_setting('page_share_front', 'xarapro');
+	$variables['page_share_page'] = theme_get_setting('page_share_page', 'xarapro');
+	$variables['page_share_article'] = theme_get_setting('page_share_article', 'xarapro');
+	$variables['page_share_book'] = theme_get_setting('page_share_book', 'xarapro');
+	$variables['page_share_other'] = theme_get_setting('page_share_other', 'xarapro');
+	
+	// Typography
+	$variables['body_font_size'] = theme_get_setting('body_font_size', 'xarapro');
+	$variables['body_line_height'] = theme_get_setting('body_line_height', 'xarapro');
+	$variables['paragraph_bottom'] = theme_get_setting('paragraph_bottom', 'xarapro');
+	$variables['headings_default'] = theme_get_setting('headings_default', 'xarapro');
+	$variables['h1_size'] = theme_get_setting('h1_size', 'xarapro');
+	$variables['h1_weight'] = theme_get_setting('h1_weight', 'xarapro');
+	$variables['h1_transform'] = theme_get_setting('h1_transform', 'xarapro');
+	$variables['h1_height'] = theme_get_setting('h1_height', 'xarapro');
+	$variables['h2_size'] = theme_get_setting('h2_size', 'xarapro');
+	$variables['h2_weight'] = theme_get_setting('h2_weight', 'xarapro');
+	$variables['h2_transform'] = theme_get_setting('h2_transform', 'xarapro');
+	$variables['h2_height'] = theme_get_setting('h2_height', 'xarapro');
+	$variables['h3_size'] = theme_get_setting('h3_size', 'xarapro');
+	$variables['h3_weight'] = theme_get_setting('h3_weight', 'xarapro');
+	$variables['h3_transform'] = theme_get_setting('h3_transform', 'xarapro');
+	$variables['h3_height'] = theme_get_setting('h3_height', 'xarapro');
+	$variables['h4_size'] = theme_get_setting('h4_size', 'xarapro');
+	$variables['h4_weight'] = theme_get_setting('h4_weight', 'xarapro');
+	$variables['h4_transform'] = theme_get_setting('h4_transform', 'xarapro');
+	$variables['h4_height'] = theme_get_setting('h4_height', 'xarapro');
+	$variables['h5_size'] = theme_get_setting('h5_size', 'xarapro');
+	$variables['h5_weight'] = theme_get_setting('h5_weight', 'xarapro');
+	$variables['h5_transform'] = theme_get_setting('h5_transform', 'xarapro');
+	$variables['h5_height'] = theme_get_setting('h5_height', 'xarapro');
+	$variables['h6_size'] = theme_get_setting('h6_size', 'xarapro');
+	$variables['h6_weight'] = theme_get_setting('h6_weight', 'xarapro');
+	$variables['h6_transform'] = theme_get_setting('h6_transform', 'xarapro');
+	$variables['h6_height'] = theme_get_setting('h6_height', 'xarapro');
+
+	// Element -> Logo
+	$variables['logo_default'] = theme_get_setting('logo_default', 'xarapro');
+	$variables['site_name_size'] = theme_get_setting('site_name_size', 'xarapro');
+	$variables['site_name_weight'] = theme_get_setting('site_name_weight', 'xarapro');
+	$variables['site_name_transform'] = theme_get_setting('site_name_transform', 'xarapro');
+	$variables['site_name_height'] = theme_get_setting('site_name_height', 'xarapro');
+	$variables['slogan_size'] = theme_get_setting('slogan_size', 'xarapro');
+	$variables['slogan_transform'] = theme_get_setting('slogan_transform', 'xarapro');
+	$variables['slogan_height'] = theme_get_setting('slogan_height', 'xarapro');
+	$variables['slogan_style'] = theme_get_setting('slogan_style', 'xarapro');
+	$variables['main_menu_default'] = theme_get_setting('main_menu_default', 'xarapro');
+	$variables['main_menu_top_size'] = theme_get_setting('main_menu_top_size', 'xarapro');
+	$variables['main_menu_top_weight'] = theme_get_setting('main_menu_top_weight', 'xarapro');
+	$variables['main_menu_top_transform'] = theme_get_setting('main_menu_top_transform', 'xarapro');
+	$variables['main_menu_sub_size'] = theme_get_setting('main_menu_sub_size', 'xarapro');
+	$variables['main_menu_sub_weight'] = theme_get_setting('main_menu_sub_weight', 'xarapro');
+	$variables['main_menu_sub_transform'] = theme_get_setting('main_menu_sub_transform', 'xarapro');
+	
+	// Element -> Page title
+	$variables['page_title_default'] = theme_get_setting('page_title_default', 'xarapro');
+	$variables['page_title_size_desktop'] = theme_get_setting('page_title_size_desktop', 'xarapro');
+	$variables['page_title_size_mobile'] = theme_get_setting('page_title_size_mobile', 'xarapro');
+	$variables['page_title_transform'] = theme_get_setting('page_title_transform', 'xarapro');
+
+	// Element -> Button
+	$variables['button_default'] = theme_get_setting('button_default', 'xarapro');
+	$variables['button_padding'] = theme_get_setting('button_padding', 'xarapro');
+	$variables['button_radius'] = theme_get_setting('button_radius', 'xarapro');
+
+	// Components -> page loader
+	$variables['preloader_option'] = theme_get_setting('preloader_option', 'xarapro');
+
+	// Components -> Font icons
+	$variables['fontawesome_four'] = theme_get_setting('fontawesome_four', 'xarapro');
+	$variables['fontawesome_five'] = theme_get_setting('fontawesome_five', 'xarapro');
+	$variables['bootstrapicons'] = theme_get_setting('bootstrapicons', 'xarapro');
+	$variables['material_icon'] = theme_get_setting('material_icon', 'xarapro');
+	
+	// Components -> scroll to top
+	$variables['scrolltotop_on'] = theme_get_setting('scrolltotop_on', 'xarapro');
+	$variables['scrolltotop_default'] = theme_get_setting('scrolltotop_default', 'xarapro');
+	$variables['scrolltotop_icon_style'] = theme_get_setting('scrolltotop_icon_style', 'xarapro');
+	$variables['scrolltotop_icon_size'] = theme_get_setting('scrolltotop_icon_size', 'xarapro');
+	$variables['scrolltotop_position'] = theme_get_setting('scrolltotop_position', 'xarapro');
+	$variables['scrolltotop_bottom'] = theme_get_setting('scrolltotop_bottom', 'xarapro');
+	$variables['scrolltotop_icon_radius'] = theme_get_setting('scrolltotop_icon_radius', 'xarapro');
+	
+	// components -> cookie message
+	$variables['cookie_message'] = theme_get_setting('cookie_message', 'xarapro');
+	$variables['cookie_message_custom'] = theme_get_setting('cookie_message_custom', 'xarapro');
+	
+	// Comment
+	$variables['highlight_author_comment'] = theme_get_setting('highlight_author_comment', 'xarapro');
+}
+/**
+ * Node preprocess.
+ */
+function xarapro_preprocess_node(array &$variables) {
+	$variables['node_author_pic'] = theme_get_setting('node_author_pic', 'xarapro');
+	$variables['node_tags'] = theme_get_setting('node_tags', 'xarapro');
+}
+
+/**
+ * Comment preprocess.
+ */
+function xarapro_preprocess_comment(array &$variables) {
+	$variables['comment_user_pic'] = theme_get_setting('comment_user_pic', 'xarapro');
+}
+
+/**
+ * Breadcrumb preprocess.
+ */
+function xarapro_preprocess_breadcrumb(&$variables) {
+	$variables['breadcrumb_icon_style'] = theme_get_setting('breadcrumb_icon_style', 'xarapro');
+}

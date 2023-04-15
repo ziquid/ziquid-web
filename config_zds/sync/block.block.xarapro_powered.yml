@@ -1,0 +1,22 @@
+uuid: edff7eb3-8581-4414-b793-7ab6517795f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - xarapro
+_core:
+  default_config_hash: s83SwpJp36mjn9AbcSFGwZJNPo7Y-KkPVImeKxlNOuo
+id: xarapro_powered
+theme: xarapro
+region: hidden
+weight: -4
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

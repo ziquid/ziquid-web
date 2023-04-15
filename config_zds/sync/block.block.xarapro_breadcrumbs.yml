@@ -1,0 +1,22 @@
+uuid: 987eca71-7eea-4c4f-8ed6-4eb659d2b61c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - xarapro
+_core:
+  default_config_hash: ac37cwI-AfwGe2-jkxDIxtufNCRR2cUSILmVqIgUqUk
+id: xarapro_breadcrumbs
+theme: xarapro
+region: page_header
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

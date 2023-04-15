@@ -1,0 +1,19 @@
+:root {
+  /* Theme Colors */
+  --color-primary: #d6620e;
+  --color-primary-light: #f2e8dd;
+  --color-secondary: #a7bd43;
+  --light: #fffbf6;
+  --text-color: #4a4a4a;
+  --bold-color: #222222;
+  --bg-body: #f9f6f3;
+  --border: #dbdbd3;
+}
+/* Header background */
+.header {
+  background: #ffffff;
+}
+/* Main menu links */
+ul.main-menu > li a {
+  color: #212121;
+}

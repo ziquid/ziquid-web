@@ -1,0 +1,27 @@
+uuid: 5568bf5e-c231-4852-a3c4-654d6f6998b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - xarapro
+_core:
+  default_config_hash: k9XmaefdForkj5Zph1uTYbMTjnPg8poFXi0G0-6Z9MQ
+id: xarapro_main_menu
+theme: xarapro
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 5
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 3c826435-6a17-4fe0-9d1f-58c3f445c457
+langcode: en
+status: true
+dependencies:
+  theme:
+    - xarapro
+_core:
+  default_config_hash: RkwbOUCypH8ESJ_IDkbCAt3lKhnnr2bbhpzSOZrHNWQ
+id: xarapro_local_actions
+theme: xarapro
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

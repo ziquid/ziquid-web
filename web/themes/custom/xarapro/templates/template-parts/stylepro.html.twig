@@ -1,0 +1,33 @@
+<style>
+{% if sticky_header_mobile %}
+@media (max-width: 767px) {
+  .header-main.sticky-header {
+    position: fixed;
+    background-color: #dddddd;
+    background-color: {{ color_header_sticky }};
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
+{% endif %}
+{% if sticky_header_desktop %}
+@media (min-width: 768px) {
+  .header-main.sticky-header {
+    position: fixed;
+    background-color: #dddddd;
+    background-color: {{ color_header_sticky }};
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
+{% endif %}
+{% if header_inner_bg_path != '' %}
+.inner-page .header {
+  background: url({{ header_inner_bg_path }}) center top no-repeat;
+}
+{% endif %}
+</style>

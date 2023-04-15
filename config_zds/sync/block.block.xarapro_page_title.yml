@@ -1,0 +1,20 @@
+uuid: 1aaf07c2-7271-4005-83d0-6090a4cc68ea
+langcode: en
+status: true
+dependencies:
+  theme:
+    - xarapro
+_core:
+  default_config_hash: Bb1mxst9Vah9wNjzWSNIF0JZmthL9FkVwasaJ_JC17Q
+id: xarapro_page_title
+theme: xarapro
+region: page_header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

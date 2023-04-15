@@ -1,0 +1,27 @@
+uuid: e167d32c-7207-4e9a-aa65-d8a4c5333fb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - xarapro
+_core:
+  default_config_hash: mZFhxxHe3MclbI4ALI9TsOlxCPXRedtfCR1i8d_IMCk
+id: xarapro_footer
+theme: xarapro
+region: hidden
+weight: -6
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

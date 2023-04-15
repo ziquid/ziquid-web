@@ -1,0 +1,20 @@
+uuid: 732ea1fd-4caf-4eea-ad67-d86a33dbcf4b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - thexpro
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: thexpro_local_actions
+theme: thexpro
+region: content
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

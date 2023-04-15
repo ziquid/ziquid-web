@@ -1,0 +1,22 @@
+uuid: 1ada3c1b-4cdd-46ba-b9a6-8f820d4c2076
+langcode: en
+status: true
+dependencies:
+  theme:
+    - thexpro
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: thexpro_local_tasks
+theme: thexpro
+region: content
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

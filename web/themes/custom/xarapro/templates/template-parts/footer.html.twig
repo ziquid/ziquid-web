@@ -1,0 +1,51 @@
+<footer class="site-footer footer">
+{% if page.footer_top %}
+  {% include '@thexpro/template-parts/footer/footer-top.html.twig' %}
+{% endif %}
+{% if page.footer_one or page.footer_two or page.footer_three or page.footer_four %}
+  {% include '@thexpro/template-parts/footer/footer-blocks.html.twig' %}
+{% endif %}
+{% if page.footer_bottom_left or page.footer_bottom_right %}
+  {% include '@thexpro/template-parts/footer/footer-bottom-blocks.html.twig' %}
+{% endif %}
+{% if copyright_text or page.footer_bottom_last %}
+  <footer class="footer-bottom footer">
+    <div class="container">
+      <div class="footer-bottom-container">
+        {% if copyright_text %}
+          {% include '@thexpro/template-parts/footer/footer-copyright.html.twig' %}
+        {% endif %}
+        {% include '@thexpro/template-parts/footer/footer-bottom-last.html.twig' %}
+      {% if social_icons_show %}
+        <div class="footer-social">
+          {% include '@xarapro/template-parts/social-icons.html.twig' %}
+        </div>
+      {% endif %}
+      </div><!-- /footer-bottom-container -->
+    </div><!-- /container -->
+  </footer><!-- /footer-bottom -->
+{% endif %}
+</footer>
+{% if scrolltotop_on %}
+  <div class="scrolltop">{{ scrolltotop_icon_style | raw }}</div>
+{% endif %}
+{% if cookie_message %}
+  {{ attach_library('thexpro/cookiealert-scripts') }}
+  {% include '@thexpro/template-parts/components/cookie.html.twig' %}
+{% endif %}
+{% include '@xarapro/template-parts/style.html.twig' %}
+{% if fontawesome_four %}
+  {{ attach_library('thexpro/fontawesome4') }}
+{% endif %}
+{% if fontawesome_five %}
+  {{ attach_library('thexpro/fontawesome5') }}
+{% endif %}
+{% if bootstrapicons %}
+  {{ attach_library('thexpro/bootstrap-icons') }}
+{% endif %}
+{% if material_icon %}
+  {{ attach_library('thexpro/material') }}
+{% endif %}
+{% if animated_content %}
+  {{ attach_library('thexpro/animated-content') }}
+{% endif %}

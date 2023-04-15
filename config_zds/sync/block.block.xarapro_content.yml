@@ -1,0 +1,22 @@
+uuid: 15ef8c18-e3ed-4670-9cae-d770a5fe4a70
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - xarapro
+_core:
+  default_config_hash: HxsjMc4JqrIercwpUGNadB4S9bHGwYPmob8FthDYLl0
+id: xarapro_content
+theme: xarapro
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

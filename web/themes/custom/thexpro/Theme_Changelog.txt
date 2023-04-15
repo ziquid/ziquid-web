@@ -1,0 +1,60 @@
++-----------------------------+
+version 8.0.0
+26 Jan 2021
++-----------------------------+
+# Initial release
+
+
++-----------------------------+
+version 8.0.1
+09 Mar 2021
++-----------------------------+
+# Added sliding sidebar block region.
+# New grid based layout for sidebars.
+# Added tiny-slider library for layered slider.
+
+
++-----------------------------+
+version 8.0.2
+17 Mar 2021
++-----------------------------+
+# Minor known bugs fixed.
+# Added shortcodes.
+
+
++-----------------------------+
+version 8.0.3
+31 Mar 2021
++-----------------------------+
+# Fixed known bugs.
+
+
++-----------------------------+
+version 8.0.4
+10 May 2021
++-----------------------------+
+# Remove button size shortcode: button-small, button-medium, button-large.
+# Added shortcode for content width.
+# Added shortcode for horizontally centering an element.
+
+
++-----------------------------+
+version 8.0.5
+27 May 2021
++-----------------------------+
+# Fixed minor known bugs.
+
+
++-----------------------------+
+version 8.0.6
+22 June 2021
++-----------------------------+
+# Fixed all known bugs.
+# Added new shortcodes.
+
+
++-----------------------------+
+version 10.1.0
+06 Jan 2023
++-----------------------------+
+# Series 10.x.x is compatible with Drupal 10.

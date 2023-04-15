@@ -1,0 +1,27 @@
+uuid: c8ed10c9-0bd9-498c-828d-9ee9fd97389b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - xarapro
+_core:
+  default_config_hash: dSvQrnEu_yKoMYoRvIDmZ2QOIORA4Sb3eR8S7P5ooYA
+id: xarapro_account_menu
+theme: xarapro
+region: hidden
+weight: -5
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

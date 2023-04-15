@@ -1,0 +1,41 @@
+{% include '@xarapro/template-parts/header/header.html.twig' %}
+{% if page.highlighted %}
+  {% include '@thexpro/template-parts/highlighted.html.twig' %}
+{% endif %}
+<div class="main-wrapper">
+  {% if page.content_home_top %}
+    {% include '@thexpro/template-parts/content-parts/content_home_top.html.twig' %}
+  {% endif %}
+  <div class="container">
+    <div class="main-container">
+      <main id="main" class="main-content">
+        <a id="main-content" tabindex="-1"></a>
+        {% if page.content_top %}
+          {% include '@thexpro/template-parts/content-parts/content_top.html.twig' %}
+        {% endif %}
+        <div class="node-content">
+          {{ page.content }}
+        </div>
+        {% if page.content_bottom %}
+          {% include '@thexpro/template-parts/content-parts/content_bottom.html.twig' %}
+        {% endif %}
+        {% if page_share_all and page_share_front %}
+          {% include '@xarapro/template-parts/components/share-node.html.twig' %}
+        {% endif %}
+      </main>
+    {% if front_sidebar and page.sidebar_first %}
+      {% include '@thexpro/template-parts/sidebar/sidebar_left.html.twig' %}
+    {% endif %}
+    {% if front_sidebar and page.sidebar_second %}
+      {% include '@thexpro/template-parts/sidebar/sidebar_right.html.twig' %}
+    {% endif %}
+    </div><!--/main-container -->
+  </div><!--/container -->
+  {% if page.content_home_bottom %}
+    {% include '@thexpro/template-parts/content-parts/content_home_bottom.html.twig' %}
+  {% endif %}
+</div><!--/main-wrapper -->
+{% if sliding_sidebar %}
+  {% include '@thexpro/template-parts/sidebar/sidebar_sliding.html.twig' %}
+{% endif %}
+{% include '@xarapro/template-parts/footer.html.twig' %}

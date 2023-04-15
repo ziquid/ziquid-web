@@ -1,0 +1,25 @@
+uuid: b9c66b88-af98-420e-a25b-2a42fbab6a36
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - xarapro
+_core:
+  default_config_hash: 1r7cJbK2OjhZh9gXf8KWGHrHVY-P1rrfGdElFc-29M0
+id: xarapro_branding
+theme: xarapro
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }
