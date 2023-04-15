@@ -5,6 +5,7 @@
   --secondary: #F9AB51;
   --dark: #628B82;
   --light: #F4FCFA;
+  --less-light: #d4dcda;
   --border: #D2EFE8;
 
   --color-heading: #111111;
@@ -21,6 +22,18 @@
 body {
   background-color: #ffffff;
   font-family: var(--font-text);
+  min-height: 100vh;
+}
+
+.dialog-off-canvas-main-canvas {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+}
+
+.main-wrapper {
+  flex: 99;
 }
 
 /* Typography

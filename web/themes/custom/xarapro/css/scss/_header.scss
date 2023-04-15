@@ -1,13 +1,24 @@
+.header {
+  color: var(--less-light);
+  h1 {
+    color: var(--light);
+    -webkit-text-stroke: 1px black;
+  }
+  h2, h3, h4, h5, h6 {
+    color: var(--light);
+  }
+}
 .header-top {
   background-color: var(--border);
 }
+.header a,
 .header-top a {
-  color: var(--color-text);
+  color: var(--less-light);
   border-bottom: 1px dashed var(--primary);
 }
 .header-top a:hover,
 .header-top i {
-  color: var(--primary);
+  color: var(--secondary);
 }
 .header-main {
   background-color: var(--border);
@@ -25,6 +36,7 @@
   width: 44px;
   height: 44px;
   background-color: var(--primary);
+  border: solid 2px var(--secondary);
 }
 .search-box-content .block-title::before,
 .search-box-content .block-title::after {
@@ -34,8 +46,12 @@
 .search-box-content input[type="search"]:focus {
   box-shadow: none;
 }
-.mobile-menu span {
-  background-color: var(--primary);
+.mobile-menu {
+  border-top-color: var(--secondary);
+  border-bottom-color: var(--secondary);
+  span {
+    background-color: var(--primary);
+  }
 }
 .menu-wrap {
   background-color: var(--primary);
@@ -52,8 +68,8 @@
 /* Header -> Sliding sidebar */
 .sliding-sidebar-icon {
   margin-left: 20px;
-  border-top: 2px solid var(--dark);
-  border-bottom: 2px solid var(--dark);
+  border-top: 2px solid var(--secondary);
+  border-bottom: 2px solid var(--secondary);
 }
 .sliding-sidebar-icon span {
   height: 2px;
@@ -90,7 +106,7 @@
 /* Page header */
 .page-header {
   background-color: var(--light);
-  padding: 4rem 0;
+  padding: 2rem 0;
   overflow: hidden;
 }
 .page-header::before {
@@ -112,4 +128,16 @@
   right: 0;
   top: 0;
   z-index: 100;
+}
+
+.site-branding {
+  .site-logo {
+    img {
+      width: 50%;
+      background-color: black;
+      padding: 12px 6px;
+      border-radius: 11px;
+      border: solid 2px var(--secondary);
+    }
+  }
 }

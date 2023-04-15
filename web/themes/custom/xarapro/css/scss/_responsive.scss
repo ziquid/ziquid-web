@@ -3,14 +3,17 @@
     font-size: 18px;
   }
   /* Header */
+  .header h1 {
+    -webkit-text-stroke-width: 2px;
+  }
   .menu-wrap .menu a {
-    color: var(--color-heading);
+    color: var(--light);
   }
   .menu .expanded:hover {
     background-color: var(--primary);
   }
   .page-header {
-    padding: 4rem 0 10rem 0;
+    padding: 2rem 0 6rem 0;
     clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
   }
   .page-header::before {
@@ -18,11 +21,14 @@
   }
   /* Footer */
   .site-footer {
-    padding-top: 10rem;
-    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    padding-top: 6rem;
+    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0% 100%);
   }
   .site-footer::before {
-    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0% 100%);
+  }
+  .footer-four {
+    text-align: right;
   }
 }
 @media (min-width: 992px) {

@@ -2,6 +2,17 @@
   background-color: var(--light);
   padding-top: 2rem;
   overflow: hidden;
+  position: relative;
+  color: var(--less-light);
+  font-weight: 300;
+  font-size: 91%;
+  p {
+    margin-bottom: 0.4rem;
+    line-height: normal;
+    strong {
+      color: var(--light);
+    }
+  }
 }
 .site-footer::before {
   position: absolute;
@@ -19,12 +30,14 @@
   border-top: 1px solid var(--primary);
 }
 
-.footer li {
-  border-bottom: 1px solid var(--light);
-}
 .footer a {
-  color: var(--color-text);
+  color: var(--light);
+  border-bottom: 1px dashed var(--primary);
+  &:hover {
+    color: var(--secondary);
+  }
 }
-.footer a:hover {
-  color: var(--primary);
+
+.footer-top {
+  text-align: center;
 }

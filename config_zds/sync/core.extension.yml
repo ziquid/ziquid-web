@@ -22,7 +22,6 @@ module:
   datetime: 0
   datetime_range: 0
   dblog: 0
-  devel: 0
   dynamic_page_cache: 0
   editor: 0
   entity_clone: 0
@@ -73,7 +72,6 @@ module:
   shortcut: 0
   simple_background_image_formatter: 0
   simple_sitemap: 0
-  stage_file_proxy: 0
   system: 0
   taxonomy: 0
   taxonomy_tree: 0

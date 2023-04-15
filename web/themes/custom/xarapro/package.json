@@ -1,0 +1,20 @@
+{
+  "name": "xarapro",
+  "version": "1.0.0",
+  "description": "XaraPro Drupal 9 theme",
+  "main": "index.js",
+  "scripts": {
+    "sass-dev": "sass --watch --update --style=expanded css/style.scss css/style.css",
+    "sass-prod": "sass --no-source-map --style=compressed css/style.scss css/style.css",
+    "test": "echo Error: no test specified && exit 1"
+  },
+  "keywords": [
+    "drupal",
+    "theme"
+  ],
+  "author": "Drupar.com",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.62.0"
+  }
+}

@@ -10,12 +10,12 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: themes/custom/xarapro/zds-logo-500px.png
+  path: themes/custom/xarapro/zds_80x54.png
   use_default: false
 container_width: '1170'
-header_width: header_width_contained
+header_width: header_width_full
 main_width: main_width_contained
-footer_width: footer_width_contained
+footer_width: footer_width_full
 slider_show: 0
 slider_code: ''
 slider_image: {  }
@@ -29,7 +29,7 @@ header_page_default: 1
 header_page_padding_top: '5'
 header_page_padding_bottom: '5'
 header_page_content_position: center
-sliding_sidebar: 1
+sliding_sidebar: 0
 front_sidebar: 0
 sidebar_width_default: 1
 sidebar_width_left: '30'
@@ -143,7 +143,7 @@ body_end_code: ''
 localcssfile: 0
 localcssfilename: ''
 color_scheme_use: 0
-theme_color_one: '#4099d9'
+theme_color_one: '#79b0d7'
 theme_color_two: '#88c050'
 theme_color_dark: '#65666a'
 theme_color_light: '#f4fcfa'
