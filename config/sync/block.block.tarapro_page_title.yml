@@ -1,0 +1,20 @@
+uuid: 83a0a09d-bebd-4229-a7cb-bf321512b70d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tarapro
+_core:
+  default_config_hash: u9hTs3E_E8LqIhHW5go98sqDx8N6PNbL__DT8Bl_NGM
+id: tarapro_page_title
+theme: tarapro
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

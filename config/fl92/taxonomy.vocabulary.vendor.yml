@@ -1,0 +1,8 @@
+uuid: bea655bd-d514-4537-ad80-c01963443355
+langcode: en
+status: true
+dependencies: {  }
+name: Vendor
+vid: vendor
+description: 'A vendor who sells my music'
+weight: 0

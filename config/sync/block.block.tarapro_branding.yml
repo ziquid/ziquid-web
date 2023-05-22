@@ -1,0 +1,25 @@
+uuid: de00fdbb-31af-4f8f-9024-a7cf32741ab5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tarapro
+_core:
+  default_config_hash: q7X4xr93n7ZKe4v_9F8d3YxFq3nSai9GZODlarwNOjA
+id: tarapro_branding
+theme: tarapro
+region: site_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

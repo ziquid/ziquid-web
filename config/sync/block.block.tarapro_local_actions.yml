@@ -1,0 +1,20 @@
+uuid: 203c3803-2f4b-4cca-b784-617777886e79
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tarapro
+_core:
+  default_config_hash: GH09TALf931mzWw_jTkcy9taj3sVmR1fjW8lddnqGzY
+id: tarapro_local_actions
+theme: tarapro
+region: content
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

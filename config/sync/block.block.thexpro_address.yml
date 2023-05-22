@@ -1,0 +1,25 @@
+uuid: 9e0c9ce9-2505-4262-b6d1-97dcbefdb53b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ee163715-bae4-4ec3-814a-b9382bc135d3'
+  module:
+    - block_content
+  theme:
+    - thexpro
+id: thexpro_address
+theme: thexpro
+region: header_top_left
+weight: -6
+provider: null
+plugin: 'block_content:ee163715-bae4-4ec3-814a-b9382bc135d3'
+settings:
+  id: 'block_content:ee163715-bae4-4ec3-814a-b9382bc135d3'
+  label: Address
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

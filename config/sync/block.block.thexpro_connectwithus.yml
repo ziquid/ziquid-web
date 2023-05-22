@@ -1,0 +1,25 @@
+uuid: 53f03b5e-e39b-46ad-ad4f-f2148103d983
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social
+  module:
+    - system
+  theme:
+    - thexpro
+id: thexpro_connectwithus
+theme: thexpro
+region: header_top_left
+weight: 0
+provider: null
+plugin: 'system_menu_block:social'
+settings:
+  id: 'system_menu_block:social'
+  label: 'Connect with us'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

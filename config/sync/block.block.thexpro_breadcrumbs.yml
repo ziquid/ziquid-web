@@ -1,0 +1,22 @@
+uuid: 3bee634c-122d-451d-a394-df06e4bdca2d
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - thexpro
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: thexpro_breadcrumbs
+theme: thexpro
+region: header
+weight: -2
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

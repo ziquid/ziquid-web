@@ -1,0 +1,22 @@
+uuid: 269d1e22-d39e-44b3-8109-cf86b4d20fff
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tarapro
+_core:
+  default_config_hash: o1krSbpoV_vOelwxIWUT5pbBcC9MR043kNEYbxgvg4s
+id: tarapro_powered
+theme: tarapro
+region: hidden_blocks
+weight: -4
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

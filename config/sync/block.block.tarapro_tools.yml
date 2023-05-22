@@ -1,0 +1,27 @@
+uuid: c46111cf-95f1-4dbb-aaa4-0911d48b7c63
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - tarapro
+_core:
+  default_config_hash: 5-1RzKP5BJ_oUdgec6dk5jLoDPYfUDcNFuBNsb3OKP8
+id: tarapro_tools
+theme: tarapro
+region: hidden_blocks
+weight: -3
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

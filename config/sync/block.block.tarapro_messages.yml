@@ -1,0 +1,22 @@
+uuid: de2c85c9-05fe-40cb-911a-63b76a6b3507
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tarapro
+_core:
+  default_config_hash: dO1GgrdSGjcOOEekeKKjzLVI6nfry-rcNNj9zULmx58
+id: tarapro_messages
+theme: tarapro
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

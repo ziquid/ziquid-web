@@ -7,6 +7,7 @@ dependencies:
     - node.type.article
     - node.type.blog_page
     - node.type.page
+    - taxonomy.vocabulary.vendor
   module:
     - admin_toolbar_search
     - comment
@@ -17,6 +18,7 @@ dependencies:
     - path
     - search
     - system
+    - taxonomy
     - toolbar
     - tour
     - update
@@ -42,13 +44,16 @@ permissions:
   - 'administer software updates'
   - 'administer url aliases'
   - 'create blog_page content'
+  - 'create terms in vendor'
   - 'create url aliases'
   - 'delete any blog_page content'
+  - 'delete terms in vendor'
   - 'delete webform submissions any node'
   - 'delete webform submissions own node'
   - 'edit own article content'
   - 'edit own comments'
   - 'edit own page content'
+  - 'edit terms in vendor'
   - 'edit webform submissions any node'
   - 'edit webform submissions own node'
   - 'use admin toolbar search'

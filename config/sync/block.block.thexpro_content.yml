@@ -1,0 +1,22 @@
+uuid: f1a5284c-284e-41c0-8b4a-019058b05ec2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - thexpro
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: thexpro_content
+theme: thexpro
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

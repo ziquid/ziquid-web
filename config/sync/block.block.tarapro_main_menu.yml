@@ -1,0 +1,27 @@
+uuid: 8c18a223-57e8-40a3-a12c-3e540cab1fc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - tarapro
+_core:
+  default_config_hash: 5ZevdFl8wjS62u2_5QDYan_xV-uWytlC57alnBd9FZA
+id: tarapro_main_menu
+theme: tarapro
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 5
+  expand_all_items: false
+visibility: {  }

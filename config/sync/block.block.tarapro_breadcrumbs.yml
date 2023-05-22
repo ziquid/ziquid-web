@@ -1,0 +1,22 @@
+uuid: 58eb1522-5aa4-4654-afb9-becb5f131587
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tarapro
+_core:
+  default_config_hash: 4-f-AUhRpFEtryMqyElY9WWAi8OAeo1lFqBY90f-dko
+id: tarapro_breadcrumbs
+theme: tarapro
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

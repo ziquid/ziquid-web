@@ -1,8 +1,2 @@
-uri: 'public:/'
-compact_snippet: true
-include_file: true
-rebuild_snippets: true
-flush_snippets: false
-debug_output: false
-_default_container:
-  container_id: ''
+use_collection: false
+default_google_tag_entity: google_tag_manager

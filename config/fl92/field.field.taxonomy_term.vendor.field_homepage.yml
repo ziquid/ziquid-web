@@ -1,0 +1,23 @@
+uuid: 1b0ec602-882e-4f16-a5a3-59f4571da486
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_homepage
+    - taxonomy.vocabulary.vendor
+  module:
+    - link
+id: taxonomy_term.vendor.field_homepage
+field_name: field_homepage
+entity_type: taxonomy_term
+bundle: vendor
+label: Homepage
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link
