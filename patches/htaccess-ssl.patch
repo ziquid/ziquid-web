@@ -20,7 +20,7 @@ index b1ee36bf..b13f8551 100644
 +
 +  # Rewrite www.ziquid.com to https://ziquid.com
 +  RewriteCond %{HTTP_HOST} ^www\.ziquid\.com$ [NC]
-+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
++  RewriteRule ^ https://ziquid.com%{REQUEST_URI} [L,R=301]
 +
    # To redirect all users to access the site WITHOUT the 'www.' prefix,
    # (http://www.example.com/foo will be redirected to http://example.com/foo)
