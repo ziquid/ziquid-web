@@ -1,0 +1,19 @@
+uuid: 4e2d29d0-52e5-4463-bdcb-a588fc5b959e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_title_version
+    - media.type.audio_recording
+id: media.audio_recording.field_title_version
+field_name: field_title_version
+entity_type: media
+bundle: audio_recording
+label: 'Title version'
+description: 'Title version, such as <em>Extended Mix</em>, if any.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

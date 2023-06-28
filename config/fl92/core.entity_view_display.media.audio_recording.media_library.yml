@@ -1,0 +1,34 @@
+uuid: 492f35b0-b524-43bb-9466-4bb10be00285
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.audio_recording.field_media_audio_file
+    - field.field.media.audio_recording.field_title_version
+    - image.style.medium
+    - media.type.audio_recording
+  module:
+    - image
+id: media.audio_recording.media_library
+targetEntityType: media
+bundle: audio_recording
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_audio_file: true
+  field_title_version: true
+  name: true
+  uid: true

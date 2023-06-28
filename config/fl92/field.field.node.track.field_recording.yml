@@ -1,0 +1,29 @@
+uuid: 9c75f359-be6e-4a1b-9a3e-a3550bfa384d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recording
+    - media.type.audio_recording
+    - node.type.track
+id: node.track.field_recording
+field_name: field_recording
+entity_type: node
+bundle: track
+label: Recording
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio_recording: audio_recording
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

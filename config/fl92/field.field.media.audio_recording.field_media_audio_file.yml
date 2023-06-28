@@ -1,0 +1,27 @@
+uuid: d7b6c9d8-e10e-4199-a42b-cf1471fb3701
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_audio_file
+    - media.type.audio_recording
+  module:
+    - file
+id: media.audio_recording.field_media_audio_file
+field_name: field_media_audio_file
+entity_type: media
+bundle: audio_recording
+label: 'Audio file'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'mp3 wav aac'
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,22 @@
+uuid: de066d6d-eedf-4e98-94f9-5e274d468c06
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.track
+id: node.track.status
+field_name: status
+entity_type: node
+bundle: track
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

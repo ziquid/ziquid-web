@@ -1,0 +1,28 @@
+uuid: c8e8c4fb-f78f-4fb1-9ae1-689146d8161c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.track.field_announcement_page
+    - field.field.node.track.field_cover_art
+    - field.field.node.track.field_description
+    - field.field.node.track.field_recording
+    - node.type.track
+  module:
+    - user
+id: node.track.teaser
+targetEntityType: node
+bundle: track
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_announcement_page: true
+  field_cover_art: true
+  field_description: true
+  field_recording: true

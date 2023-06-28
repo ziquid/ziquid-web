@@ -1,0 +1,14 @@
+uuid: 3f69de73-b543-4b30-8dd3-bc1673c26ce7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.track
+id: node_type_track
+entity_type_id: node_type
+entity_id: track
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

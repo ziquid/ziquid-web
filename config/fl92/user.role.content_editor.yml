@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - filter.format.full_html
+    - media.type.audio_recording
     - node.type.article
     - node.type.blog_page
     - node.type.page
+    - node.type.track
     - taxonomy.vocabulary.tags
     - taxonomy.vocabulary.vendor
   module:
@@ -15,6 +17,7 @@ dependencies:
     - contextual
     - file
     - filter
+    - media
     - node
     - path
     - search
@@ -44,31 +47,44 @@ permissions:
   - 'administer search'
   - 'administer url aliases'
   - 'create article content'
+  - 'create audio_recording media'
   - 'create blog_page content'
   - 'create page content'
   - 'create terms in tags'
   - 'create terms in vendor'
+  - 'create track content'
   - 'create url aliases'
+  - 'delete any audio_recording media'
   - 'delete any blog_page content'
+  - 'delete any track content'
   - 'delete article revisions'
   - 'delete own article content'
+  - 'delete own audio_recording media'
   - 'delete own page content'
+  - 'delete own track content'
   - 'delete page revisions'
   - 'delete terms in vendor'
+  - 'delete track revisions'
   - 'delete webform submissions any node'
   - 'delete webform submissions own node'
+  - 'edit any audio_recording media'
+  - 'edit any track content'
   - 'edit own article content'
+  - 'edit own audio_recording media'
   - 'edit own comments'
   - 'edit own page content'
+  - 'edit own track content'
   - 'edit terms in tags'
   - 'edit terms in vendor'
   - 'edit webform submissions any node'
   - 'edit webform submissions own node'
   - 'revert all revisions'
+  - 'revert track revisions'
   - 'use admin toolbar search'
   - 'use text format full_html'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'view the administration theme'
+  - 'view track revisions'
   - 'view webform submissions any node'
   - 'view webform submissions own node'

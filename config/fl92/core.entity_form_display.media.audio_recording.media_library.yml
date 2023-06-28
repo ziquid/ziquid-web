@@ -1,0 +1,22 @@
+uuid: 4a7dfd25-02d9-4d70-9b2e-dd4e972bb9b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.audio_recording.field_media_audio_file
+    - field.field.media.audio_recording.field_title_version
+    - media.type.audio_recording
+id: media.audio_recording.media_library
+targetEntityType: media
+bundle: audio_recording
+mode: media_library
+content: {  }
+hidden:
+  created: true
+  field_media_audio_file: true
+  field_title_version: true
+  name: true
+  path: true
+  status: true
+  uid: true

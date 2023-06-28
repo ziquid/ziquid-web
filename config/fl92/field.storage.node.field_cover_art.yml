@@ -1,0 +1,20 @@
+uuid: f0d979d2-6d06-4d6b-9bf9-a90f80b89224
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_cover_art
+field_name: field_cover_art
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

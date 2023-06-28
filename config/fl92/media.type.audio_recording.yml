@@ -1,0 +1,14 @@
+uuid: e5fbd759-811c-4429-8009-ceca4c798b6a
+langcode: en
+status: false
+dependencies: {  }
+id: audio_recording
+label: 'Audio Recording'
+description: 'A locally-hosted audio file, with meta information regarding public release.'
+source: audio_file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_audio_file
+field_map:
+  name: name
