@@ -1,14 +1,14 @@
-uuid: de066d6d-eedf-4e98-94f9-5e274d468c06
+uuid: 65255721-10aa-4046-adb6-76136187e5b3
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.track
-id: node.track.status
-field_name: status
+    - node.type.song
+id: node.song.promote
+field_name: promote
 entity_type: node
-bundle: track
-label: Published
+bundle: song
+label: 'Promoted to front page'
 description: ''
 required: false
 translatable: true

@@ -1,19 +1,19 @@
-uuid: c8e8c4fb-f78f-4fb1-9ae1-689146d8161c
+uuid: 249c034c-bc2b-4646-8ad6-475d5c783fdd
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.track.field_announcement_page
-    - field.field.node.track.field_cover_art
-    - field.field.node.track.field_description
-    - field.field.node.track.field_recording
-    - node.type.track
+    - field.field.node.song.field_announcement_page
+    - field.field.node.song.field_cover_art
+    - field.field.node.song.field_description
+    - field.field.node.song.field_recording
+    - node.type.song
   module:
     - user
-id: node.track.teaser
+id: node.song.teaser
 targetEntityType: node
-bundle: track
+bundle: song
 mode: teaser
 content:
   links:

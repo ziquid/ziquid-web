@@ -69,8 +69,10 @@ module:
   rabbit_hole: 0
   recaptcha: 0
   redirect: 0
+  redirect_404: 0
   redirect_domain: 0
   responsive_image: 0
+  rh_media: 0
   rh_node: 0
   rh_user: 0
   search: 0

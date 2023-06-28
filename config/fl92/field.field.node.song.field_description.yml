@@ -1,16 +1,16 @@
-uuid: 75eb56ea-7624-4f96-8add-c406d69464b9
+uuid: fbb246d7-36ef-40fc-b82e-c75a7a3ece4a
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_description
-    - node.type.track
+    - node.type.song
   module:
     - text
-id: node.track.field_description
+id: node.song.field_description
 field_name: field_description
 entity_type: node
-bundle: track
+bundle: song
 label: Description
 description: ''
 required: false

@@ -1,15 +1,15 @@
-uuid: 9c75f359-be6e-4a1b-9a3e-a3550bfa384d
+uuid: b10f8dac-5005-4732-acbe-fc6975125a6c
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_recording
     - media.type.audio_recording
-    - node.type.track
-id: node.track.field_recording
+    - node.type.song
+id: node.song.field_recording
 field_name: field_recording
 entity_type: node
-bundle: track
+bundle: song
 label: Recording
 description: ''
 required: false

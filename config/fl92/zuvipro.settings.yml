@@ -27,7 +27,7 @@ telegram_url: ''
 whatsapp_url: ''
 github_url: ''
 vk_url: ''
-social_new_icon_code: ''
+social_new_icon_code: '<li><a href="https://www.tiktok.com/@flabbierlime92"><i class="fab fa-tiktok" aria-hidden="true"></i></a></li>'
 slider_show: 0
 slider_time: '10000'
 slider_dots: 'true'
@@ -42,7 +42,7 @@ comment_user_pic: 1
 node_author_pic: 0
 node_tags: 1
 font_icon_fontawesome: 0
-fontawesome_five: 0
+fontawesome_five: 1
 font_icon_material: 0
 page_share_all: 1
 page_share_page: 1

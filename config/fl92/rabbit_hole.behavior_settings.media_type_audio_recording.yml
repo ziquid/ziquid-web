@@ -1,0 +1,14 @@
+uuid: b326bc52-8090-4766-b0f8-0229a4e9f039
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.audio_recording
+id: media_type_audio_recording
+entity_type_id: media_type
+entity_id: audio_recording
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

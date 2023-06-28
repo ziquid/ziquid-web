@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - node.type.song
   module:
     - comment
     - contact
     - filter
     - media
+    - node
     - search
     - shortcut
     - system
@@ -25,7 +27,9 @@ permissions:
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'access tour'
+  - 'delete own song content'
   - 'edit own comments'
+  - 'edit own song content'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'

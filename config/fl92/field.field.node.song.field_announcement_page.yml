@@ -1,16 +1,16 @@
-uuid: a9892599-5494-44ec-a46b-26bb1941f359
+uuid: a54b17f2-d244-43de-a801-70f96543a401
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_announcement_page
-    - node.type.track
+    - node.type.song
   module:
     - link
-id: node.track.field_announcement_page
+id: node.song.field_announcement_page
 field_name: field_announcement_page
 entity_type: node
-bundle: track
+bundle: song
 label: 'Announcement Page'
 description: 'Link to the Announcement page for this track, if any.  If a link is entered here, any requests to view this track''s page will redirect to the announcement page.'
 required: false

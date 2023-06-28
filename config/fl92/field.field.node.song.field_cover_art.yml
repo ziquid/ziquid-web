@@ -1,15 +1,15 @@
-uuid: 3e21ff99-0c55-49ea-b924-32a0b62c5c7e
+uuid: d4833817-fe0c-43b5-b209-b680c936cb9d
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_cover_art
     - media.type.image
-    - node.type.track
-id: node.track.field_cover_art
+    - node.type.song
+id: node.song.field_cover_art
 field_name: field_cover_art
 entity_type: node
-bundle: track
+bundle: song
 label: 'Cover Art'
 description: ''
 required: false

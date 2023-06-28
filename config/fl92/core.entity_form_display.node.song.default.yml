@@ -1,21 +1,21 @@
-uuid: 7eb68548-926f-4cbf-bf92-10d3d305292c
+uuid: cbd58968-484a-4b33-9591-6276a872abaa
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.track.field_announcement_page
-    - field.field.node.track.field_cover_art
-    - field.field.node.track.field_description
-    - field.field.node.track.field_recording
-    - node.type.track
+    - field.field.node.song.field_announcement_page
+    - field.field.node.song.field_cover_art
+    - field.field.node.song.field_description
+    - field.field.node.song.field_recording
+    - node.type.song
   module:
     - link
     - media_library
     - path
     - text
-id: node.track.default
+id: node.song.default
 targetEntityType: node
-bundle: track
+bundle: song
 mode: default
 content:
   created:

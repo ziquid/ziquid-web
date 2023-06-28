@@ -1,0 +1,14 @@
+uuid: d43881e3-558e-4671-8bdc-6fa7f99caad9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.song
+id: node_type_song
+entity_type_id: node_type
+entity_id: song
+action: page_redirect
+allow_override: 1
+redirect: '[node:field_announcement_page:uri]'
+redirect_code: 301
+redirect_fallback_action: page_not_found

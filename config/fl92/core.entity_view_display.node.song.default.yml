@@ -1,0 +1,50 @@
+uuid: 45c63324-273f-461d-aba7-c059391b9918
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.song.field_announcement_page
+    - field.field.node.song.field_cover_art
+    - field.field.node.song.field_description
+    - field.field.node.song.field_recording
+    - node.type.song
+  module:
+    - text
+    - user
+id: node.song.default
+targetEntityType: node
+bundle: song
+mode: default
+content:
+  field_cover_art:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_recording:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_announcement_page: true

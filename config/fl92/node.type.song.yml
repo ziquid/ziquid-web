@@ -1,4 +1,4 @@
-uuid: 3e7e9909-0226-4b2a-bb55-9b5cca7d1a4a
+uuid: 269f31c1-bf7b-40ac-b824-f5099366de06
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,9 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Track
-type: track
-description: 'A specific recording of a song.'
+name: Song
+type: song
+description: 'A song, containing (potentially) one or more recordings.'
 help: ''
 new_revision: true
 preview_mode: 1
