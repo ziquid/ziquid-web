@@ -61,7 +61,7 @@ _warning This will replace all running databases.'  Have you exported any config
 
 _db_merge ziquid
 _db_merge zds
-_db_merge cheek
+# _db_merge cheek
 _db_merge pam
 _db_merge glamma
 _db_merge fl92
