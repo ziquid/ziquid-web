@@ -44,6 +44,9 @@ services:
       user: drupal
       password: drupal
       database: zds
+      run_as_root:
+        # Creates the extra databases as root since the app user does not have those privileges
+        - mysql -uroot -e "CREATE DATABASE IF NOT EXISTS zds; GRANT ALL PRIVILEGES ON zds.* TO 'drupal'@'%' IDENTIFIED by 'drupal';"
   cheek:
     type: mariadb:10.4
     portforward: true

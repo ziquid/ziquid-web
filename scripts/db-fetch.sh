@@ -49,7 +49,7 @@ _mac || _die This command works for macs only.  Sorry.
 
 _db_fetch ziquid
 _db_fetch zds
-# _db_fetch cheek
+_db_fetch cheek
 _db_fetch pam
-_db_fetch glamma
+# _db_fetch glamma
 _db_fetch fl92
