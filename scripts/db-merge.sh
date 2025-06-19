@@ -6,7 +6,7 @@
 if [ "$1" == '-v' ]; then
   echo verbose mode on...
   shift
-  set -xe
+  set -x
 fi
 
 cd $(dirname "$0")
@@ -50,20 +50,19 @@ function _db_merge() {
   fi
 
   echo Importing the $1 db...
-  drush sql-drop -l $1
-  gzcat $1.latest.sql.gz | drush sqlc -l $1
+  drush sql-drop -l $1 && gzcat $1.latest.sql.gz | drush sqlc -l $1
 }
 
 # main()
 cd ..
 
-_warning This will replace all running databases.'  Have you exported any config changes you need to keep?'
+DBS='ziquid zds pam fl92'
+[ $# -gt 0 ] && DBS="$@"
 
-_db_merge ziquid
-_db_merge zds
-_db_merge cheek
-_db_merge pam
-# _db_merge glamma
-_db_merge fl92
+_warning This will replace the following databases: $DBS.'  Have you exported any config changes you need to keep?'
+
+for DB in $DBS; do
+  _db_merge "$DB"
+done
 
 echo If no errors were present, the db merge has succeeded.'  You may wish to run a build now.'
