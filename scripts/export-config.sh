@@ -27,7 +27,7 @@ function update() {
   drush cr -l $1 || :
   drush updb -y -l $1
   drush cr -l $1 || :
-  drush cex -y sync -l $1 || drush cex -y sync -l $1
+  drush cex -y -l $1 || drush cex -y -l $1
 }
 
 # main()
