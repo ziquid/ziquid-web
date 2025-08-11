@@ -2,7 +2,6 @@ _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   admin_toolbar: 0
-  admin_toolbar_links_access_filter: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
@@ -13,12 +12,13 @@ module:
   breakpoint: 0
   captcha: 0
   ckeditor: 0
-  color: 0
+  ckeditor5: 0
   comment: 0
   config: 0
   contact: 0
   content_access: 0
   contextual: 0
+  ctools: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -62,8 +62,6 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
-  quickedit: 0
-  rdf: 0
   recaptcha: 0
   redirect: 0
   redirect_domain: 0
@@ -103,7 +101,6 @@ module:
 theme:
   stable: 0
   classy: 0
-  bartik: 0
   seven: 0
   adminimal_theme: 0
   ziquid_theme: 0

@@ -1,4 +1,0 @@
-override-styling:
-  css:
-    component:
-      css/style.css: {}

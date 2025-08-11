@@ -11,7 +11,7 @@ archive: false
 id: recording_request_form
 title: 'Recording Request Form'
 description: 'Form to request a recording session or just get more information.'
-category: ''
+categories: {  }
 elements: |
   header:
     '#type': webform_markup
@@ -321,6 +321,8 @@ settings:
   wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''

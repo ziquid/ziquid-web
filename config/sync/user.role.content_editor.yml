@@ -1,7 +1,39 @@
 uuid: e969ca72-9c2f-4f6b-ab83-47ed468e365d
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - entityqueue.entity_queue.tile_image_queues
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.article
+    - node.type.page
+    - node.type.tile
+    - node.type.webform_page
+    - taxonomy.vocabulary.font_classification
+    - taxonomy.vocabulary.font_designer
+    - taxonomy.vocabulary.font_foundry
+    - taxonomy.vocabulary.font_tags
+    - taxonomy.vocabulary.free_tags
+    - taxonomy.vocabulary.languages_supported
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.tile_type
+  module:
+    - content_access
+    - entity_clone
+    - entityqueue
+    - layout_builder
+    - media
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+    - webform
+    - webform_node
 id: content_editor
 label: 'Content Editor'
 weight: 3
@@ -10,7 +42,6 @@ permissions:
   - 'access any webform configuration'
   - 'access content'
   - 'access content overview'
-  - 'access in-place editing'
   - 'access media overview'
   - 'access own webform configuration'
   - 'access taxonomy overview'
@@ -56,7 +87,6 @@ permissions:
   - 'clone node entity'
   - 'clone node_type entity'
   - 'clone path_alias entity'
-  - 'clone rdf_mapping entity'
   - 'clone redirect entity'
   - 'clone responsive_image_style entity'
   - 'clone search_page entity'

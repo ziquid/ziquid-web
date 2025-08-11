@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entityqueue.entity_queue.client_logo
+    - entityqueue.entity_queue.quick_portfolio_carousel
     - media.type.audio
     - media.type.document
     - media.type.image
@@ -38,7 +40,6 @@ dependencies:
     - media
     - node
     - path
-    - quickedit
     - system
     - taxonomy
     - tour
@@ -53,7 +54,6 @@ permissions:
   - 'access any webform configuration'
   - 'access content'
   - 'access content overview'
-  - 'access in-place editing'
   - 'access intranet'
   - 'access media overview'
   - 'access own webform configuration'
@@ -100,7 +100,6 @@ permissions:
   - 'clone node entity'
   - 'clone node_type entity'
   - 'clone path_alias entity'
-  - 'clone rdf_mapping entity'
   - 'clone redirect entity'
   - 'clone responsive_image_style entity'
   - 'clone search_page entity'

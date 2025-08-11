@@ -1,6 +1,6 @@
 uuid: 0fce7bf2-f3c8-40e7-87d8-6c0360993258
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -23,7 +23,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Monthly archive'
+      title: 'All Ziquid Content By Month'
       fields: {  }
       pager:
         type: mini
@@ -83,21 +83,36 @@ display:
           id: created_year_month
           table: node_field_data
           field: created_year_month
+          relationship: none
+          group_type: group
+          admin_label: ''
           entity_type: node
           plugin_id: date_year_month
           default_action: summary
           exception:
+            value: all
             title_enable: true
+            title: All
           title_enable: true
-          title: '{{ arguments.created_year_month }}'
+          title: 'Ziquid Content From {{ arguments.created_year_month }}'
           default_argument_type: fixed
+          default_argument_options:
+            argument: ''
+          default_argument_skip_url: false
           summary_options:
+            base_path: ''
+            count: true
             override: true
             items_per_page: 30
           summary:
             sort_order: desc
+            number_of_records: 0
             format: default_summary
           specify_validation: true
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
       filters:
         status:
           id: status
@@ -234,7 +249,24 @@ display:
       query:
         type: views_query
         options: {  }
-      display_extenders: {  }
+      defaults:
+        header: false
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<a href="/archive">Full Archive List</a>'
+            format: full_html
+          tokenize: false
+      display_extenders:
+        simple_sitemap_display_extender: {  }
       path: archive
     cache_metadata:
       max-age: -1

@@ -1,9 +1,7 @@
 uuid: 020a9b52-475d-4023-8a1d-643165b9381e
 langcode: en
-status: false
+status: true
 dependencies:
-  config:
-    - system.menu.main
   module:
     - node
     - user
@@ -440,14 +438,18 @@ display:
       query:
         type: views_query
         options: {  }
-      display_extenders: {  }
+      display_extenders:
+        simple_sitemap_display_extender: {  }
       path: glossary
       menu:
-        type: normal
+        type: none
         title: Glossary
+        description: ''
         weight: 0
+        expanded: false
         menu_name: main
         parent: ''
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:
