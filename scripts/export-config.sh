@@ -42,7 +42,4 @@ fi
 
 update ziquid
 update zds
-# update cheek
-update pam
-update glamma
 update fl92
