@@ -6,3 +6,4 @@ name: Vendor
 vid: vendor
 description: 'A vendor who sells my music'
 weight: 0
+new_revision: false

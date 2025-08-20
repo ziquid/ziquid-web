@@ -17,6 +17,7 @@ dependencies:
     - contextual
     - file
     - filter
+    - help
     - media
     - node
     - path
@@ -24,7 +25,6 @@ dependencies:
     - system
     - taxonomy
     - toolbar
-    - tour
     - webform_node
 _core:
   default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
@@ -37,9 +37,9 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access help pages'
   - 'access site in maintenance mode'
   - 'access toolbar'
-  - 'access tour'
   - 'administer comment types'
   - 'administer comments'
   - 'administer content types'
@@ -59,6 +59,7 @@ permissions:
   - 'delete article revisions'
   - 'delete own article content'
   - 'delete own audio_recording media'
+  - 'delete own files'
   - 'delete own page content'
   - 'delete page revisions'
   - 'delete terms in vendor'

@@ -86,7 +86,5 @@ cd ..
 [ $(uname) == Linux ] && DUMP=do_dump_san || DUMP=do_dump
 $DUMP ziquid
 $DUMP zds
-# $DUMP cheek
 $DUMP pam
-# $DUMP glamma
 $DUMP fl92

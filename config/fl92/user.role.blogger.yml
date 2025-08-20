@@ -6,10 +6,10 @@ dependencies:
     - node.type.blog_page
   module:
     - contextual
+    - file
     - node
     - path
     - toolbar
-    - tour
     - webform_node
 id: blogger
 label: Blogger
@@ -18,9 +18,9 @@ is_admin: null
 permissions:
   - 'access contextual links'
   - 'access toolbar'
-  - 'access tour'
   - 'create blog_page content'
   - 'create url aliases'
+  - 'delete own files'
   - 'delete webform submissions own node'
   - 'edit webform submissions own node'
   - 'view own unpublished content'

@@ -11,7 +11,7 @@ third_party_settings:
 name: Song
 type: song
 description: 'A song, containing (potentially) one or more recordings.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

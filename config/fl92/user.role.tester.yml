@@ -16,6 +16,7 @@ dependencies:
     - contextual
     - file
     - filter
+    - help
     - media
     - node
     - path
@@ -23,7 +24,6 @@ dependencies:
     - system
     - taxonomy
     - toolbar
-    - tour
     - update
     - webform_node
 id: tester
@@ -35,10 +35,10 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access help pages'
   - 'access site in maintenance mode'
   - 'access site reports'
   - 'access toolbar'
-  - 'access tour'
   - 'administer comment types'
   - 'administer comments'
   - 'administer content types'
@@ -54,6 +54,7 @@ permissions:
   - 'delete any blog_page content'
   - 'delete any song content'
   - 'delete own audio_recording media'
+  - 'delete own files'
   - 'delete terms in vendor'
   - 'delete webform submissions any node'
   - 'delete webform submissions own node'

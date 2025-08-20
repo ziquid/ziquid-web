@@ -1,0 +1,71 @@
+# docker-compose.yml
+
+# start the container with:
+# $ docker compose up -d
+
+# ssh in with:
+# $ docker exec -t -i drupal10-web-1 /bin/bash
+
+services:
+  web:
+    image: ghcr.io/ziquid/drupal10:latest
+    container_name: "fl92"
+    volumes:
+      - .:/var/www/html
+    expose:
+      - "80"
+    labels:
+      - "traefik.http.routers.${DEV_DASH}fl92.rule=(Host(`fl92.docker.localhost`) || Host(`fl92.asrock.lan`) || Host(`flabberlime92.org`))"
+      - "traefik.enable=true"
+      - "traefik.http.routers.${DEV_DASH}fl92.entrypoints=web,websecure"
+      - "traefik.http.services.${DEV_DASH}fl92.loadbalancer.server.port=80"
+    networks:
+      - traefik
+      - db
+    environment:
+      ELEVENLABS_KEY: ${ELEVENLABS_KEY}
+      OPENAI_KEY: ${OPENAI_KEY}
+      PINECONE_KEY: ${PINECONE_KEY}
+  db:
+    image: bitnami/mysql:latest
+    volumes:
+      - ./db/backups:/bitnami/mysql/backups
+      - ./db/data:/bitnami/mysql/data
+      - ./db/init:/docker-entrypoint-initdb.d
+      - ./db/start:/docker-entrypoint-startdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    expose:
+      - "3306"
+    networks:
+      - db
+  pma:
+    image: phpmyadmin:latest
+    environment:
+      PMA_HOST: ${PMA_HOST}
+      PMA_USER: ${PMA_USER}
+      PMA_PASSWORD: ${PMA_PASSWORD}
+      PHP_UPLOAD_MAX_FILESIZE: 1G
+      PHP_MAX_INPUT_VARS: 1G
+    expose:
+      - "80"
+    labels:
+      - "traefik.http.routers.${DEV_DASH}fl92-pma.rule=(Host(`fl92.docker.localhost`) || Host(`fl92.asrock.lan`) || Host(`flabberlime92.org`)) && PathPrefix(`/pma`)"
+      - "traefik.http.middlewares.${DEV_DASH}fl92pma-stripprefix.stripprefix.prefixes=/pma"
+      - "traefik.http.routers.${DEV_DASH}fl92-pma.middlewares=${DEV_DASH}fl92pma-stripprefix@docker"
+      - "traefik.enable=true"
+      - "traefik.http.routers.${DEV_DASH}fl92-pma.entrypoints=web,websecure"
+      - "traefik.http.services.${DEV_DASH}fl92-pma.loadbalancer.server.port=80"
+    networks:
+      - traefik
+      - db
+
+networks:
+  traefik:
+    name: traefik
+    external: true
+  db:
+    name: db

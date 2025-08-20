@@ -1,11 +1,11 @@
 name: zuvipro
 type: theme
-base theme: stable
+base theme: stable9
 description: 'A light weight, flexible, fully responsive and multi-purpose Drupal 8 theme by <a href="https://www.drupar.com" target="_blank">Drupar.com</a>'
 package: Core
 # Define Drupal core requirement
-core_version_requirement: ^8 || ^9
-version: 8.2.1
+core_version_requirement: ^9 || ^10
+version: 8.2.2
 # Libraries
 libraries:
   - zuvipro/global-styling # Library for all global css. These css will be loaded on every pages.

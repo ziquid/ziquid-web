@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.blog_roll
 label: 'Blog roll'
+description: ''
 targetEntityType: node
 cache: true

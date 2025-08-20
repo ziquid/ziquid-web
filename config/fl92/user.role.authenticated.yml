@@ -4,17 +4,18 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - filter.format.webform_default
     - node.type.song
   module:
     - comment
     - contact
+    - file
     - filter
     - media
     - node
     - search
     - shortcut
     - system
-    - tour
 _core:
   default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
 id: authenticated
@@ -26,7 +27,7 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
-  - 'access tour'
+  - 'delete own files'
   - 'delete own song content'
   - 'edit own comments'
   - 'edit own song content'
@@ -35,4 +36,5 @@ permissions:
   - 'skip comment approval'
   - 'use advanced search'
   - 'use text format basic_html'
+  - 'use text format webform_default'
   - 'view media'
